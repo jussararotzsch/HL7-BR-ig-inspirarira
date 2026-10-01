@@ -1,0 +1,19 @@
+{
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/ImplementationGuide/br.org.hsl.inspirarira",
+  "name" : "InspiraRIRA",
+  "title" : "Guia de Implementação InspiraRIRA",
+  "description" : "Guia de Implementação FHIR R4 do projeto InspiraRIRA. Refatora o RIRA (Regulação Assistencial da RNDS) para o workflow nativo ServiceRequest, Task, Appointment e Encounter, com Claim/ClaimResponse restritos à camada administrativo-financeira da APAC/AIH.",
+  "status" : "draft",
+  "package-id" : "br.org.hsl.inspirarira",
+  "ig-ver" : "0.1.0",
+  "date" : "Thu, 01 Oct, 2026 16:52:20 -0300",
+  "dateISO8601" : "2026-10-01T16:52:20-03:00",
+  "errs" : 0,
+  "warnings" : 605,
+  "hints" : 28,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1582956864
+}

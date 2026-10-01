@@ -1,0 +1,178 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/MeasureReport/censo-hre-20261001> a fhir:MeasureReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "censo-hre-20261001"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: MeasureReport censo-hre-20261001</b></p><a name=\"censo-hre-20261001\"> </a><a name=\"hccenso-hre-20261001\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-censo-leitos.html\">Censo de Leitos</a></p></div><p><b>status</b>: Complete</p><p><b>type</b>: Summary</p><p><b>measure</b>: <a href=\"Measure-censo-leitos.html\">Censo de leitos</a> versão: 0.1.0</p><p><b>date</b>: 2026-10-01 18:00:00-0300</p><p><b>reporter</b>: <a href=\"Organization-org-hospital-destino.html\">Organization Hospital Regional Exemplo</a></p><p><b>period</b>: 2026-10-01 18:00:00-0300 --&gt; 2026-10-01 18:00:00-0300</p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos existentes}\">existentes</span></p><p><b>count</b>: 3</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos ocupados}\">ocupados</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos higienizacao}\">higienizacao</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos reservados}\">reservados</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos livres}\">livres</span></p><p><b>count</b>: 0</p></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title=\"Códigos:\">Especialidade de leito (CNES)</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 75}\">UTI ADULTO - TIPO II</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos existentes}\">existentes</span></p><p><b>count</b>: 2</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos ocupados}\">ocupados</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos higienizacao}\">higienizacao</span></p><p><b>count</b>: 1</p></blockquote></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 33}\">CLINICA GERAL</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos existentes}\">existentes</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos reservados}\">reservados</span></p><p><b>count</b>: 1</p></blockquote></blockquote></blockquote></blockquote></div>"
+  ] ;
+  fhir:MeasureReport.status [ fhir:value "complete"] ;
+  fhir:MeasureReport.type [ fhir:value "summary"] ;
+  fhir:MeasureReport.measure [
+     fhir:value "http://fhir.hsl.org.br/ig/inspirarira/Measure/censo-leitos|0.1.0" ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Measure/censo-leitos|0.1.0>
+  ] ;
+  fhir:MeasureReport.date [ fhir:value "2026-10-01T18:00:00-03:00"^^xsd:dateTime] ;
+  fhir:MeasureReport.reporter [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-hospital-destino> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-hospital-destino" ]
+  ] ;
+  fhir:MeasureReport.period [
+     fhir:Period.start [ fhir:value "2026-10-01T18:00:00-03:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-10-01T18:00:00-03:00"^^xsd:dateTime ]
+  ] ;
+  fhir:MeasureReport.group [
+     fhir:index 0 ;
+     fhir:MeasureReport.group.population [
+       fhir:index 0 ;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+           fhir:Coding.code [ fhir:value "existentes" ]
+         ]
+       ] ;
+       fhir:MeasureReport.group.population.count [ fhir:value "3"^^xsd:integer ]
+     ], [
+       fhir:index 1 ;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+           fhir:Coding.code [ fhir:value "ocupados" ]
+         ]
+       ] ;
+       fhir:MeasureReport.group.population.count [ fhir:value "1"^^xsd:integer ]
+     ], [
+       fhir:index 2 ;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+           fhir:Coding.code [ fhir:value "higienizacao" ]
+         ]
+       ] ;
+       fhir:MeasureReport.group.population.count [ fhir:value "1"^^xsd:integer ]
+     ], [
+       fhir:index 3 ;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+           fhir:Coding.code [ fhir:value "reservados" ]
+         ]
+       ] ;
+       fhir:MeasureReport.group.population.count [ fhir:value "1"^^xsd:integer ]
+     ], [
+       fhir:index 4 ;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+           fhir:Coding.code [ fhir:value "livres" ]
+         ]
+       ] ;
+       fhir:MeasureReport.group.population.count [ fhir:value "0"^^xsd:integer ]
+     ] ;
+     fhir:MeasureReport.group.stratifier [
+       fhir:index 0 ;
+       fhir:MeasureReport.group.stratifier.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.text [ fhir:value "Especialidade de leito (CNES)" ]
+       ] ;
+       fhir:MeasureReport.group.stratifier.stratum [
+         fhir:index 0 ;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0 ;
+             fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito" ] ;
+             fhir:Coding.code [ fhir:value "75" ] ;
+             fhir:Coding.display [ fhir:value "UTI ADULTO - TIPO II" ]
+           ]
+         ] ;
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0 ;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0 ;
+               fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+               fhir:Coding.code [ fhir:value "existentes" ]
+             ]
+           ] ;
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "2"^^xsd:integer ]
+         ], [
+           fhir:index 1 ;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0 ;
+               fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+               fhir:Coding.code [ fhir:value "ocupados" ]
+             ]
+           ] ;
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "1"^^xsd:integer ]
+         ], [
+           fhir:index 2 ;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0 ;
+               fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+               fhir:Coding.code [ fhir:value "higienizacao" ]
+             ]
+           ] ;
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "1"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:MeasureReport.group.stratifier.stratum.value [
+           fhir:CodeableConcept.coding [
+             fhir:index 0 ;
+             fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito" ] ;
+             fhir:Coding.code [ fhir:value "33" ] ;
+             fhir:Coding.display [ fhir:value "CLINICA GERAL" ]
+           ]
+         ] ;
+         fhir:MeasureReport.group.stratifier.stratum.population [
+           fhir:index 0 ;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0 ;
+               fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+               fhir:Coding.code [ fhir:value "existentes" ]
+             ]
+           ] ;
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "1"^^xsd:integer ]
+         ], [
+           fhir:index 1 ;
+           fhir:MeasureReport.group.stratifier.stratum.population.code [
+             fhir:CodeableConcept.coding [
+               fhir:index 0 ;
+               fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos" ] ;
+               fhir:Coding.code [ fhir:value "reservados" ]
+             ]
+           ] ;
+           fhir:MeasureReport.group.stratifier.stratum.population.count [ fhir:value "1"^^xsd:integer ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/MeasureReport/censo-hre-20261001.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

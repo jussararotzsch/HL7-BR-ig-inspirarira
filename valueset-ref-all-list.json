@@ -1,0 +1,1325 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/action-cardinality-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionCardinalityBehavior",
+    "title" : "ActionCardinalityBehavior",
+    "description" : "Defines behavior for an action or a group for how many times that item may be repeated.",
+    "systems" : ["http://hl7.org/fhir/action-cardinality-behavior"],
+    "oids" : ["2.16.840.1.113883.4.642.3.807"],
+    "sources" : ["2.16.840.1.113883.4.642.3.807"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-condition-kind",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionConditionKind",
+    "title" : "ActionConditionKind",
+    "description" : "Defines the kinds of conditions that can appear on actions.",
+    "systems" : ["http://hl7.org/fhir/action-condition-kind"],
+    "oids" : ["2.16.840.1.113883.4.642.3.815"],
+    "sources" : ["2.16.840.1.113883.4.642.3.815"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-grouping-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionGroupingBehavior",
+    "title" : "ActionGroupingBehavior",
+    "description" : "Defines organization behavior of a group.",
+    "systems" : ["http://hl7.org/fhir/action-grouping-behavior"],
+    "oids" : ["2.16.840.1.113883.4.642.3.799"],
+    "sources" : ["2.16.840.1.113883.4.642.3.799"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-participant-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionParticipantRole",
+    "title" : "Action participant role",
+    "description" : "Either a practitioner role or a relationship type.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "http://terminology.hl7.org/CodeSystem/practitioner-role",
+    "http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.796"],
+    "sources" : ["2.16.840.1.113883.4.642.3.796"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-participant-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionParticipantType",
+    "title" : "ActionParticipantType",
+    "description" : "The type of participant for the action.",
+    "systems" : ["http://hl7.org/fhir/action-participant-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.811"],
+    "sources" : ["2.16.840.1.113883.4.642.3.811"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-precheck-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionPrecheckBehavior",
+    "title" : "ActionPrecheckBehavior",
+    "description" : "Defines selection frequency behavior for an action or group.",
+    "systems" : ["http://hl7.org/fhir/action-precheck-behavior"],
+    "oids" : ["2.16.840.1.113883.4.642.3.805"],
+    "sources" : ["2.16.840.1.113883.4.642.3.805"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-relationship-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionRelationshipType",
+    "title" : "ActionRelationshipType",
+    "description" : "Defines the types of relationships between actions.",
+    "systems" : ["http://hl7.org/fhir/action-relationship-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.813"],
+    "sources" : ["2.16.840.1.113883.4.642.3.813"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-required-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionRequiredBehavior",
+    "title" : "ActionRequiredBehavior",
+    "description" : "Defines expectations around whether an action or action group is required.",
+    "systems" : ["http://hl7.org/fhir/action-required-behavior"],
+    "oids" : ["2.16.840.1.113883.4.642.3.803"],
+    "sources" : ["2.16.840.1.113883.4.642.3.803"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-selection-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionSelectionBehavior",
+    "title" : "ActionSelectionBehavior",
+    "description" : "Defines selection behavior of a group.",
+    "systems" : ["http://hl7.org/fhir/action-selection-behavior"],
+    "oids" : ["2.16.840.1.113883.4.642.3.801"],
+    "sources" : ["2.16.840.1.113883.4.642.3.801"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/action-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionType",
+    "title" : "ActionType",
+    "description" : "The type of action to be performed.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/action-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.809"],
+    "sources" : ["2.16.840.1.113883.4.642.3.809"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/adjudication",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AdjudicationValueCodes",
+    "title" : "Adjudication Value Codes",
+    "description" : "This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/adjudication"],
+    "oids" : ["2.16.840.1.113883.4.642.3.596"],
+    "sources" : ["2.16.840.1.113883.4.642.3.596"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/adjudication-error",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Adjudication Error Codes",
+    "title" : "AdjudicationError",
+    "description" : "This value set includes a smattering of adjudication codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/adjudication-error"],
+    "oids" : ["2.16.840.1.113883.4.642.3.39"],
+    "sources" : ["2.16.840.1.113883.4.642.3.39"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/adjudication-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AdjudicationReasonCodes",
+    "title" : "Adjudication Reason Codes",
+    "description" : "This value set includes smattering of Adjudication Reason codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/adjudication-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.598"],
+    "sources" : ["2.16.840.1.113883.4.642.3.598"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AppointmentCancellationReason",
+    "title" : "Appointment cancellation reason",
+    "description" : "This example value set defines a set of reasons for the cancellation of an appointment.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1381"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1381"],
+    "uses" : {
+    },
+    "StructureDefinition-agendamento-regulacao.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/appointmentstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AppointmentStatus",
+    "title" : "AppointmentStatus",
+    "description" : "The free/busy status of an appointment.",
+    "systems" : ["http://hl7.org/fhir/appointmentstatus"],
+    "oids" : ["2.16.840.1.113883.4.642.3.484"],
+    "sources" : ["2.16.840.1.113883.4.642.3.484"],
+    "uses" : {
+    },
+    "StructureDefinition-agendamento-regulacao.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/body-site",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTBodyStructures",
+    "title" : "SNOMED CT Body Structures",
+    "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.141"],
+    "sources" : ["2.16.840.1.113883.4.642.3.141"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário",
+    "StructureDefinition-requisicao-regulacao.html" : "Requisição de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/claim-careteamrole",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ClaimCareTeamRoleCodes",
+    "title" : "Claim Care Team Role Codes",
+    "description" : "This value set includes sample Claim Care Team Role codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/claimcareteamrole"],
+    "oids" : ["2.16.840.1.113883.4.642.3.586"],
+    "sources" : ["2.16.840.1.113883.4.642.3.586"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/claim-exception",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExceptionCodes",
+    "title" : "Exception Codes",
+    "description" : "This value set includes sample Exception codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/claim-exception"],
+    "oids" : ["2.16.840.1.113883.4.642.3.580"],
+    "sources" : ["2.16.840.1.113883.4.642.3.580"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/claim-informationcategory",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ClaimInformationCategoryCodes",
+    "title" : "Claim Information Category Codes",
+    "description" : "This value set includes sample Information Category codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/claiminformationcategory"],
+    "oids" : ["2.16.840.1.113883.4.642.3.582"],
+    "sources" : ["2.16.840.1.113883.4.642.3.582"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/claim-modifiers",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ModifierTypeCodes",
+    "title" : "Modifier type Codes",
+    "description" : "This value set includes sample Modifier type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/modifiers"],
+    "oids" : ["2.16.840.1.113883.4.642.3.536"],
+    "sources" : ["2.16.840.1.113883.4.642.3.536"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/claim-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ClaimTypeCodes",
+    "title" : "Claim Type Codes",
+    "description" : "This value set includes Claim Type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/claim-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.558"],
+    "sources" : ["2.16.840.1.113883.4.642.3.558"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/claim-use",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Use",
+    "title" : "Use",
+    "description" : "The purpose of the Claim: predetermination, preauthorization, claim.",
+    "systems" : ["http://hl7.org/fhir/claim-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.544"],
+    "sources" : ["2.16.840.1.113883.4.642.3.544"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTClinicalFindings",
+    "title" : "SNOMED CT Clinical Findings",
+    "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.232"],
+    "sources" : ["2.16.840.1.113883.4.642.3.232"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Condition/Problem/DiagnosisCodes",
+    "title" : "Condition/Problem/Diagnosis Codes",
+    "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.161"],
+    "sources" : ["2.16.840.1.113883.4.642.3.161"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DaysOfWeek",
+    "title" : "DaysOfWeek",
+    "description" : "The days of the week.",
+    "systems" : ["http://hl7.org/fhir/days-of-week"],
+    "oids" : ["2.16.840.1.113883.4.642.3.512"],
+    "sources" : ["2.16.840.1.113883.4.642.3.512"],
+    "uses" : {
+    },
+    "StructureDefinition-leito-regulado.html" : "Leito Regulado"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/definition-topic",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DefinitionTopic",
+    "title" : "DefinitionTopic",
+    "description" : "High-level categorization of the definition, used for searching, sorting, and filtering.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/definition-topic"],
+    "oids" : ["2.16.840.1.113883.4.642.3.794"],
+    "sources" : ["2.16.840.1.113883.4.642.3.794"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DiagnosisRole",
+    "title" : "DiagnosisRole",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diagnosis-role"],
+    "oids" : ["2.16.840.1.113883.4.642.3.49"],
+    "sources" : ["2.16.840.1.113883.4.642.3.49"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Diet",
+    "title" : "Diet",
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
+    "oids" : ["2.16.840.1.113883.4.642.3.255"],
+    "sources" : ["2.16.840.1.113883.4.642.3.255"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterLocationStatus",
+    "title" : "EncounterLocationStatus",
+    "description" : "The status of the location.",
+    "systems" : ["http://hl7.org/fhir/encounter-location-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.262"],
+    "sources" : ["2.16.840.1.113883.4.642.3.262"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SpecialArrangements",
+    "title" : "Special arrangements",
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"],
+    "oids" : ["2.16.840.1.113883.4.642.3.253"],
+    "sources" : ["2.16.840.1.113883.4.642.3.253"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SpecialCourtesy",
+    "title" : "Special courtesy",
+    "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.252"],
+    "sources" : ["2.16.840.1.113883.4.642.3.252"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterStatus",
+    "title" : "EncounterStatus",
+    "description" : "Current state of the encounter.",
+    "systems" : ["http://hl7.org/fhir/encounter-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.246"],
+    "sources" : ["2.16.840.1.113883.4.642.3.246"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "BenefitCategoryCodes",
+    "title" : "Benefit Category Codes",
+    "description" : "This value set includes examples of Benefit Category codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-benefitcategory"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1174"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1174"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleDiagnosisOnAdmissionCodes",
+    "title" : "Example Diagnosis on Admission Codes",
+    "description" : "This value set includes example Diagnosis on Admission codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1169"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1169"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosisrelatedgroup",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleDiagnosisRelatedGroupCodes",
+    "title" : "Example Diagnosis Related Group Codes",
+    "description" : "This value set includes example Diagnosis Related Group codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup"],
+    "oids" : ["2.16.840.1.113883.4.642.3.588"],
+    "sources" : ["2.16.840.1.113883.4.642.3.588"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosistype",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleDiagnosisTypeCodes",
+    "title" : "Example Diagnosis Type Codes",
+    "description" : "This value set includes example Diagnosis Type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-diagnosistype"],
+    "oids" : ["2.16.840.1.113883.4.642.3.590"],
+    "sources" : ["2.16.840.1.113883.4.642.3.590"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-paymenttype",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExamplePaymentTypeCodes",
+    "title" : "Example Payment Type Codes",
+    "description" : "This value set includes example Payment Type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-paymenttype"],
+    "oids" : ["2.16.840.1.113883.4.642.3.616"],
+    "sources" : ["2.16.840.1.113883.4.642.3.616"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-procedure-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleProcedureTypeCodes",
+    "title" : "Example Procedure Type Codes",
+    "description" : "This value set includes example Procedure Type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-procedure-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1387"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1387"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-program-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleProgramReasonCodes",
+    "title" : "Example Program Reason Codes",
+    "description" : "This value set includes sample Program Reason Span codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-programcode"],
+    "oids" : ["2.16.840.1.113883.4.642.3.576"],
+    "sources" : ["2.16.840.1.113883.4.642.3.576"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/ex-revenue-center",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleRevenueCenterCodes",
+    "title" : "Example Revenue Center Codes",
+    "description" : "This value set includes sample Revenue Center codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-revenue-center"],
+    "oids" : ["2.16.840.1.113883.4.642.3.594"],
+    "sources" : ["2.16.840.1.113883.4.642.3.594"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/fm-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "FinancialResourceStatusCodes",
+    "title" : "Financial Resource Status Codes",
+    "description" : "This value set includes Status codes.",
+    "systems" : ["http://hl7.org/fhir/fm-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.592"],
+    "sources" : ["2.16.840.1.113883.4.642.3.592"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/forms",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Form Codes",
+    "title" : "Forms",
+    "description" : "This value set includes a sample set of Forms codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/forms-codes"],
+    "oids" : ["2.16.840.1.113883.4.642.3.37"],
+    "sources" : ["2.16.840.1.113883.4.642.3.37"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/fundsreserve",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Funds Reservation Codes",
+    "title" : "FundsReserve",
+    "description" : "This value set includes sample funds reservation type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/fundsreserve"],
+    "oids" : ["2.16.840.1.113883.4.642.3.33"],
+    "sources" : ["2.16.840.1.113883.4.642.3.33"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/goal-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "GoalCategory",
+    "title" : "Goal category",
+    "description" : "Example codes for grouping goals to use for filtering or presentation.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/goal-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.275"],
+    "sources" : ["2.16.840.1.113883.4.642.3.275"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/goal-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "GoalPriority",
+    "title" : "Goal priority",
+    "description" : "Indicates the level of importance associated with reaching or sustaining a goal.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/goal-priority"],
+    "oids" : ["2.16.840.1.113883.4.642.3.273"],
+    "sources" : ["2.16.840.1.113883.4.642.3.273"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/goal-start-event",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "GoalStartEvent",
+    "title" : "Goal start event",
+    "description" : "Identifies types of events that might trigger the start of a goal.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.279"],
+    "sources" : ["2.16.840.1.113883.4.642.3.279"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/icd-10-procedures",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ICD-10ProcedureCodes",
+    "title" : "ICD-10 Procedure Codes",
+    "description" : "This value set includes sample ICD-10 Procedure codes.",
+    "systems" : ["http://hl7.org/fhir/sid/ex-icd-10-procedures"],
+    "oids" : ["2.16.840.1.113883.4.642.3.574"],
+    "sources" : ["2.16.840.1.113883.4.642.3.574"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/invoice-priceComponentType",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "InvoicePriceComponentType",
+    "title" : "InvoicePriceComponentType",
+    "description" : "Codes indicating the kind of the price component.",
+    "systems" : ["http://hl7.org/fhir/invoice-priceComponentType"],
+    "oids" : ["2.16.840.1.113883.4.642.3.868"],
+    "sources" : ["2.16.840.1.113883.4.642.3.868"],
+    "uses" : {
+    },
+    "StructureDefinition-regra-reembolso-oci.html" : "Regra de Reembolso de OCI"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/jurisdiction",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Jurisdiction ValueSet",
+    "title" : "Jurisdiction",
+    "description" : "This value set defines a base set of codes for country, country subdivision and region    for indicating where a resource is intended to be used.   \r\n   \r\n   Note: The codes for countries and country subdivisions are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)    while the codes for \"supra-national\" regions are from    [UN Standard country or area codes for statistical use (M49)](http://unstats.un.org/unsd/methods/m49/m49.htm).",
+    "systems" : ["http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "urn:iso:std:iso:3166",
+    "urn:iso:std:iso:3166:-2"],
+    "oids" : ["2.16.840.1.113883.4.642.3.48"],
+    "sources" : ["2.16.840.1.113883.4.642.3.48"],
+    "uses" : {
+    },
+    "StructureDefinition-regra-reembolso-oci.html" : "Regra de Reembolso de OCI",
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-agendamento-regulacao.html" : "Agendamento de Regulação Assistencial",
+    "StructureDefinition-leito-regulado.html" : "Leito Regulado",
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-regra-reembolso-oci.html" : "Regra de Reembolso de OCI",
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário",
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada",
+    "StructureDefinition-censo-leitos.html" : "Censo de Leitos",
+    "StructureDefinition-tarefa-regulacao.html" : "Tarefa de Regulação Assistencial",
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-requisicao-regulacao.html" : "Requisição de Regulação Assistencial",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/location-mode",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LocationMode",
+    "title" : "LocationMode",
+    "description" : "Indicates whether a resource instance represents a specific location or a class of locations.",
+    "systems" : ["http://hl7.org/fhir/location-mode"],
+    "oids" : ["2.16.840.1.113883.4.642.3.330"],
+    "sources" : ["2.16.840.1.113883.4.642.3.330"],
+    "uses" : {
+    },
+    "StructureDefinition-leito-regulado.html" : "Leito Regulado"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/location-physical-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LocationType",
+    "title" : "Location type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/location-physical-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.328"],
+    "sources" : ["2.16.840.1.113883.4.642.3.328"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/location-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LocationStatus",
+    "title" : "LocationStatus",
+    "description" : "Indicates whether the location is still in use.",
+    "systems" : ["http://hl7.org/fhir/location-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.332"],
+    "sources" : ["2.16.840.1.113883.4.642.3.332"],
+    "uses" : {
+    },
+    "StructureDefinition-leito-regulado.html" : "Leito Regulado"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/measure-improvement-notation",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MeasureImprovementNotation",
+    "title" : "MeasureImprovementNotation",
+    "description" : "Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/measure-improvement-notation"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1236"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1236"],
+    "uses" : {
+    },
+    "StructureDefinition-censo-leitos.html" : "Censo de Leitos"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/measure-report-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MeasureReportStatus",
+    "title" : "MeasureReportStatus",
+    "description" : "The status of the measure report.",
+    "systems" : ["http://hl7.org/fhir/measure-report-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.776"],
+    "sources" : ["2.16.840.1.113883.4.642.3.776"],
+    "uses" : {
+    },
+    "StructureDefinition-censo-leitos.html" : "Censo de Leitos"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/measure-report-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MeasureReportType",
+    "title" : "MeasureReportType",
+    "description" : "The type of the measure report.",
+    "systems" : ["http://hl7.org/fhir/measure-report-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.778"],
+    "sources" : ["2.16.840.1.113883.4.642.3.778"],
+    "uses" : {
+    },
+    "StructureDefinition-censo-leitos.html" : "Censo de Leitos"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+    "title" : "SNOMED CT Medication As Needed Reason Codes",
+    "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.96"],
+    "sources" : ["2.16.840.1.113883.4.642.3.96"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário",
+    "StructureDefinition-requisicao-regulacao.html" : "Requisição de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/missing-tooth-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MissingToothReasonCodes",
+    "title" : "Missing Tooth Reason Codes",
+    "description" : "This value set includes sample Missing Tooth Reason codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/missingtoothreason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.534"],
+    "sources" : ["2.16.840.1.113883.4.642.3.534"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/note-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "NoteType",
+    "title" : "NoteType",
+    "description" : "The presentation types of notes.",
+    "systems" : ["http://hl7.org/fhir/note-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.15"],
+    "sources" : ["2.16.840.1.113883.4.642.3.15"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LOINCCodes",
+    "title" : "LOINC Codes",
+    "description" : "This value set includes all LOINC codes",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.396"],
+    "sources" : ["2.16.840.1.113883.4.642.3.396"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/participant-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantRoles",
+    "title" : "Participant Roles",
+    "description" : "Roles of participants that may be included in a care team.  Defined as: Is a Person, Healthcare professional (occupation) or Healthcare related organization (qualifier value).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.152"],
+    "sources" : ["2.16.840.1.113883.4.642.3.152"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/participantrequired",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantRequired",
+    "title" : "ParticipantRequired",
+    "description" : "Is the Participant required to attend the appointment.",
+    "systems" : ["http://hl7.org/fhir/participantrequired"],
+    "oids" : ["2.16.840.1.113883.4.642.3.488"],
+    "sources" : ["2.16.840.1.113883.4.642.3.488"],
+    "uses" : {
+    },
+    "StructureDefinition-agendamento-regulacao.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/participationstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipationStatus",
+    "title" : "ParticipationStatus",
+    "description" : "The Participation status of an appointment.",
+    "systems" : ["http://hl7.org/fhir/participationstatus"],
+    "oids" : ["2.16.840.1.113883.4.642.3.486"],
+    "sources" : ["2.16.840.1.113883.4.642.3.486"],
+    "uses" : {
+    },
+    "StructureDefinition-agendamento-regulacao.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/payeetype",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Claim Payee Type Codes",
+    "title" : "PayeeType",
+    "description" : "This value set includes sample Payee Type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/payeetype"],
+    "oids" : ["2.16.840.1.113883.4.642.3.31"],
+    "sources" : ["2.16.840.1.113883.4.642.3.31"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/payment-adjustment-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "PaymentAdjustmentReasonCodes",
+    "title" : "Payment Adjustment Reason Codes",
+    "description" : "This value set includes smattering of Payment Adjustment Reason codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/payment-adjustment-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.600"],
+    "sources" : ["2.16.840.1.113883.4.642.3.600"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/performer-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedurePerformerRoleCodes",
+    "title" : "Procedure Performer Role Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.433"],
+    "sources" : ["2.16.840.1.113883.4.642.3.433"],
+    "uses" : {
+    },
+    "StructureDefinition-tarefa-regulacao.html" : "Tarefa de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/plan-definition-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "PlanDefinitionType",
+    "title" : "PlanDefinitionType",
+    "description" : "The type of PlanDefinition.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/plan-definition-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.797"],
+    "sources" : ["2.16.840.1.113883.4.642.3.797"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureReasonCodes",
+    "title" : "Procedure Reason Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.432"],
+    "sources" : ["2.16.840.1.113883.4.642.3.432"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/process-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcessPriorityCodes",
+    "title" : "Process Priority Codes",
+    "description" : "This value set includes the financial processing priority codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/processpriority"],
+    "oids" : ["2.16.840.1.113883.4.642.3.552"],
+    "sources" : ["2.16.840.1.113883.4.642.3.552"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/provider-qualification",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleProviderQualificationCodes",
+    "title" : "Example Provider Qualification Codes",
+    "description" : "This value set includes sample Provider Qualification codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-providerqualification"],
+    "oids" : ["2.16.840.1.113883.4.642.3.570"],
+    "sources" : ["2.16.840.1.113883.4.642.3.570"],
+    "uses" : {
+    },
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/publication-status",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "PublicationStatus",
+    "title" : "PublicationStatus",
+    "description" : "The lifecycle status of an artifact.",
+    "systems" : ["http://hl7.org/fhir/publication-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3"],
+    "uses" : {
+    },
+    "StructureDefinition-regra-reembolso-oci.html" : "Regra de Reembolso de OCI",
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/related-claim-relationship",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleRelatedClaimRelationshipCodes",
+    "title" : "Example Related Claim Relationship Codes",
+    "description" : "This value set includes sample Related Claim Relationship codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship"],
+    "oids" : ["2.16.840.1.113883.4.642.3.568"],
+    "sources" : ["2.16.840.1.113883.4.642.3.568"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/remittance-outcome",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ClaimProcessingCodes",
+    "title" : "Claim Processing Codes",
+    "description" : "This value set includes Claim Processing Outcome codes.",
+    "systems" : ["http://hl7.org/fhir/remittance-outcome"],
+    "oids" : ["2.16.840.1.113883.4.642.3.13"],
+    "sources" : ["2.16.840.1.113883.4.642.3.13"],
+    "uses" : {
+    },
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestIntent",
+    "title" : "RequestIntent",
+    "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+    "systems" : ["http://hl7.org/fhir/request-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.113"],
+    "sources" : ["2.16.840.1.113883.4.642.3.113"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário",
+    "StructureDefinition-requisicao-regulacao.html" : "Requisição de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "Request priority",
+    "description" : "The clinical priority of a diagnostic order.",
+    "systems" : ["http://hl7.org/fhir/request-priority"],
+    "oids" : ["2.16.840.1.113883.4.642.3.115"],
+    "sources" : ["2.16.840.1.113883.4.642.3.115"],
+    "uses" : {
+    },
+    "StructureDefinition-tarefa-regulacao.html" : "Tarefa de Regulação Assistencial",
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestStatus",
+    "title" : "RequestStatus",
+    "description" : "Codes identifying the lifecycle stage of a request.",
+    "systems" : ["http://hl7.org/fhir/request-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.111"],
+    "sources" : ["2.16.840.1.113883.4.642.3.111"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário",
+    "StructureDefinition-requisicao-regulacao.html" : "Requisição de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/service-place",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ExampleServicePlaceCodes",
+    "title" : "Example Service Place Codes",
+    "description" : "This value set includes a smattering of Service Place codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-serviceplace"],
+    "oids" : ["2.16.840.1.113883.4.642.3.564"],
+    "sources" : ["2.16.840.1.113883.4.642.3.564"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/service-uscls",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "USCLSCodes",
+    "title" : "USCLS Codes",
+    "description" : "This value set includes a smattering of USCLS codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-USCLS"],
+    "oids" : ["2.16.840.1.113883.4.642.3.542"],
+    "sources" : ["2.16.840.1.113883.4.642.3.542"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ServiceRequestOrderDetailsCodes",
+    "title" : "Service Request Order Details Codes",
+    "description" : "An example value set of Codified order entry details concepts.  These concepts only make sense in the context of what is being ordered.  This example is for a patient ventilation order",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.435"],
+    "sources" : ["2.16.840.1.113883.4.642.3.435"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário",
+    "StructureDefinition-requisicao-regulacao.html" : "Requisição de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/subject-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SubjectType",
+    "title" : "Subject type",
+    "description" : "Possible types of subjects.",
+    "systems" : ["http://hl7.org/fhir/resource-types"],
+    "oids" : ["2.16.840.1.113883.4.642.3.775"],
+    "sources" : ["2.16.840.1.113883.4.642.3.775"],
+    "uses" : {
+    },
+    "StructureDefinition-protocolo-oci.html" : "Protocolo de Oferta de Cuidados Integrados (OCI)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/surface",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SurfaceCodes",
+    "title" : "Surface Codes",
+    "description" : "This value set includes a smattering of FDI tooth surface codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/FDI-surface"],
+    "oids" : ["2.16.840.1.113883.4.642.3.546"],
+    "sources" : ["2.16.840.1.113883.4.642.3.546"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/task-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskIntent",
+    "title" : "TaskIntent",
+    "description" : "Distinguishes whether the task is a proposal, plan or full order.",
+    "systems" : ["http://hl7.org/fhir/request-intent",
+    "http://hl7.org/fhir/task-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1240"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1240"],
+    "uses" : {
+    },
+    "StructureDefinition-tarefa-regulacao.html" : "Tarefa de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/task-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskStatus",
+    "title" : "TaskStatus",
+    "description" : "The current status of the task.",
+    "systems" : ["http://hl7.org/fhir/task-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.790"],
+    "sources" : ["2.16.840.1.113883.4.642.3.790"],
+    "uses" : {
+    },
+    "StructureDefinition-tarefa-regulacao.html" : "Tarefa de Regulação Assistencial"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/tooth",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "OralSiteCodes",
+    "title" : "Oral Site Codes",
+    "description" : "This value set includes a smattering of FDI oral site codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-tooth"],
+    "oids" : ["2.16.840.1.113883.4.642.3.540"],
+    "sources" : ["2.16.840.1.113883.4.642.3.540"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)",
+    "StructureDefinition-resposta-autorizacao-sus.html" : "Resposta de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSReAdmissionIndicator",
+    "title" : "hl7VS-re-admissionIndicator",
+    "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
+    "oids" : ["2.16.840.1.113883.21.40"],
+    "sources" : ["2.16.840.1.113883.21.40"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0116",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSBedStatus",
+    "title" : "hl7VS-bedStatus",
+    "description" : "Value Set of codes that specify the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0116"],
+    "oids" : ["2.16.840.1.113883.21.51"],
+    "sources" : ["2.16.840.1.113883.21.51"],
+    "uses" : {
+    },
+    "StructureDefinition-leito-regulado.html" : "Leito Regulado"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0276",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSAppointmentReasonCodes",
+    "title" : "hl7VS-appointmentReasonCodes",
+    "description" : "Value Set of codes that describe the kind of appointment or the reason why an appointment has been scheduled.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
+    "oids" : ["2.16.840.1.113883.21.181"],
+    "sources" : ["2.16.840.1.113883.21.181"],
+    "uses" : {
+    },
+    "StructureDefinition-agendamento-regulacao.html" : "Agendamento de Regulação Assistencial"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActEncounterCode",
+    "title" : "ActEncounterCode",
+    "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.13955"],
+    "sources" : ["2.16.840.1.113883.1.11.13955"],
+    "uses" : {
+    },
+    "StructureDefinition-internacao-regulada.html" : "Internação Regulada"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActIncidentCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActIncidentCode",
+    "title" : "ActIncidentCode",
+    "description" : "Set of codes indicating the type of incident or accident.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.16508"],
+    "sources" : ["2.16.840.1.113883.1.11.16508"],
+    "uses" : {
+    },
+    "StructureDefinition-producao-sus.html" : "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)",
+    "StructureDefinition-autorizacao-previa-sus.html" : "Solicitação de Autorização SUS (APAC/AIH)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ServiceDeliveryLocationRoleType",
+    "title" : "ServiceDeliveryLocationRoleType",
+    "description" : "A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+    "oids" : ["2.16.840.1.113883.1.11.17660"],
+    "sources" : ["2.16.840.1.113883.1.11.17660"],
+    "uses" : {
+    },
+    "StructureDefinition-transporte-sanitario.html" : "Transporte Sanitário",
+    "StructureDefinition-requisicao-regulacao.html" : "Requisição de Regulação Assistencial"
+  }]
+}

@@ -1,0 +1,152 @@
+[{
+  "id" : "regra-reembolso-oci-ic",
+  "type" : "ChargeItemDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-ic",
+  "version" : "0.1.0"
+},
+{
+  "id" : "regra-reembolso-oci-mama",
+  "type" : "ChargeItemDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-mama",
+  "version" : "0.1.0"
+},
+{
+  "id" : "br.org.hsl.inspirarira",
+  "type" : "ImplementationGuide",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/ImplementationGuide/br.org.hsl.inspirarira",
+  "version" : "0.1.0",
+  "name" : "InspiraRIRA"
+},
+{
+  "id" : "censo-leitos",
+  "type" : "Measure",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/Measure/censo-leitos",
+  "version" : "0.1.0",
+  "name" : "CensoLeitos"
+},
+{
+  "id" : "protocolo-acesso-nefrologia",
+  "type" : "PlanDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-acesso-nefrologia",
+  "version" : "0.1.0",
+  "name" : "ProtocoloAcessoNefrologia"
+},
+{
+  "id" : "protocolo-oci-ic",
+  "type" : "PlanDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-ic",
+  "version" : "0.1.0",
+  "name" : "ProtocoloOCIIC"
+},
+{
+  "id" : "protocolo-oci-mama",
+  "type" : "PlanDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama",
+  "version" : "0.1.0",
+  "name" : "ProtocoloOCIMama"
+},
+{
+  "id" : "agendamento-regulacao",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao",
+  "version" : "0.1.0",
+  "name" : "AgendamentoRegulacao"
+},
+{
+  "id" : "autorizacao-previa-sus",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/autorizacao-previa-sus",
+  "version" : "0.1.0",
+  "name" : "AutorizacaoPreviaSUS"
+},
+{
+  "id" : "censo-leitos",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos",
+  "version" : "0.1.0",
+  "name" : "CensoLeitos"
+},
+{
+  "id" : "data-entrada-fila",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/data-entrada-fila",
+  "version" : "0.1.0",
+  "name" : "DataEntradaFila"
+},
+{
+  "id" : "internacao-regulada",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada",
+  "version" : "0.1.0",
+  "name" : "InternacaoRegulada"
+},
+{
+  "id" : "leito-regulado",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado",
+  "version" : "0.1.0",
+  "name" : "LeitoRegulado"
+},
+{
+  "id" : "local-origem",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/local-origem",
+  "version" : "0.1.0",
+  "name" : "LocalOrigem"
+},
+{
+  "id" : "prioridade-regulatoria",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/prioridade-regulatoria",
+  "version" : "0.1.0",
+  "name" : "PrioridadeRegulatoria"
+},
+{
+  "id" : "producao-sus",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus",
+  "version" : "0.1.0",
+  "name" : "ProducaoSUS"
+},
+{
+  "id" : "protocolo-oci",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci",
+  "version" : "0.1.0",
+  "name" : "ProtocoloOCI"
+},
+{
+  "id" : "regra-reembolso-oci",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci",
+  "version" : "0.1.0",
+  "name" : "RegraReembolsoOCI"
+},
+{
+  "id" : "requisicao-regulacao",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao",
+  "version" : "0.1.0",
+  "name" : "RequisicaoRegulacao"
+},
+{
+  "id" : "resposta-autorizacao-sus",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus",
+  "version" : "0.1.0",
+  "name" : "RespostaAutorizacaoSUS"
+},
+{
+  "id" : "tarefa-regulacao",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao",
+  "version" : "0.1.0",
+  "name" : "TarefaRegulacao"
+},
+{
+  "id" : "transporte-sanitario",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/transporte-sanitario",
+  "version" : "0.1.0",
+  "name" : "TransporteSanitario"
+}]

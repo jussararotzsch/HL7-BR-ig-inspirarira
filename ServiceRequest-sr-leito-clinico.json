@@ -1,0 +1,53 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "sr-leito-clinico",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest sr-leito-clinico</b></p><a name=\"sr-leito-clinico\"> </a><a name=\"hcsr-leito-clinico\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-requisicao-regulacao.html\">Requisição de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao</code>/SOL-LEITO-2026-0102</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0303}\">Tratamentos clínicos (outras especialidades)</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0303060212}\">TRATAMENTO DE INSUFICIENCIA CARDIACA</span></p><p><b>subject</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-10-01 10:00:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>locationCode</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 33}\">CLINICA GERAL</span></p><p><b>reasonCode</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10 I50.0}\">Insuficiência cardíaca congestiva</span></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao",
+    "value" : "SOL-LEITO-2026-0102"
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS",
+      "code" : "0303",
+      "display" : "Tratamentos clínicos (outras especialidades)"
+    }]
+  }],
+  "priority" : "routine",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS",
+      "code" : "0303060212",
+      "display" : "TRATAMENTO DE INSUFICIENCIA CARDIACA"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "authoredOn" : "2026-10-01T10:00:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-ubs-solicitante"
+  },
+  "locationCode" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito",
+      "code" : "33",
+      "display" : "CLINICA GERAL"
+    }]
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10",
+      "code" : "I50.0",
+      "display" : "Insuficiência cardíaca congestiva"
+    }]
+  }]
+}

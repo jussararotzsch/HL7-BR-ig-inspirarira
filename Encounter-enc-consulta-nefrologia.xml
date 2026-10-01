@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="enc-consulta-nefrologia"/>
+  <meta>
+    <profile value="https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Encounter enc-consulta-nefrologia</b></p><a name="enc-consulta-nefrologia"> </a><a name="hcenc-consulta-nefrologia"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter">br-core-encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>priority</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento 03}">Consulta agendada</span></p><p><b>subject</b>: <a href="Patient-paciente-maria.html">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>basedOn</b>: <a href="ServiceRequest-sr-consulta-nefrologia.html">ServiceRequest Consulta médica em atenção especializada</a></p><p><b>appointment</b>: <a href="Appointment-appt-consulta-nefrologia.html">Appointment: identifier = http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento#AG-2026-005102; status = fulfilled; serviceType = Consulta médica em atenção especializada; specialty = Médico nefrologista; start = 2026-09-15 10:00:00-0300; end = 2026-09-15 10:30:00-0300</a></p><p><b>period</b>: 2026-09-15 10:05:00-0300 --&gt; 2026-09-15 10:35:00-0300</p><p><b>reasonReference</b>: <a href="Condition-condicao-drc.html">Condition Doença renal em estádio final</a></p><p><b>serviceProvider</b>: <a href="Organization-org-executante.html">Organization Hospital Exemplo</a></p></div>
+  </text>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+  </class>
+  <priority>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento"/>
+      <code value="03"/>
+      <display value="Consulta agendada"/>
+    </coding>
+  </priority>
+  <subject>
+    <reference value="Patient/paciente-maria"/>
+  </subject>
+  <basedOn>
+    <reference value="ServiceRequest/sr-consulta-nefrologia"/>
+  </basedOn>
+  <appointment>
+    <reference value="Appointment/appt-consulta-nefrologia"/>
+  </appointment>
+  <period>
+    <start value="2026-09-15T10:05:00-03:00"/>
+    <end value="2026-09-15T10:35:00-03:00"/>
+  </period>
+  <reasonReference>
+    <reference value="Condition/condicao-drc"/>
+  </reasonReference>
+  <serviceProvider>
+    <reference value="Organization/org-executante"/>
+  </serviceProvider>
+</Encounter>

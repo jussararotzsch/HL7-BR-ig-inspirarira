@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Location",
+  "id" : "leito-uti-02",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Location leito-uti-02</b></p><a name=\"leito-uti-02\"> </a><a name=\"hcleito-uti-02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-leito-regulado.html\">Leito Regulado</a></p></div><p><b>identifier</b>: <code>http://hre.exemplo.gov.br/fhir/sid/leito</code>/UTI-A-02</p><p><b>status</b>: Active</p><p><b>operationalStatus</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v2-0116.html#v2-0116-H\">bedStatus: H</a> (Housekeeping)</p><p><b>name</b>: UTI Adulto, leito 02</p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoLeito 3}\">COMPLEMENTAR</span>, <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 75}\">UTI ADULTO - TIPO II</span></p><p><b>physicalType</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/location-physical-type bd}\">Bed</span></p><p><b>managingOrganization</b>: <a href=\"Organization-org-hospital-destino.html\">Organization Hospital Regional Exemplo</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://hre.exemplo.gov.br/fhir/sid/leito",
+    "value" : "UTI-A-02"
+  }],
+  "status" : "active",
+  "operationalStatus" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0116",
+    "code" : "H",
+    "display" : "Housekeeping"
+  },
+  "name" : "UTI Adulto, leito 02",
+  "type" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoLeito",
+      "code" : "3",
+      "display" : "COMPLEMENTAR"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito",
+      "code" : "75",
+      "display" : "UTI ADULTO - TIPO II"
+    }]
+  }],
+  "physicalType" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+      "code" : "bd"
+    }]
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/org-hospital-destino"
+  }
+}

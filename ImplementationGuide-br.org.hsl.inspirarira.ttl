@@ -1,0 +1,1945 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ImplementationGuide/br.org.hsl.inspirarira> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "br.org.hsl.inspirarira"] ;
+  fhir:Resource.language [ fhir:value "pt-BR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"pt-BR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"pt-BR\"><p class=\"res-header-id\"><b>Narrativa gerada: ImplementationGuide br.org.hsl.inspirarira</b></p><a name=\"br.org.hsl.inspirarira\"> </a><a name=\"hcbr.org.hsl.inspirarira\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Língua: pt-BR</p></div><h2>InspiraRIRA</h2><p>O URL oficial para este guia de implementação é: </p><pre>http://fhir.hsl.org.br/ig/inspirarira/ImplementationGuide/br.org.hsl.inspirarira</pre><div><p>Guia de Implementação FHIR R4 do projeto InspiraRIRA. Refatora o RIRA (Regulação Assistencial da RNDS) para o workflow nativo ServiceRequest, Task, Appointment e Encounter, com Claim/ClaimResponse restritos à camada administrativo-financeira da APAC/AIH.</p>\n</div></div>"
+  ] ;
+  fhir:ImplementationGuide.url [ fhir:value "http://fhir.hsl.org.br/ig/inspirarira/ImplementationGuide/br.org.hsl.inspirarira"] ;
+  fhir:ImplementationGuide.version [ fhir:value "0.1.0"] ;
+  fhir:ImplementationGuide.name [ fhir:value "InspiraRIRA"] ;
+  fhir:ImplementationGuide.title [ fhir:value "Guia de Implementação InspiraRIRA"] ;
+  fhir:ImplementationGuide.status [ fhir:value "draft"] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-10-01T16:52:20-03:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.publisher [ fhir:value "Hospital Sírio-Libanês"] ;
+  fhir:ImplementationGuide.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Hospital Sírio-Libanês" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.hospitalsiriolibanes.org.br" ]
+     ]
+  ] ;
+  fhir:ImplementationGuide.description [ fhir:value "Guia de Implementação FHIR R4 do projeto InspiraRIRA. Refatora o RIRA (Regulação Assistencial da RNDS) para o workflow nativo ServiceRequest, Task, Appointment e Encounter, com Claim/ClaimResponse restritos à camada administrativo-financeira da APAC/AIH."] ;
+  fhir:ImplementationGuide.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ] ;
+       fhir:Coding.display [ fhir:value "Brazil" ]
+     ]
+  ] ;
+  fhir:ImplementationGuide.packageId [ fhir:value "br.org.hsl.inspirarira"] ;
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"] ;
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1" ;
+     fhir:index 0
+  ] ;
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0 ;
+     fhir:Element.id [ fhir:value "hl7tx" ] ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment" ] ;
+       fhir:Extension.valueMarkdown [ fhir:value "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://terminology.hl7.org/ImplementationGuide/hl7.terminology" ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.1.0" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Element.id [ fhir:value "hl7ext" ] ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment" ] ;
+       fhir:Extension.valueMarkdown [ fhir:value "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "5.2.0" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Element.id [ fhir:value "brcore" ] ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "https://br-core.saude.gov.br/fhir/ImplementationGuide/br.gov.saude.br-core.fhir" ;
+       fhir:link <https://br-core.saude.gov.br/fhir/ImplementationGuide/br.gov.saude.br-core.fhir>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "br.gov.saude.br-core.fhir" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.3.0" ]
+  ] ;
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "2026+" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "ci-build" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://fhir.hsl.org.br/ig/inspirarira/history.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 19 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-wg" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 20 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 21 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 22 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 23 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 24 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 25 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency" ] ;
+       fhir:Extension.valueCode [ fhir:value "hl7.fhir.uv.tools.r4#1.1.2" ]
+     ], [
+       fhir:index 26 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "2026+" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 27 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "ci-build" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 28 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 29 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 30 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 31 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 32 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 33 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 34 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 35 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://fhir.hsl.org.br/ig/inspirarira/history.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 36 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 37 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 38 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 39 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 40 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 41 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 42 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 43 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 44 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 45 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-wg" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 46 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 47 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 48 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 49 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 50 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ] ;
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-consulta-nefrologia> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-consulta-nefrologia" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "A1. Pedido de consulta em nefrologia" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Appointment" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-consulta-nefrologia-falta> ;
+         fhir:Reference.reference [ fhir:value "Appointment/appt-consulta-nefrologia-falta" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "A2. Primeiro agendamento, com falta" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao>
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Appointment" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-consulta-nefrologia> ;
+         fhir:Reference.reference [ fhir:value "Appointment/appt-consulta-nefrologia" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "A3. Reagendamento, realizado" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao>
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-consulta> ;
+         fhir:Reference.reference [ fhir:value "Task/task-regulacao-consulta" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "A4. Regulação do acesso concluída e executada" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A falta em A2 não reinicia o pedido: a tarefa voltou à fila preservando a data de entrada e gerou o reagendamento A3." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-consulta-nefrologia> ;
+         fhir:Reference.reference [ fhir:value "Encounter/enc-consulta-nefrologia" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "A5. Consulta realizada" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Claim" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Claim/bpai-consulta-nefrologia> ;
+         fhir:Reference.reference [ fhir:value "Claim/bpai-consulta-nefrologia" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "A6. Produção em BPA-I" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Registro da produção da consulta regulada. BPA-I dispensa autorização prévia." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus>
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/agendamento-regulacao" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Agendamento de Regulação Assistencial" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Agendamento resultante da regulação. Só DEVE ser criado quando houver proposta de data, local e serviço. Os estados booked, fulfilled, cancelled e noshow substituem os slices event:booked, event:attended, event:cancelled e event:absence do RIRA." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-hemodialise> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-hemodialise" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B1. Pedido de hemodiálise" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Coverage" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Coverage/coverage-sus-arranjo-publico> ;
+         fhir:Reference.reference [ fhir:value "Coverage/coverage-sus-arranjo-publico" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B2. Arranjo público SUS (PPI)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Coverage que representa o arranjo público de custeio e o gestor responsável. Não é plano individual e não condiciona o direito universal. Perfil BR Public Funding Arrangement fica para versão futura." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 9 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Claim" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Claim/claim-apac-hemodialise> ;
+         fhir:Reference.reference [ fhir:value "Claim/claim-apac-hemodialise" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B3. Solicitação de APAC" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/autorizacao-previa-sus" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/autorizacao-previa-sus>
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ClaimResponse" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ClaimResponse/claimresponse-apac-hemodialise> ;
+         fhir:Reference.reference [ fhir:value "ClaimResponse/claimresponse-apac-hemodialise" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B4. APAC emitida" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus>
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Appointment" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-hemodialise> ;
+         fhir:Reference.reference [ fhir:value "Appointment/appt-hemodialise" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B5. Primeira sessão, realizada" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao>
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-autorizacao-hemodialise> ;
+         fhir:Reference.reference [ fhir:value "Task/task-autorizacao-hemodialise" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B6. Autorização regulatória concluída" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A autorização acontece na Task: dimensões avaliadas, decisão e protocolo. A ClaimResponse da APAC é um produto da decisão, referenciado em output." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-hemodialise> ;
+         fhir:Reference.reference [ fhir:value "Encounter/enc-hemodialise" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B7. Atendimento realizado" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A existência do Encounter é a evidência do atendimento. Substitui event:attended sem duplicar o RAC." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 14 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Claim" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Claim/producao-apac-hemodialise> ;
+         fhir:Reference.reference [ fhir:value "Claim/producao-apac-hemodialise" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "B8. Produção da APAC" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Produção ligada à autorização (insurance.preAuthRef e related.claim) e ao cuidado executado (item.encounter)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus>
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-usg-abdome> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-usg-abdome" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C1. Pedido de ultrassonografia com informação insuficiente" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-usg-pendencia> ;
+         fhir:Reference.reference [ fhir:value "Task/task-regulacao-usg-pendencia" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C2. Devolução por pendência documental" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Devolução é pendência regulatória (Task on-hold), não negativa financeira." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-consulta-urologia-excluida> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-consulta-urologia-excluida" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C3. Pedido retirado após revisão" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-urologia-negada> ;
+         fhir:Reference.reference [ fhir:value "Task/task-regulacao-urologia-negada" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C4. Negativa por ausência de indicação" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Negativa com dimensão, motivo, responsável e protocolo, passível de recurso (nova Task com partOf)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/censo-leitos" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Censo de Leitos" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Situação dos leitos de um estabelecimento num instante, estratificada por especialidade de leito do CNES. Calculado a partir dos LeitoRegulado e das InternacaoRegulada." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-central-regulacao> ;
+         fhir:Reference.reference [ fhir:value "Organization/org-central-regulacao" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Complexo regulador" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 21 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/protocolo-oci-mama" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "D1. Protocolo da OCI de avaliação diagnóstica inicial de câncer de mama" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci>
+       ]
+     ], [
+       fhir:index 22 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ChargeItemDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-mama> ;
+         fhir:Reference.reference [ fhir:value "ChargeItemDefinition/regra-reembolso-oci-mama" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "D2. Regra de reembolso da OCI de câncer de mama" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci>
+       ]
+     ], [
+       fhir:index 23 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-oci-mama> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-oci-mama" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "D3. Pedido da OCI" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 24 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Appointment" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-oci-mama> ;
+         fhir:Reference.reference [ fhir:value "Appointment/appt-oci-mama" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "D4. Agendamento da OCI, realizado" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao>
+       ]
+     ], [
+       fhir:index 25 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-oci-mama> ;
+         fhir:Reference.reference [ fhir:value "Task/task-regulacao-oci-mama" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "D5. Regulação da OCI, com prazo alvo do protocolo" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 26 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-oci-mama> ;
+         fhir:Reference.reference [ fhir:value "Encounter/enc-oci-mama" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "D6. Consulta da OCI realizada" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 27 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Claim" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Claim/producao-oci-mama> ;
+         fhir:Reference.reference [ fhir:value "Claim/producao-oci-mama" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "D7. Produção da OCI" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Um item com o código da OCI e os componentes realizados em item.detail. A RegraReembolsoOCI avalia este Claim." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus>
+       ]
+     ], [
+       fhir:index 28 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/data-entrada-fila> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/data-entrada-fila" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Data de Entrada na Fila" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Momento em que o pedido se tornou elegível e entrou na fila regulada. Preservada quando uma reserva expira e a tarefa volta à fila, ou quando uma nova etapa substitui a anterior (seção 7.3 do guia do GT). Difere de ServiceRequest.authoredOn (autoria do pedido) e de Task.authoredOn (criação da etapa)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Condition/condicao-drc> ;
+         fhir:Reference.reference [ fhir:value "Condition/condicao-drc" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Doença renal crônica" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 30 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-ic> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/protocolo-oci-ic" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "E1. Protocolo da OCI de insuficiência cardíaca" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci>
+       ]
+     ], [
+       fhir:index 31 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ChargeItemDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-ic> ;
+         fhir:Reference.reference [ fhir:value "ChargeItemDefinition/regra-reembolso-oci-ic" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "E2. Regra de reembolso da OCI de insuficiência cardíaca" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci>
+       ]
+     ], [
+       fhir:index 32 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-executante> ;
+         fhir:Reference.reference [ fhir:value "Organization/org-executante" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Estabelecimento executante" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 33 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-origem-enfermaria> ;
+         fhir:Reference.reference [ fhir:value "Encounter/enc-origem-enfermaria" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F1a. Internação na origem, encerrada por transferência" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada>
+       ]
+     ], [
+       fhir:index 34 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-leito-uti> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-leito-uti" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F1b. Pedido de leito de UTI (transferência externa)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "O pedido nasce na internação de origem (encounter) e pede leito complementar de UTI." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 35 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/transporte-uti> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/transporte-uti" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F1c. Transporte sanitário avançado" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/transporte-sanitario" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/transporte-sanitario>
+       ]
+     ], [
+       fhir:index 36 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-destino-uti> ;
+         fhir:Reference.reference [ fhir:value "Encounter/enc-destino-uti" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F1d. Internação na UTI de destino" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "dischargeDisposition 07 Permanência: o BR-Core exige o elemento antes da alta." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada>
+       ]
+     ], [
+       fhir:index 37 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-leito-uti> ;
+         fhir:Reference.reference [ fhir:value "Task/task-leito-uti" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F1e. Regulação de leito concluída: paciente internado no destino" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 38 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Claim" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Claim/claim-aih-icc> ;
+         fhir:Reference.reference [ fhir:value "Claim/claim-aih-icc" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F1f. Solicitação de AIH" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/autorizacao-previa-sus" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/autorizacao-previa-sus>
+       ]
+     ], [
+       fhir:index 39 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ClaimResponse" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ClaimResponse/claimresponse-aih-icc> ;
+         fhir:Reference.reference [ fhir:value "ClaimResponse/claimresponse-aih-icc" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F1g. AIH emitida" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus>
+       ]
+     ], [
+       fhir:index 40 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-leito-clinico> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-leito-clinico" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F2a. Pedido de leito clínico" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 41 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-reserva-clinico> ;
+         fhir:Reference.reference [ fhir:value "Encounter/enc-reserva-clinico" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F2b. Reserva de leito clínico" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada>
+       ]
+     ], [
+       fhir:index 42 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-leito-clinico> ;
+         fhir:Reference.reference [ fhir:value "Task/task-leito-clinico" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F2c. Leito reservado" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "restriction.period.end marca o fim da reserva; se expirar, a tarefa volta a aguardando-leito sem perder a data de entrada." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 43 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-vaga-zero> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/sr-vaga-zero" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F3a. Pedido de leito de UTI a partir da UPA" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+       ]
+     ], [
+       fhir:index 44 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Task/task-vaga-zero> ;
+         fhir:Reference.reference [ fhir:value "Task/task-vaga-zero" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F3b. Vaga zero" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Sem leito compatível disponível e com risco iminente, o regulador encaminha ao hospital de referência. A decisão tem responsável, motivo e justificativa." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+       ]
+     ], [
+       fhir:index 45 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-alta-uti> ;
+         fhir:Reference.reference [ fhir:value "Encounter/enc-alta-uti" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F4. Internação encerrada com alta clínica" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Após a alta, o leito-uti-02 passa a H (higienização) e depois a U (livre)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada>
+       ]
+     ], [
+       fhir:index 46 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/MeasureReport/censo-hre-20261001> ;
+         fhir:Reference.reference [ fhir:value "MeasureReport/censo-hre-20261001" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "F5. Censo do Hospital Regional Exemplo" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos>
+       ]
+     ], [
+       fhir:index 47 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-gestor-ses> ;
+         fhir:Reference.reference [ fhir:value "Organization/org-gestor-ses" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Gestor autorizador (SES)" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 48 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-hospital-destino> ;
+         fhir:Reference.reference [ fhir:value "Organization/org-hospital-destino" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hospital de destino" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 49 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Condition/condicao-icc> ;
+         fhir:Reference.reference [ fhir:value "Condition/condicao-icc" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Insuficiência cardíaca descompensada" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 50 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/internacao-regulada" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Internação Regulada" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Reserva e ocupação de leito resultante da regulação. Reserva = status planned com o leito em location.status reserved. Internação = in-progress com o leito active. Transferência interna (entre leitos do mesmo estabelecimento) é a troca de location dentro do mesmo Encounter. Transferência externa encerra este Encounter (desfecho Transferência) e abre outro no destino, regulado por nova Requisição." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 51 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Location/leito-clin-01> ;
+         fhir:Reference.reference [ fhir:value "Location/leito-clin-01" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Leito clínica geral 01 (livre, com reserva)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reserva não muda operationalStatus: o leito segue U e a reserva fica no Encounter planned." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado>
+       ]
+     ], [
+       fhir:index 52 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Location/leito-origem-01> ;
+         fhir:Reference.reference [ fhir:value "Location/leito-origem-01" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Leito clínico na origem" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado>
+       ]
+     ], [
+       fhir:index 53 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/leito-regulado" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Leito Regulado" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Leito hospitalar disponível à regulação. Tipo e especialidade seguem os domínios do CNES. A situação operacional (livre, ocupado, higienização, bloqueado) usa a tabela HL7 v2-0116, nativa de Location.operationalStatus." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 54 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Location/leito-uti-01> ;
+         fhir:Reference.reference [ fhir:value "Location/leito-uti-01" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Leito UTI adulto tipo II 01 (ocupado)" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado>
+       ]
+     ], [
+       fhir:index 55 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Location/leito-uti-02> ;
+         fhir:Reference.reference [ fhir:value "Location/leito-uti-02" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Leito UTI adulto tipo II 02 (higienização)" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado" ;
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado>
+       ]
+     ], [
+       fhir:index 56 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/local-origem> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/local-origem" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Local de Origem" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Local de onde o paciente parte no transporte sanitário. ServiceRequest R4 só tem o local de realização (locationReference), usado aqui como destino. No R5 o recurso Transport resolve isso nativamente." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 57 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Measure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Measure/censo-leitos> ;
+         fhir:Reference.reference [ fhir:value "Measure/censo-leitos" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medida do censo de leitos" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Contagem de leitos por situação, estratificada por especialidade de leito do CNES." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 58 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-joao> ;
+         fhir:Reference.reference [ fhir:value "Patient/paciente-joao" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Paciente João Souza" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 59 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+         fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Paciente Maria da Silva" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Paciente usada em todos os cenários." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 60 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/prioridade-regulatoria> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/prioridade-regulatoria" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Prioridade Regulatória" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Classe, escore e fatores componentes da prioridade clínica atribuída pela regulação. Task.priority (request-priority) só expressa urgência operacional e não comporta classe de protocolo, escore nem fatores de equidade." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 61 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-acesso-nefrologia> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/protocolo-acesso-nefrologia" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Protocolo de acesso à nefrologia (exemplo)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Semente do perfil BR Access Protocol (seção 6.1 do guia do GT). Define critérios, sem representar fila nem decisão." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 62 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/protocolo-oci" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Protocolo de Oferta de Cuidados Integrados (OCI)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Composição, obrigatoriedade dos procedimentos e prazo de conclusão de uma OCI do SUS. É artefato definicional: não representa fila, pedido nem decisão. A requisição da OCI aponta para ele em ServiceRequest.instantiatesCanonical." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 63 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/producao-sus" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Apresentação da produção ao SIA/SUS ou SIH/SUS depois da execução do cuidado. Cobre BPA-I e RAAS (sem autorização prévia) e a produção de APAC e AIH (ligada à autorização emitida). Cada item aponta para o Encounter executado." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 64 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/regra-reembolso-oci" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Regra de Reembolso de OCI" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Condições de pagamento e valor de referência de uma OCI do SUS. As condições (applicability) são avaliadas sobre o Registro de Produção SUS: procedimentos obrigatórios realizados, conclusão no prazo e habilitação do executante. Pagamento por pacote, não por procedimento isolado." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 65 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/requisicao-regulacao" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Requisição de Regulação Assistencial" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Pedido clínico persistente submetido à regulação do acesso. Registra o que é solicitado, por quê, com que prioridade e com que apoio clínico, independentemente do canal de financiamento. Substitui BRRequisicaoRegulacaoAssistencial do RIRA." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 66 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/resposta-autorizacao-sus" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Resposta de Autorização SUS (APAC/AIH)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Emissão, negativa ou crítica da APAC/AIH pelo gestor autorizador. Carrega o número e a validade da autorização. Estrutura alinhada ao perfil RespostaGuia (ClaimResponse) da ANS." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 67 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/autorizacao-previa-sus> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/autorizacao-previa-sus" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Solicitação de Autorização SUS (APAC/AIH)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Solicitação de APAC ou AIH ao gestor autorizador. Pertence à camada administrativo-financeira e NÃO substitui a Requisição nem a Tarefa de Regulação. Estrutura alinhada aos perfis Guia (Claim) da ANS, sem dependência do pacote ANS." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 68 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/tarefa-regulacao" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Tarefa de Regulação Assistencial" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Etapa de trabalho regulatório sobre uma Requisição de Regulação: regulação do acesso (qualificação, priorização, alocação e agendamento), autorização regulatória, reavaliação, recurso e contrarreferência. É onde a decisão regulatória acontece, com dimensão, resultado, motivo, responsável e protocolo. Substitui os slices de Composition.event do RIRA." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 69 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/transporte-sanitario> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/transporte-sanitario" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Transporte Sanitário" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Pedido de transporte do paciente entre estabelecimentos, vinculado à requisição de internação ou transferência." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 70 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-ubs-solicitante> ;
+         fhir:Reference.reference [ fhir:value "Organization/org-ubs-solicitante" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "UBS solicitante" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 71 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-upa> ;
+         fhir:Reference.reference [ fhir:value "Organization/org-upa" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "UPA de origem" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ] ;
+     fhir:ImplementationGuide.definition.page [
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+         fhir:Extension.valueUrl [ fhir:value "toc.html" ]
+       ] ;
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ] ;
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ] ;
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ] ;
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "index.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Início" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "fluxo.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "fluxo.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Fluxo regulatório" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "autorizacao.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "autorizacao.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Autorização na Task" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "leitos.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "leitos.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Regulação de leitos" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 4 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "mapeamento-rira.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "mapeamento-rira.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Mapeamento RIRA" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "debitos-tecnicos.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "debitos-tecnicos.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Débitos técnicos" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 6 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recomendacoes-rnds.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recomendacoes-rnds.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recomendações à RNDS" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 7 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "transicao.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transicao.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Transição e convivência" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ] ;
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 2 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 3 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 4 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 5 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 6 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 7 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 8 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
+     ], [
+       fhir:index 9 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 10 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 11 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 12 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 13 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 14 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ImplementationGuide/br.org.hsl.inspirarira.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

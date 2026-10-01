@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-consulta-nefrologia> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "sr-consulta-nefrologia"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest sr-consulta-nefrologia</b></p><a name=\"sr-consulta-nefrologia\"> </a><a name=\"hcsr-consulta-nefrologia\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-requisicao-regulacao.html\">Requisição de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao</code>/SOL-2026-000123</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0301}\">Consultas / Atendimentos / Acompanhamentos</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}\">Consulta médica em atenção especializada</span></p><p><b>subject</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-08-03 09:10:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>performerType</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCBO 225109}\">Médico nefrologista</span></p><p><b>reasonReference</b>: <a href=\"Condition-condicao-drc.html\">Condition Doença renal em estádio final</a></p></div>"
+  ] ;
+  fhir:ServiceRequest.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao" ] ;
+     fhir:Identifier.value [ fhir:value "SOL-2026-000123" ]
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "active"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0301" ] ;
+       fhir:Coding.display [ fhir:value "Consultas / Atendimentos / Acompanhamentos" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.priority [ fhir:value "routine"] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0301010072" ] ;
+       fhir:Coding.display [ fhir:value "Consulta médica em atenção especializada" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-08-03T09:10:00-03:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-ubs-solicitante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-ubs-solicitante" ]
+  ] ;
+  fhir:ServiceRequest.performerType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCBO" ] ;
+       fhir:Coding.code [ fhir:value "225109" ] ;
+       fhir:Coding.display [ fhir:value "Médico nefrologista" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Condition/condicao-drc> ;
+     fhir:Reference.reference [ fhir:value "Condition/condicao-drc" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-consulta-nefrologia.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

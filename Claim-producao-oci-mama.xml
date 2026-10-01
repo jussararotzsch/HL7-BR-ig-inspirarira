@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="producao-oci-mama"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Claim producao-oci-mama</b></p><a name="producao-oci-mama"> </a><a name="hcproducao-oci-mama"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-producao-sus.html">Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)</a></p></div><p><b>identifier</b>: <code>http://hospital-exemplo.org.br/fhir/sid/producao</code>/OCI-PROD-202609-0007</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/claim-type professional}">Professional</span></p><p><b>subType</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS apac}">apac</span></p><p><b>use</b>: Claim</p><p><b>patient</b>: <a href="Patient-paciente-maria.html">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>billablePeriod</b>: 2026-09-01 --&gt; 2026-09-30</p><p><b>created</b>: 2026-09-05 08:00:00-0300</p><p><b>insurer</b>: <a href="Organization-org-gestor-ses.html">Organization Secretaria Estadual de Saúde Exemplo</a></p><p><b>provider</b>: <a href="Organization-org-executante.html">Organization Hospital Exemplo</a></p><p><b>priority</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/processpriority normal}">Normal</span></p><p><b>referral</b>: <a href="ServiceRequest-sr-oci-mama.html">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Sequence</b></td><td><b>Diagnosis[x]</b></td></tr><tr><td style="display: none">*</td><td>1</td><td><span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10 N63}">Nódulo mamário não especificado</span></td></tr></table><h3>Insurances</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td><td><b>PreAuthRef</b></td></tr><tr><td style="display: none">*</td><td>1</td><td>true</td><td><a href="Coverage-coverage-sus-arranjo-publico.html">Coverage: status = active; type = </a></td><td>3526100000410</td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>productOrService</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0901010014}">OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</span></p><p><b>serviced</b>: 2026-08-18 --&gt; 2026-08-29</p><p><b>quantity</b>: 1</p><p><b>encounter</b>: <a href="Encounter-enc-oci-mama.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); priority = Consulta agendada; period = 2026-08-18 09:05:00-0300 --&gt; 2026-08-18 09:40:00-0300</a></p><blockquote><p><b>detail</b></p><p><b>sequence</b>: 1</p><p><b>productOrService</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}">CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</span></p></blockquote><blockquote><p><b>detail</b></p><p><b>sequence</b>: 2</p><p><b>productOrService</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0204030030}">MAMOGRAFIA</span></p></blockquote><blockquote><p><b>detail</b></p><p><b>sequence</b>: 3</p><p><b>productOrService</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0205020097}">ULTRASSONOGRAFIA MAMARIA BILATERAL</span></p></blockquote></blockquote></div>
+  </text>
+  <identifier>
+    <system value="http://hospital-exemplo.org.br/fhir/sid/producao"/>
+    <value value="OCI-PROD-202609-0007"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="professional"/>
+    </coding>
+  </type>
+  <subType>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS"/>
+      <code value="apac"/>
+    </coding>
+  </subType>
+  <use value="claim"/>
+  <patient>
+    <reference value="Patient/paciente-maria"/>
+  </patient>
+  <billablePeriod>
+    <start value="2026-09-01"/>
+    <end value="2026-09-30"/>
+  </billablePeriod>
+  <created value="2026-09-05T08:00:00-03:00"/>
+  <insurer>
+    <reference value="Organization/org-gestor-ses"/>
+  </insurer>
+  <provider>
+    <reference value="Organization/org-executante"/>
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+      <code value="normal"/>
+    </coding>
+  </priority>
+  <referral>
+    <reference value="ServiceRequest/sr-oci-mama"/>
+  </referral>
+  <diagnosis>
+    <sequence value="1"/>
+    <diagnosisCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10"/>
+        <code value="N63"/>
+        <display value="Nódulo mamário não especificado"/>
+      </coding>
+    </diagnosisCodeableConcept>
+  </diagnosis>
+  <insurance>
+    <sequence value="1"/>
+    <focal value="true"/>
+    <coverage>
+      <reference value="Coverage/coverage-sus-arranjo-publico"/>
+    </coverage>
+    <preAuthRef value="3526100000410"/>
+  </insurance>
+  <item>
+    <sequence value="1"/>
+    <productOrService>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+        <code value="0901010014"/>
+        <display value="OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA"/>
+      </coding>
+    </productOrService>
+    <servicedPeriod>
+      <start value="2026-08-18"/>
+      <end value="2026-08-29"/>
+    </servicedPeriod>
+    <quantity>
+      <value value="1"/>
+    </quantity>
+    <encounter>
+      <reference value="Encounter/enc-oci-mama"/>
+    </encounter>
+    <detail>
+      <sequence value="1"/>
+      <productOrService>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+          <code value="0301010072"/>
+          <display value="CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA"/>
+        </coding>
+      </productOrService>
+    </detail>
+    <detail>
+      <sequence value="2"/>
+      <productOrService>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+          <code value="0204030030"/>
+          <display value="MAMOGRAFIA"/>
+        </coding>
+      </productOrService>
+    </detail>
+    <detail>
+      <sequence value="3"/>
+      <productOrService>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+          <code value="0205020097"/>
+          <display value="ULTRASSONOGRAFIA MAMARIA BILATERAL"/>
+        </coding>
+      </productOrService>
+    </detail>
+  </item>
+</Claim>

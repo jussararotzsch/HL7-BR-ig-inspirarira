@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "enc-hemodialise",
+  "meta" : {
+    "profile" : ["https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Encounter enc-hemodialise</b></p><a name=\"enc-hemodialise\"> </a><a name=\"hcenc-hemodialise\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter\">br-core-encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>priority</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento 01}\">Eletivo</span></p><p><b>subject</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-hemodialise.html\">ServiceRequest Hemodiálise (máximo 3 sessões por semana)</a></p><p><b>appointment</b>: <a href=\"Appointment-appt-hemodialise.html\">Appointment: identifier = http://hospital-exemplo.org.br/fhir/sid/agendamento#AG-HD-2026-0311; status = fulfilled; serviceType = Hemodiálise (máximo 3 sessões por semana); start = 2026-10-13 07:00:00-0300; end = 2026-10-13 11:00:00-0300</a></p><p><b>period</b>: 2026-10-13 07:05:00-0300 --&gt; 2026-10-13 11:10:00-0300</p><p><b>serviceProvider</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p></div>"
+  },
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB"
+  },
+  "priority" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento",
+      "code" : "01",
+      "display" : "Eletivo"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-hemodialise"
+  }],
+  "appointment" : [{
+    "reference" : "Appointment/appt-hemodialise"
+  }],
+  "period" : {
+    "start" : "2026-10-13T07:05:00-03:00",
+    "end" : "2026-10-13T11:10:00-03:00"
+  },
+  "serviceProvider" : {
+    "reference" : "Organization/org-executante"
+  }
+}

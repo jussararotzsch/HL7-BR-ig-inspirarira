@@ -1,0 +1,125 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-vaga-zero> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "task-vaga-zero"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-vaga-zero</b></p><a name=\"task-vaga-zero\"> </a><a name=\"hctask-vaga-zero\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-vaga-zero.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>status</b>: Completed</p><p><b>statusReason</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria risco-iminente}\">risco-iminente</span></p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria vaga-zero}\">vaga-zero</span></p><p><b>intent</b>: order</p><p><b>priority</b>: STAT</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-leito}\">regulacao-leito</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-vaga-zero.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>for</b>: <a href=\"Patient-paciente-joao.html\">João Souza  Male, DoB: 1950-07-02 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-09-20 02:12:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-upa.html\">Organization UPA 24h Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><p><b>note</b>: </p><blockquote><div><p>Edema agudo de pulmão refratário, sem suporte ventilatório invasivo na UPA. Nenhum leito de UTI adulto disponível na região às 02h30. Encaminhado ao hospital de referência regional em vaga zero.</p>\n</div></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria capacidade}\">capacidade</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria indisponivel}\">indisponivel</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria decisao}\">decisao</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria aprovado}\">aprovado</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao estabelecimento-destino}\">estabelecimento-destino</span></p><p><b>value</b>: <a href=\"Organization-org-hospital-destino.html\">Organization Hospital Regional Exemplo</a></p></blockquote></div>"
+  ] ;
+  fhir:Task.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-vaga-zero> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-vaga-zero" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria" ] ;
+       fhir:Coding.code [ fhir:value "risco-iminente" ]
+     ]
+  ] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria" ] ;
+       fhir:Coding.code [ fhir:value "vaga-zero" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.priority [ fhir:value "stat"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao" ] ;
+       fhir:Coding.code [ fhir:value "regulacao-leito" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-vaga-zero> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-vaga-zero" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-joao> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-joao" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-09-20T02:12:00-03:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-upa> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-upa" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-central-regulacao> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-central-regulacao" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Edema agudo de pulmão refratário, sem suporte ventilatório invasivo na UPA. Nenhum leito de UTI adulto disponível na região às 02h30. Encaminhado ao hospital de referência regional em vaga zero." ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "capacidade" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "indisponivel" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "decisao" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "aprovado" ]
+       ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao" ] ;
+         fhir:Coding.code [ fhir:value "estabelecimento-destino" ]
+       ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-hospital-destino> ;
+       fhir:Reference.reference [ fhir:value "Organization/org-hospital-destino" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-vaga-zero.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

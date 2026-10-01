@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="leito-origem-01"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Location leito-origem-01</b></p><a name="leito-origem-01"> </a><a name="hcleito-origem-01"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-leito-regulado.html">Leito Regulado</a></p></div><p><b>identifier</b>: <code>http://hospital-exemplo.org.br/fhir/sid/leito</code>/ENF-07</p><p><b>status</b>: Active</p><p><b>operationalStatus</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v2-0116.html#v2-0116-H">bedStatus: H</a> (Housekeeping)</p><p><b>name</b>: Enfermaria, leito 07</p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoLeito 2}">CLINICO</span>, <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 32}">CARDIOLOGIA</span></p><p><b>physicalType</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/location-physical-type bd}">Bed</span></p><p><b>managingOrganization</b>: <a href="Organization-org-executante.html">Organization Hospital Exemplo</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://hospital-exemplo.org.br/fhir/sid/leito"/>
+    <value value="ENF-07"/>
+  </identifier>
+  <status value="active"/>
+  <operationalStatus>
+    <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
+    <code value="H"/>
+    <display value="Housekeeping"/>
+  </operationalStatus>
+  <name value="Enfermaria, leito 07"/>
+  <type>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoLeito"/>
+      <code value="2"/>
+      <display value="CLINICO"/>
+    </coding>
+  </type>
+  <type>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito"/>
+      <code value="32"/>
+      <display value="CARDIOLOGIA"/>
+    </coding>
+  </type>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="bd"/>
+    </coding>
+  </physicalType>
+  <managingOrganization>
+    <reference value="Organization/org-executante"/>
+  </managingOrganization>
+</Location>

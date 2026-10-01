@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-oci-mama> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "task-regulacao-oci-mama"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-regulacao-oci-mama</b></p><a name=\"task-regulacao-oci-mama\"> </a><a name=\"hctask-regulacao-oci-mama\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>instantiatesUri</b>: <a href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama|0.1.0\">http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama|0.1.0</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-oci-mama.html\">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria executado}\">executado</span></p><p><b>intent</b>: order</p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-acesso}\">regulacao-acesso</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-oci-mama.html\">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-08-11 09:05:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><h3>Restrictions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>?? --&gt; 2026-09-17</td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria pertinencia}\">pertinencia</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria pertinente}\">pertinente</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao agendamento}\">agendamento</span></p><p><b>value</b>: <a href=\"Appointment-appt-oci-mama.html\">Appointment: identifier = http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento#AG-2026-004980; status = fulfilled; serviceType = CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA; start = 2026-08-18 09:00:00-0300; end = 2026-08-18 09:30:00-0300</a></p></blockquote></div>"
+  ] ;
+  fhir:Task.instantiatesUri [ fhir:value "http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama|0.1.0"] ;
+  fhir:Task.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-oci-mama> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-oci-mama" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria" ] ;
+       fhir:Coding.code [ fhir:value "executado" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.priority [ fhir:value "urgent"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao" ] ;
+       fhir:Coding.code [ fhir:value "regulacao-acesso" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-oci-mama> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-oci-mama" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-08-11T09:05:00-03:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-ubs-solicitante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-ubs-solicitante" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-central-regulacao> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-central-regulacao" ]
+  ] ;
+  fhir:Task.restriction [
+     fhir:Task.restriction.period [
+       fhir:Period.end [ fhir:value "2026-09-17"^^xsd:date ]
+     ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "pertinencia" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "pertinente" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao" ] ;
+         fhir:Coding.code [ fhir:value "agendamento" ]
+       ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-oci-mama> ;
+       fhir:Reference.reference [ fhir:value "Appointment/appt-oci-mama" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-oci-mama.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

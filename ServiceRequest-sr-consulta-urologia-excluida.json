@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "sr-consulta-urologia-excluida",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest sr-consulta-urologia-excluida</b></p><a name=\"sr-consulta-urologia-excluida\"> </a><a name=\"hcsr-consulta-urologia-excluida\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-requisicao-regulacao.html\">Requisição de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao</code>/SOL-2026-000288</p><p><b>status</b>: Revoked</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0301}\">Consultas / Atendimentos / Acompanhamentos</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}\">Consulta médica em atenção especializada</span></p><p><b>subject</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-08-20 08:30:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>performerType</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCBO 225285}\">Médico urologista</span></p><p><b>reasonCode</b>: <span title=\"Códigos:\">Rastreamento sem sintomas</span></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao",
+    "value" : "SOL-2026-000288"
+  }],
+  "status" : "revoked",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS",
+      "code" : "0301",
+      "display" : "Consultas / Atendimentos / Acompanhamentos"
+    }]
+  }],
+  "priority" : "routine",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS",
+      "code" : "0301010072",
+      "display" : "Consulta médica em atenção especializada"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "authoredOn" : "2026-08-20T08:30:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-ubs-solicitante"
+  },
+  "performerType" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCBO",
+      "code" : "225285",
+      "display" : "Médico urologista"
+    }]
+  },
+  "reasonCode" : [{
+    "text" : "Rastreamento sem sintomas"
+  }]
+}

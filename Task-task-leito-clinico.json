@@ -1,0 +1,61 @@
+{
+  "resourceType" : "Task",
+  "id" : "task-leito-clinico",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-leito-clinico</b></p><a name=\"task-leito-clinico\"> </a><a name=\"hctask-leito-clinico\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>Data de Entrada na Fila</b>: 2026-10-01 10:05:00-0300</p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-leito-clinico.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>status</b>: In Progress</p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria leito-reservado}\">leito-reservado</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-leito}\">regulacao-leito</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-leito-clinico.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-10-01 10:05:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><h3>Restrictions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>?? --&gt; 2026-10-02 10:00:00-0300</td></tr></table><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao internacao}\">internacao</span></td><td><a href=\"Encounter-enc-reserva-clinico.html\">Encounter: status = planned; class = inpatient encounter (ActCode#IMP); priority = Eletivo; period = 2026-10-02 08:00:00-0300 --&gt; (em curso)</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/data-entrada-fila",
+    "valueDateTime" : "2026-10-01T10:05:00-03:00"
+  }],
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-leito-clinico"
+  }],
+  "status" : "in-progress",
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria",
+      "code" : "leito-reservado"
+    }]
+  },
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao",
+      "code" : "regulacao-leito"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/sr-leito-clinico"
+  },
+  "for" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "authoredOn" : "2026-10-01T10:05:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-ubs-solicitante"
+  },
+  "owner" : {
+    "reference" : "Organization/org-central-regulacao"
+  },
+  "restriction" : {
+    "period" : {
+      "end" : "2026-10-02T10:00:00-03:00"
+    }
+  },
+  "output" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao",
+        "code" : "internacao"
+      }]
+    },
+    "valueReference" : {
+      "reference" : "Encounter/enc-reserva-clinico"
+    }
+  }]
+}

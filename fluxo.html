@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Fluxo regulatório - Guia de Implementação InspiraRIRA v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação InspiraRIRA</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Brazil
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Início</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fluxo
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="fluxo.html">Fluxo regulatório</a>
+      </li>
+      <li>
+        <a href="autorizacao.html">Autorização na Task</a>
+      </li>
+      <li>
+        <a href="leitos.html">Regulação de leitos</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="mapeamento-rira.html">Mapeamento RIRA</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Débitos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="debitos-tecnicos.html">Débitos técnicos</a>
+      </li>
+      <li>
+        <a href="recomendacoes-rnds.html">Recomendações à RNDS</a>
+      </li>
+      <li>
+        <a href="transicao.html">Transição</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefatos</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Fluxo regulatório</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação InspiraRIRA - Compilação de desenvolvimento local (v0.1.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.hsl.org.br/ig/inspirarira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Fluxo regulatório</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="fluxo-regulatório">Fluxo regulatório</h1>
+
+<p>O ServiceRequest é o objeto clínico persistente. Cada etapa de trabalho é uma Task. O Appointment só é criado quando existe proposta de data, local e serviço. O Encounter comprova que o cuidado ocorreu.</p>
+
+<h2 id="passos-no-sus">Passos no SUS</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Passo</th>
+      <th>Interação</th>
+      <th>Responsável</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 Solicitar</td>
+      <td><code class="language-plaintext highlighter-rouge">POST</code> RequisicaoRegulacao com contexto clínico</td>
+      <td>APS, ambulatório, hospital</td>
+    </tr>
+    <tr>
+      <td>2 Receber</td>
+      <td>Criar TarefaRegulacao (<code class="language-plaintext highlighter-rouge">basedOn</code> e <code class="language-plaintext highlighter-rouge">focus</code> no pedido)</td>
+      <td>Complexo regulador</td>
+    </tr>
+    <tr>
+      <td>3 Qualificar</td>
+      <td>Atualizar a Task; pedir complemento se faltar informação</td>
+      <td>Regulador e solicitante</td>
+    </tr>
+    <tr>
+      <td>4 Priorizar</td>
+      <td>Extensão <code class="language-plaintext highlighter-rouge">prioridadeRegulatoria</code>, <code class="language-plaintext highlighter-rouge">restriction.period</code> (prazo alvo), <code class="language-plaintext highlighter-rouge">dataEntradaFila</code></td>
+      <td>Regulador ou protocolo</td>
+    </tr>
+    <tr>
+      <td>5 Rotear e alocar</td>
+      <td>Pesquisar HealthcareService, Schedule, Slot</td>
+      <td>Central e prestador</td>
+    </tr>
+    <tr>
+      <td>6 Agendar</td>
+      <td>Criar AgendamentoRegulacao; Task <code class="language-plaintext highlighter-rouge">output</code> aponta para ele</td>
+      <td>Central, unidade ou cidadão</td>
+    </tr>
+    <tr>
+      <td>7 Autorizar</td>
+      <td>Task <code class="language-plaintext highlighter-rouge">code = autorizacao</code>; se exigido, Claim/ClaimResponse APAC ou AIH</td>
+      <td>Gestor autorizador</td>
+    </tr>
+    <tr>
+      <td>8 Executar</td>
+      <td>Encounter e Procedure</td>
+      <td>Executante</td>
+    </tr>
+    <tr>
+      <td>9 Registrar produção</td>
+      <td>ProducaoSUS (BPA-I, RAAS, APAC, AIH) ligado ao Encounter</td>
+      <td>Executante</td>
+    </tr>
+    <tr>
+      <td>10 Contrarreferir</td>
+      <td>Communication ou DocumentReference; Task <code class="language-plaintext highlighter-rouge">code = contrarreferencia</code></td>
+      <td>Executante</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="estados">Estados</h2>
+
+<p><code class="language-plaintext highlighter-rouge">ServiceRequest.status</code> controla só a vigência clínica. Ele NÃO DEVE receber códigos como “na fila” ou “agendado”.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Situação</th>
+      <th>ServiceRequest.status</th>
+      <th>Task.status</th>
+      <th>Task.businessStatus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pedido recebido</td>
+      <td>active</td>
+      <td>received</td>
+      <td>recebido</td>
+    </tr>
+    <tr>
+      <td>Em qualificação</td>
+      <td>active</td>
+      <td>in-progress</td>
+      <td>qualificacao</td>
+    </tr>
+    <tr>
+      <td>Aguardando complemento</td>
+      <td>active</td>
+      <td>on-hold</td>
+      <td>pendencia-documental</td>
+    </tr>
+    <tr>
+      <td>Elegível, aguardando oferta</td>
+      <td>active</td>
+      <td>ready</td>
+      <td>fila-elegivel</td>
+    </tr>
+    <tr>
+      <td>Oferta em negociação</td>
+      <td>active</td>
+      <td>in-progress</td>
+      <td>oferta-proposta</td>
+    </tr>
+    <tr>
+      <td>Agendado</td>
+      <td>active</td>
+      <td>completed</td>
+      <td>agendado (+ Appointment booked)</td>
+    </tr>
+    <tr>
+      <td>Autorização em análise</td>
+      <td>active</td>
+      <td>in-progress</td>
+      <td>autorizacao-em-analise</td>
+    </tr>
+    <tr>
+      <td>Autorizado</td>
+      <td>active</td>
+      <td>completed</td>
+      <td>autorizado</td>
+    </tr>
+    <tr>
+      <td>Autorização negada</td>
+      <td>active ou revoked</td>
+      <td>rejected</td>
+      <td>autorizacao-negada</td>
+    </tr>
+    <tr>
+      <td>Pedido clínico suspenso</td>
+      <td>on-hold</td>
+      <td>on-hold</td>
+      <td>suspensao-clinica</td>
+    </tr>
+    <tr>
+      <td>Sem indicação após revisão</td>
+      <td>revoked</td>
+      <td>rejected</td>
+      <td>cancelado-clinicamente</td>
+    </tr>
+    <tr>
+      <td>Executado</td>
+      <td>completed</td>
+      <td>completed</td>
+      <td>executado (+ Encounter)</td>
+    </tr>
+    <tr>
+      <td>Falha operacional recuperável</td>
+      <td>active</td>
+      <td>failed</td>
+      <td>reprocessamento</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fila">Fila</h2>
+
+<p>A fila é uma visão calculada das Tasks com <code class="language-plaintext highlighter-rouge">status = ready</code> e <code class="language-plaintext highlighter-rouge">businessStatus = fila-elegivel</code>, filtradas por serviço, território e requisitos. A ordenação usa prioridade clínica, prazo alvo, risco da espera, fragilidade, barreiras e data de entrada. A posição nunca é gravada.</p>
+
+<p>Quando surge uma vaga, uma transação reserva o Slot, atualiza a Task e cria o Appointment. Se a reserva expira ou o paciente falta, a Task volta à fila e a extensão <code class="language-plaintext highlighter-rouge">dataEntradaFila</code> preserva a data original. O <a href="Task-task-regulacao-consulta.html">cenário A</a> mostra uma falta seguida de reagendamento sem reiniciar o pedido.</p>
+
+<h2 id="invariantes">Invariantes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chave</th>
+      <th>Regra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rr-1</td>
+      <td>Pedido regulado tem indicação clínica (reasonCode ou reasonReference)</td>
+    </tr>
+    <tr>
+      <td>tr-1</td>
+      <td>Task rejeitada tem statusReason e ao menos uma dimensão em output</td>
+    </tr>
+    <tr>
+      <td>tr-2</td>
+      <td>Task com businessStatus <code class="language-plaintext highlighter-rouge">agendado</code> aponta o Appointment em output</td>
+    </tr>
+    <tr>
+      <td>tr-3</td>
+      <td>Task de autorização concluída ou rejeitada registra a decisão (<code class="language-plaintext highlighter-rouge">output.type = decisao</code>)</td>
+    </tr>
+    <tr>
+      <td>ag-1</td>
+      <td>Agendamento tem o paciente como participante</td>
+    </tr>
+    <tr>
+      <td>ra-1</td>
+      <td>Autorização emitida tem número (preAuthRef) e validade (preAuthPeriod)</td>
+    </tr>
+    <tr>
+      <td>pr-1</td>
+      <td>Produção de APAC/AIH informa o número da autorização</td>
+    </tr>
+    <tr>
+      <td>pr-2</td>
+      <td>Item de OCI detalha os procedimentos componentes</td>
+    </tr>
+    <tr>
+      <td>tr-4</td>
+      <td>Vaga zero tem motivo e justificativa</td>
+    </tr>
+    <tr>
+      <td>tr-5</td>
+      <td>Task com leito reservado aponta a InternacaoRegulada</td>
+    </tr>
+    <tr>
+      <td>in-1</td>
+      <td>Reserva tem leito com location.status reserved</td>
+    </tr>
+    <tr>
+      <td>in-2</td>
+      <td>Internação em curso tem exatamente um leito ativo</td>
+    </tr>
+    <tr>
+      <td>in-3</td>
+      <td>Internação encerrada informa o desfecho</td>
+    </tr>
+    <tr>
+      <td>oci-1</td>
+      <td>Protocolo da OCI declara o código SIGTAP da oferta</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hospitalsiriolibanes.org.br">Hospital Sírio-Libanês</a>.  Package br.org.hsl.inspirarira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 1, 2026 16:52-0300">2026-10-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="condicao-icc"/>
+  <meta>
+    <profile value="https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-condition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Condition condicao-icc</b></p><a name="condicao-icc"> </a><a name="hccondicao-icc"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-condition">BRCoreCondition</a></p></div><p><b>clinicalStatus</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10 I50.0}">Insuficiência cardíaca congestiva</span></p><p><b>subject</b>: <a href="Patient-paciente-joao.html">João Souza  Male, DoB: 1950-07-02 ( Health Card Number (use: official, ))</a></p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10"/>
+      <code value="I50.0"/>
+      <display value="Insuficiência cardíaca congestiva"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/paciente-joao"/>
+  </subject>
+</Condition>

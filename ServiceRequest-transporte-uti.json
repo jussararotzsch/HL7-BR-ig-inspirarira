@@ -1,0 +1,50 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "transporte-uti",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/transporte-sanitario"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest transporte-uti</b></p><a name=\"transporte-uti\"> </a><a name=\"hctransporte-uti\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-transporte-sanitario.html\">Transporte Sanitário</a></p></div><p><b>Local de Origem</b>: <a href=\"Location-leito-origem-01.html\">Location Enfermaria, leito 07</a></p><p><b>identifier</b>: <code>http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/transporte</code>/TR-SAN-2026-0412</p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-leito-uti.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0303}\">Tratamentos clínicos (outras especialidades)</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Códigos:\">Transporte sanitário com suporte avançado</span></p><p><b>subject</b>: <a href=\"Patient-paciente-joao.html\">João Souza  Male, DoB: 1950-07-02 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>occurrence</b>: 2026-10-01 15:00:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><p><b>locationReference</b>: <a href=\"Location-leito-uti-01.html\">Location UTI Adulto, leito 01</a></p><p><b>reasonReference</b>: <a href=\"Condition-condicao-icc.html\">Condition Insuficiência cardíaca congestiva</a></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/local-origem",
+    "valueReference" : {
+      "reference" : "Location/leito-origem-01"
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/transporte",
+    "value" : "TR-SAN-2026-0412"
+  }],
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-leito-uti"
+  }],
+  "status" : "completed",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS",
+      "code" : "0303",
+      "display" : "Tratamentos clínicos (outras especialidades)"
+    }]
+  }],
+  "priority" : "urgent",
+  "code" : {
+    "text" : "Transporte sanitário com suporte avançado"
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-joao"
+  },
+  "occurrenceDateTime" : "2026-10-01T15:00:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-central-regulacao"
+  },
+  "locationReference" : [{
+    "reference" : "Location/leito-uti-01"
+  }],
+  "reasonReference" : [{
+    "reference" : "Condition/condicao-icc"
+  }]
+}

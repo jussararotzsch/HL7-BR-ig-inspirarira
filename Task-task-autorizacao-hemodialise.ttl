@@ -1,0 +1,136 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-autorizacao-hemodialise> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "task-autorizacao-hemodialise"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-autorizacao-hemodialise</b></p><a name=\"task-autorizacao-hemodialise\"> </a><a name=\"hctask-autorizacao-hemodialise\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/tarefa</code>/TR-2026-001540</p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-hemodialise.html\">ServiceRequest Hemodiálise (máximo 3 sessões por semana)</a></p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria autorizado}\">autorizado</span></p><p><b>intent</b>: order</p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao autorizacao}\">autorizacao</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-hemodialise.html\">ServiceRequest Hemodiálise (máximo 3 sessões por semana)</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-10-08 09:05:00-0300</p><p><b>lastModified</b>: 2026-10-09 15:30:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-gestor-ses.html\">Organization Secretaria Estadual de Saúde Exemplo</a></p><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria pertinencia}\">pertinencia</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria pertinente}\">pertinente</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria cobertura}\">cobertura</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria coberto}\">coberto</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria decisao}\">decisao</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria aprovado}\">aprovado</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao autorizacao-administrativa}\">autorizacao-administrativa</span></p><p><b>value</b>: <a href=\"ClaimResponse-claimresponse-apac-hemodialise.html\">ClaimResponse: identifier = http://ses-exemplo.saude.sp.gov.br/fhir/sid/apac#3526100000001; status = active; type = Institutional; subType = apac; use = preauthorization; created = 2026-10-09 15:30:00-0300; outcome = complete; disposition = APAC autorizada; preAuthRef = 3526100000001; preAuthPeriod = 2026-10-13 --&gt; 2027-01-12</a></p></blockquote></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/tarefa" ] ;
+     fhir:Identifier.value [ fhir:value "TR-2026-001540" ]
+  ] ;
+  fhir:Task.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-hemodialise> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-hemodialise" ]
+  ] ;
+  fhir:Task.status [ fhir:value "completed"] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria" ] ;
+       fhir:Coding.code [ fhir:value "autorizado" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.priority [ fhir:value "urgent"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao" ] ;
+       fhir:Coding.code [ fhir:value "autorizacao" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-hemodialise> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-hemodialise" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-10-08T09:05:00-03:00"^^xsd:dateTime] ;
+  fhir:Task.lastModified [ fhir:value "2026-10-09T15:30:00-03:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-executante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-executante" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-gestor-ses> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-gestor-ses" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "pertinencia" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "pertinente" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "cobertura" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "coberto" ]
+       ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "decisao" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "aprovado" ]
+       ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao" ] ;
+         fhir:Coding.code [ fhir:value "autorizacao-administrativa" ]
+       ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ClaimResponse/claimresponse-apac-hemodialise> ;
+       fhir:Reference.reference [ fhir:value "ClaimResponse/claimresponse-apac-hemodialise" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-autorizacao-hemodialise.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

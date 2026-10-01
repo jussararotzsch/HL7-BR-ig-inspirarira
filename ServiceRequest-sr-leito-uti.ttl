@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-leito-uti> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "sr-leito-uti"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest sr-leito-uti</b></p><a name=\"sr-leito-uti\"> </a><a name=\"hcsr-leito-uti\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-requisicao-regulacao.html\">Requisição de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://hospital-exemplo.org.br/fhir/sid/solicitacao</code>/SOL-LEITO-2026-0091</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0303}\">Tratamentos clínicos (outras especialidades)</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0303060212}\">TRATAMENTO DE INSUFICIENCIA CARDIACA</span></p><p><b>subject</b>: <a href=\"Patient-paciente-joao.html\">João Souza  Male, DoB: 1950-07-02 ( Health Card Number (use: official, ))</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-origem-enfermaria.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); priority = Urgência; period = 2026-10-01 06:00:00-0300 --&gt; 2026-10-01 15:40:00-0300</a></p><p><b>authoredOn</b>: 2026-10-01 09:00:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p><p><b>locationCode</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 75}\">UTI ADULTO - TIPO II</span></p><p><b>reasonReference</b>: <a href=\"Condition-condicao-icc.html\">Condition Insuficiência cardíaca congestiva</a></p></div>"
+  ] ;
+  fhir:ServiceRequest.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://hospital-exemplo.org.br/fhir/sid/solicitacao" ] ;
+     fhir:Identifier.value [ fhir:value "SOL-LEITO-2026-0091" ]
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "completed"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0303" ] ;
+       fhir:Coding.display [ fhir:value "Tratamentos clínicos (outras especialidades)" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.priority [ fhir:value "urgent"] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0303060212" ] ;
+       fhir:Coding.display [ fhir:value "TRATAMENTO DE INSUFICIENCIA CARDIACA" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-joao> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-joao" ]
+  ] ;
+  fhir:ServiceRequest.encounter [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-origem-enfermaria> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-origem-enfermaria" ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-10-01T09:00:00-03:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-executante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-executante" ]
+  ] ;
+  fhir:ServiceRequest.locationCode [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito" ] ;
+       fhir:Coding.code [ fhir:value "75" ] ;
+       fhir:Coding.display [ fhir:value "UTI ADULTO - TIPO II" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Condition/condicao-icc> ;
+     fhir:Reference.reference [ fhir:value "Condition/condicao-icc" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-leito-uti.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

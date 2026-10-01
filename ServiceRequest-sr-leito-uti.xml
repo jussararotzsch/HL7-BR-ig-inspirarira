@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="sr-leito-uti"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: ServiceRequest sr-leito-uti</b></p><a name="sr-leito-uti"> </a><a name="hcsr-leito-uti"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-requisicao-regulacao.html">Requisição de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://hospital-exemplo.org.br/fhir/sid/solicitacao</code>/SOL-LEITO-2026-0091</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0303}">Tratamentos clínicos (outras especialidades)</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0303060212}">TRATAMENTO DE INSUFICIENCIA CARDIACA</span></p><p><b>subject</b>: <a href="Patient-paciente-joao.html">João Souza  Male, DoB: 1950-07-02 ( Health Card Number (use: official, ))</a></p><p><b>encounter</b>: <a href="Encounter-enc-origem-enfermaria.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); priority = Urgência; period = 2026-10-01 06:00:00-0300 --&gt; 2026-10-01 15:40:00-0300</a></p><p><b>authoredOn</b>: 2026-10-01 09:00:00-0300</p><p><b>requester</b>: <a href="Organization-org-executante.html">Organization Hospital Exemplo</a></p><p><b>locationCode</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 75}">UTI ADULTO - TIPO II</span></p><p><b>reasonReference</b>: <a href="Condition-condicao-icc.html">Condition Insuficiência cardíaca congestiva</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://hospital-exemplo.org.br/fhir/sid/solicitacao"/>
+    <value value="SOL-LEITO-2026-0091"/>
+  </identifier>
+  <status value="completed"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS"/>
+      <code value="0303"/>
+      <display value="Tratamentos clínicos (outras especialidades)"/>
+    </coding>
+  </category>
+  <priority value="urgent"/>
+  <code>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+      <code value="0303060212"/>
+      <display value="TRATAMENTO DE INSUFICIENCIA CARDIACA"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/paciente-joao"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/enc-origem-enfermaria"/>
+  </encounter>
+  <authoredOn value="2026-10-01T09:00:00-03:00"/>
+  <requester>
+    <reference value="Organization/org-executante"/>
+  </requester>
+  <locationCode>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito"/>
+      <code value="75"/>
+      <display value="UTI ADULTO - TIPO II"/>
+    </coding>
+  </locationCode>
+  <reasonReference>
+    <reference value="Condition/condicao-icc"/>
+  </reasonReference>
+</ServiceRequest>

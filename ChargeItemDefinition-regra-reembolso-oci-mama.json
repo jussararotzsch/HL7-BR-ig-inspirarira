@@ -1,0 +1,66 @@
+{
+  "resourceType" : "ChargeItemDefinition",
+  "id" : "regra-reembolso-oci-mama",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ChargeItemDefinition regra-reembolso-oci-mama</b></p><a name=\"regra-reembolso-oci-mama\"> </a><a name=\"hcregra-reembolso-oci-mama\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-regra-reembolso-oci.html\">Regra de Reembolso de OCI</a></p></div><p><b>url</b>: <a href=\"ChargeItemDefinition-regra-reembolso-oci-mama.html\">ChargeItemDefinition Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama</a></p><p><b>version</b>: 0.1.0</p><p><b>title</b>: Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama</p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2026-10-01 16:52:20-0300</p><p><b>publisher</b>: Hospital Sírio-Libanês</p><p><b>contact</b>: Hospital Sírio-Libanês: <a href=\"https://www.hospitalsiriolibanes.org.br\">https://www.hospitalsiriolibanes.org.br</a></p><p><b>jurisdiction</b>: <span title=\"Códigos:{urn:iso:std:iso:3166 BR}\">Brazil</span></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0901010014}\">OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</span></p><blockquote><p><b>applicability</b></p><p><b>description</b>: Procedimentos obrigatórios realizados: consulta especializada e mamografia.</p><p><b>language</b>: text/fhirpath</p><p><b>expression</b>: Claim.item.detail.productOrService.coding.where(code = '0301010072').exists() and Claim.item.detail.productOrService.coding.where(code = '0204030030').exists()</p></blockquote><blockquote><p><b>applicability</b></p><p><b>description</b>: OCI concluída no prazo: todos os atendimentos em até 30 dias do primeiro.</p><p><b>language</b>: text/fhirpath</p><p><b>expression</b>: Claim.item.servicedPeriod.exists() and (Claim.item.servicedPeriod.start + 30 days) &gt;= Claim.item.servicedPeriod.end</p></blockquote><blockquote><p><b>applicability</b></p><p><b>description</b>: Produção vinculada a requisição regulada e ao cuidado executado.</p><p><b>language</b>: text/fhirpath</p><p><b>expression</b>: Claim.referral.exists() and Claim.item.encounter.exists()</p></blockquote><blockquote><p><b>propertyGroup</b></p><h3>PriceComponents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>base price</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0901010014}\">OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</span></td></tr></table></blockquote></div>"
+  },
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-mama",
+  "version" : "0.1.0",
+  "title" : "Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-01T16:52:20-03:00",
+  "publisher" : "Hospital Sírio-Libanês",
+  "contact" : [{
+    "name" : "Hospital Sírio-Libanês",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.hospitalsiriolibanes.org.br"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR",
+      "display" : "Brazil"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS",
+      "code" : "0901010014",
+      "display" : "OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA"
+    }]
+  },
+  "applicability" : [{
+    "description" : "Procedimentos obrigatórios realizados: consulta especializada e mamografia.",
+    "language" : "text/fhirpath",
+    "expression" : "Claim.item.detail.productOrService.coding.where(code = '0301010072').exists() and Claim.item.detail.productOrService.coding.where(code = '0204030030').exists()"
+  },
+  {
+    "description" : "OCI concluída no prazo: todos os atendimentos em até 30 dias do primeiro.",
+    "language" : "text/fhirpath",
+    "expression" : "Claim.item.servicedPeriod.exists() and (Claim.item.servicedPeriod.start + 30 days) >= Claim.item.servicedPeriod.end"
+  },
+  {
+    "description" : "Produção vinculada a requisição regulada e ao cuidado executado.",
+    "language" : "text/fhirpath",
+    "expression" : "Claim.referral.exists() and Claim.item.encounter.exists()"
+  }],
+  "propertyGroup" : [{
+    "priceComponent" : [{
+      "type" : "base",
+      "code" : {
+        "coding" : [{
+          "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS",
+          "code" : "0901010014",
+          "display" : "OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA"
+        }]
+      }
+    }]
+  }]
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="task-leito-uti"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Task task-leito-uti</b></p><a name="task-leito-uti"> </a><a name="hctask-leito-uti"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-tarefa-regulacao.html">Tarefa de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/tarefa</code>/TR-LEITO-2026-0091</p><p><b>basedOn</b>: <a href="ServiceRequest-sr-leito-uti.html">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria internado}">internado</span></p><p><b>intent</b>: order</p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-leito}">regulacao-leito</span></p><p><b>focus</b>: <a href="ServiceRequest-sr-leito-uti.html">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>for</b>: <a href="Patient-paciente-joao.html">João Souza  Male, DoB: 1950-07-02 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-10-01 09:05:00-0300</p><p><b>lastModified</b>: 2026-10-01 16:15:00-0300</p><p><b>requester</b>: <a href="Organization-org-executante.html">Organization Hospital Exemplo</a></p><p><b>owner</b>: <a href="Organization-org-central-regulacao.html">Organization Central de Regulação Ambulatorial Exemplo</a></p><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria pertinencia}">pertinencia</span></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria pertinente}">pertinente</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria destino}">destino</span></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria aceito}">aceito</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria capacidade}">capacidade</span></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria vaga-disponivel}">vaga-disponivel</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao internacao}">internacao</span></p><p><b>value</b>: <a href="Encounter-enc-destino-uti.html">Encounter: status = in-progress; class = inpatient encounter (ActCode#IMP); priority = Urgência; period = 2026-10-01 16:10:00-0300 --&gt; (em curso)</a></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao transporte}">transporte</span></p><p><b>value</b>: <a href="ServiceRequest-transporte-uti.html">ServiceRequest </a></p></blockquote></div>
+  </text>
+  <identifier>
+    <system value="http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/tarefa"/>
+    <value value="TR-LEITO-2026-0091"/>
+  </identifier>
+  <basedOn>
+    <reference value="ServiceRequest/sr-leito-uti"/>
+  </basedOn>
+  <status value="completed"/>
+  <businessStatus>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria"/>
+      <code value="internado"/>
+    </coding>
+  </businessStatus>
+  <intent value="order"/>
+  <priority value="urgent"/>
+  <code>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao"/>
+      <code value="regulacao-leito"/>
+    </coding>
+  </code>
+  <focus>
+    <reference value="ServiceRequest/sr-leito-uti"/>
+  </focus>
+  <for>
+    <reference value="Patient/paciente-joao"/>
+  </for>
+  <authoredOn value="2026-10-01T09:05:00-03:00"/>
+  <lastModified value="2026-10-01T16:15:00-03:00"/>
+  <requester>
+    <reference value="Organization/org-executante"/>
+  </requester>
+  <owner>
+    <reference value="Organization/org-central-regulacao"/>
+  </owner>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria"/>
+        <code value="pertinencia"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria"/>
+        <code value="pertinente"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria"/>
+        <code value="destino"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria"/>
+        <code value="aceito"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria"/>
+        <code value="capacidade"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria"/>
+        <code value="vaga-disponivel"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao"/>
+        <code value="internacao"/>
+      </coding>
+    </type>
+    <valueReference>
+      <reference value="Encounter/enc-destino-uti"/>
+    </valueReference>
+  </output>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao"/>
+        <code value="transporte"/>
+      </coding>
+    </type>
+    <valueReference>
+      <reference value="ServiceRequest/transporte-uti"/>
+    </valueReference>
+  </output>
+</Task>

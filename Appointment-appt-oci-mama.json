@@ -1,0 +1,37 @@
+{
+  "resourceType" : "Appointment",
+  "id" : "appt-oci-mama",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Appointment appt-oci-mama</b></p><a name=\"appt-oci-mama\"> </a><a name=\"hcappt-oci-mama\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-agendamento-regulacao.html\">Agendamento de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento</code>/AG-2026-004980</p><p><b>status</b>: Fulfilled</p><p><b>serviceType</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}\">CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</span></p><p><b>supportingInformation</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><p><b>start</b>: 2026-08-18 09:00:00-0300</p><p><b>end</b>: 2026-08-18 09:30:00-0300</p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-oci-mama.html\">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></td><td>Accepted</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento",
+    "value" : "AG-2026-004980"
+  }],
+  "status" : "fulfilled",
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS",
+      "code" : "0301010072",
+      "display" : "CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA"
+    }]
+  }],
+  "supportingInformation" : [{
+    "reference" : "Organization/org-central-regulacao"
+  }],
+  "start" : "2026-08-18T09:00:00-03:00",
+  "end" : "2026-08-18T09:30:00-03:00",
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-oci-mama"
+  }],
+  "participant" : [{
+    "actor" : {
+      "reference" : "Patient/paciente-maria"
+    },
+    "status" : "accepted"
+  }]
+}

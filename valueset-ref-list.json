@@ -1,0 +1,16 @@
+{
+  "codeSystems" : [{
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0116",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSBedStatus",
+    "title" : "hl7VS-bedStatus",
+    "description" : "Value Set of codes that specify the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0116"],
+    "oids" : ["2.16.840.1.113883.21.51"],
+    "sources" : ["2.16.840.1.113883.21.51"],
+    "uses" : {
+    },
+    "StructureDefinition-leito-regulado.html" : "Leito Regulado"
+  }]
+}

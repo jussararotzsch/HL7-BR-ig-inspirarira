@@ -1,0 +1,42 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "sr-usg-abdome",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest sr-usg-abdome</b></p><a name=\"sr-usg-abdome\"> </a><a name=\"hcsr-usg-abdome\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-requisicao-regulacao.html\">Requisição de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao</code>/SOL-2026-000301</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0205}\">Diagnóstico por ultrasonografia</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0205020046}\">Ultrassonografia de abdomen total</span></p><p><b>subject</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-09-10 10:00:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>reasonCode</b>: <span title=\"Códigos:\">Dor abdominal a esclarecer</span></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://ubs-exemplo.saude.sp.gov.br/fhir/sid/solicitacao",
+    "value" : "SOL-2026-000301"
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS",
+      "code" : "0205",
+      "display" : "Diagnóstico por ultrasonografia"
+    }]
+  }],
+  "priority" : "routine",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS",
+      "code" : "0205020046",
+      "display" : "Ultrassonografia de abdomen total"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "authoredOn" : "2026-09-10T10:00:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-ubs-solicitante"
+  },
+  "reasonCode" : [{
+    "text" : "Dor abdominal a esclarecer"
+  }]
+}

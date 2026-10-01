@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="leito-clin-01"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Location leito-clin-01</b></p><a name="leito-clin-01"> </a><a name="hcleito-clin-01"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-leito-regulado.html">Leito Regulado</a></p></div><p><b>identifier</b>: <code>http://hre.exemplo.gov.br/fhir/sid/leito</code>/CLM-01</p><p><b>status</b>: Active</p><p><b>operationalStatus</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v2-0116.html#v2-0116-U">bedStatus: U</a> (Unoccupied)</p><p><b>name</b>: Clínica Médica, leito 01</p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoLeito 2}">CLINICO</span>, <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 33}">CLINICA GERAL</span></p><p><b>physicalType</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/location-physical-type bd}">Bed</span></p><p><b>managingOrganization</b>: <a href="Organization-org-hospital-destino.html">Organization Hospital Regional Exemplo</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://hre.exemplo.gov.br/fhir/sid/leito"/>
+    <value value="CLM-01"/>
+  </identifier>
+  <status value="active"/>
+  <operationalStatus>
+    <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
+    <code value="U"/>
+    <display value="Unoccupied"/>
+  </operationalStatus>
+  <name value="Clínica Médica, leito 01"/>
+  <type>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoLeito"/>
+      <code value="2"/>
+      <display value="CLINICO"/>
+    </coding>
+  </type>
+  <type>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito"/>
+      <code value="33"/>
+      <display value="CLINICA GERAL"/>
+    </coding>
+  </type>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="bd"/>
+    </coding>
+  </physicalType>
+  <managingOrganization>
+    <reference value="Organization/org-hospital-destino"/>
+  </managingOrganization>
+</Location>

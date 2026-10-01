@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-leito-clinico> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "task-leito-clinico"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-leito-clinico</b></p><a name=\"task-leito-clinico\"> </a><a name=\"hctask-leito-clinico\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>Data de Entrada na Fila</b>: 2026-10-01 10:05:00-0300</p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-leito-clinico.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>status</b>: In Progress</p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria leito-reservado}\">leito-reservado</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-leito}\">regulacao-leito</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-leito-clinico.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-10-01 10:05:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><h3>Restrictions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>?? --&gt; 2026-10-02 10:00:00-0300</td></tr></table><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao internacao}\">internacao</span></td><td><a href=\"Encounter-enc-reserva-clinico.html\">Encounter: status = planned; class = inpatient encounter (ActCode#IMP); priority = Eletivo; period = 2026-10-02 08:00:00-0300 --&gt; (em curso)</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/data-entrada-fila" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2026-10-01T10:05:00-03:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Task.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-leito-clinico> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-leito-clinico" ]
+  ] ;
+  fhir:Task.status [ fhir:value "in-progress"] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria" ] ;
+       fhir:Coding.code [ fhir:value "leito-reservado" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao" ] ;
+       fhir:Coding.code [ fhir:value "regulacao-leito" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-leito-clinico> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-leito-clinico" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-10-01T10:05:00-03:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-ubs-solicitante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-ubs-solicitante" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-central-regulacao> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-central-regulacao" ]
+  ] ;
+  fhir:Task.restriction [
+     fhir:Task.restriction.period [
+       fhir:Period.end [ fhir:value "2026-10-02T10:00:00-03:00"^^xsd:dateTime ]
+     ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao" ] ;
+         fhir:Coding.code [ fhir:value "internacao" ]
+       ]
+     ] ;
+     fhir:Task.output.valueReference [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-reserva-clinico> ;
+       fhir:Reference.reference [ fhir:value "Encounter/enc-reserva-clinico" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-leito-clinico.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

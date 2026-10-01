@@ -1,0 +1,131 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Claim/producao-apac-hemodialise> a fhir:Claim ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "producao-apac-hemodialise"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Claim producao-apac-hemodialise</b></p><a name=\"producao-apac-hemodialise\"> </a><a name=\"hcproducao-apac-hemodialise\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-producao-sus.html\">Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)</a></p></div><p><b>identifier</b>: <code>http://hospital-exemplo.org.br/fhir/sid/producao</code>/APAC-PROD-202610-0042</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/claim-type institutional}\">Institutional</span></p><p><b>subType</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS apac}\">apac</span></p><p><b>use</b>: Claim</p><p><b>patient</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>billablePeriod</b>: 2026-10-01 --&gt; 2026-10-31</p><p><b>created</b>: 2026-11-03 08:00:00-0300</p><p><b>insurer</b>: <a href=\"Organization-org-gestor-ses.html\">Organization Secretaria Estadual de Saúde Exemplo</a></p><p><b>provider</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p><p><b>priority</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/processpriority normal}\">Normal</span></p><h3>Relateds</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Claim</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Claim-claim-apac-hemodialise.html\">Claim: identifier = http://hospital-exemplo.org.br/fhir/sid/laudo-apac#LAUDO-2026-7781; status = active; type = Institutional; subType = apac; use = preauthorization; created = 2026-10-08 09:00:00-0300; priority = Normal</a></td></tr></table><p><b>referral</b>: <a href=\"ServiceRequest-sr-hemodialise.html\">ServiceRequest Hemodiálise (máximo 3 sessões por semana)</a></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Sequence</b></td><td><b>Diagnosis[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10 N18.0}\">Doença renal em estádio final</span></td></tr></table><h3>Insurances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td><td><b>PreAuthRef</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td>true</td><td><a href=\"Coverage-coverage-sus-arranjo-publico.html\">Coverage: status = active; type = </a></td><td>3526100000001</td></tr></table><h3>Items</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Sequence</b></td><td><b>ProductOrService</b></td><td><b>Serviced[x]</b></td><td><b>Quantity</b></td><td><b>Encounter</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0305010107}\">Hemodiálise (máximo 3 sessões por semana)</span></td><td>2026-10-13</td><td>1</td><td><a href=\"Encounter-enc-hemodialise.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB); priority = Eletivo; period = 2026-10-13 07:05:00-0300 --&gt; 2026-10-13 11:10:00-0300</a></td></tr></table></div>"
+  ] ;
+  fhir:Claim.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://hospital-exemplo.org.br/fhir/sid/producao" ] ;
+     fhir:Identifier.value [ fhir:value "APAC-PROD-202610-0042" ]
+  ] ;
+  fhir:Claim.status [ fhir:value "active"] ;
+  fhir:Claim.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ] ;
+       fhir:Coding.code [ fhir:value "institutional" ]
+     ]
+  ] ;
+  fhir:Claim.subType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS" ] ;
+       fhir:Coding.code [ fhir:value "apac" ]
+     ]
+  ] ;
+  fhir:Claim.use [ fhir:value "claim"] ;
+  fhir:Claim.patient [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Claim.billablePeriod [
+     fhir:Period.start [ fhir:value "2026-10-01"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2026-10-31"^^xsd:date ]
+  ] ;
+  fhir:Claim.created [ fhir:value "2026-11-03T08:00:00-03:00"^^xsd:dateTime] ;
+  fhir:Claim.insurer [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-gestor-ses> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-gestor-ses" ]
+  ] ;
+  fhir:Claim.provider [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-executante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-executante" ]
+  ] ;
+  fhir:Claim.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/processpriority" ] ;
+       fhir:Coding.code [ fhir:value "normal" ]
+     ]
+  ] ;
+  fhir:Claim.related [
+     fhir:index 0 ;
+     fhir:Claim.related.claim [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Claim/claim-apac-hemodialise> ;
+       fhir:Reference.reference [ fhir:value "Claim/claim-apac-hemodialise" ]
+     ]
+  ] ;
+  fhir:Claim.referral [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-hemodialise> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-hemodialise" ]
+  ] ;
+  fhir:Claim.diagnosis [
+     fhir:index 0 ;
+     fhir:Claim.diagnosis.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.diagnosis.diagnosisCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10" ] ;
+         fhir:Coding.code [ fhir:value "N18.0" ] ;
+         fhir:Coding.display [ fhir:value "Doença renal em estádio final" ]
+       ]
+     ]
+  ] ;
+  fhir:Claim.insurance [
+     fhir:index 0 ;
+     fhir:Claim.insurance.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.insurance.focal [ fhir:value "true"^^xsd:boolean ] ;
+     fhir:Claim.insurance.coverage [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Coverage/coverage-sus-arranjo-publico> ;
+       fhir:Reference.reference [ fhir:value "Coverage/coverage-sus-arranjo-publico" ]
+     ] ;
+     fhir:Claim.insurance.preAuthRef [
+       fhir:value "3526100000001" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Claim.item [
+     fhir:index 0 ;
+     fhir:Claim.item.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.item.productOrService [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+         fhir:Coding.code [ fhir:value "0305010107" ] ;
+         fhir:Coding.display [ fhir:value "Hemodiálise (máximo 3 sessões por semana)" ]
+       ]
+     ] ;
+     fhir:Claim.item.servicedDate [ fhir:value "2026-10-13"^^xsd:date ] ;
+     fhir:Claim.item.quantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+     ] ;
+     fhir:Claim.item.encounter [
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-hemodialise> ;
+       fhir:Reference.reference [ fhir:value "Encounter/enc-hemodialise" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Claim/producao-apac-hemodialise.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

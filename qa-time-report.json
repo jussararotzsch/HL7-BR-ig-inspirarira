@@ -1,0 +1,2872 @@
+{
+  "date" : "Thu, 01 Oct, 2026 16:52:20 -0300",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-br.org.hsl.inspirarira.json",
+    "size" : 26241,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 16,
+      "length" : 15
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 22
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 78
+    },
+    {
+      "activity" : "validate",
+      "start" : 29,
+      "length" : 3994
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 104
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 249
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 3
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appt-consulta-nefrologia-falta.json",
+    "size" : 1279,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 395
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 37
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 21
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appt-consulta-nefrologia.json",
+    "size" : 1276,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 17
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appt-hemodialise.json",
+    "size" : 1100,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 12
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 22
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Appointment-appt-oci-mama.json",
+    "size" : 1022,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ChargeItemDefinition-regra-reembolso-oci-ic.json",
+    "size" : 1971,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 12
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 29,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 19
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ChargeItemDefinition-regra-reembolso-oci-mama.json",
+    "size" : 2049,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 29,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Claim-bpai-consulta-nefrologia.json",
+    "size" : 2264,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 21,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 83
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 29
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 40,
+      "length" : 46
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Claim-claim-aih-icc.json",
+    "size" : 2025,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 24
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 24
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Claim-claim-apac-hemodialise.json",
+    "size" : 2147,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 31
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Claim-producao-apac-hemodialise.json",
+    "size" : 2417,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 8
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 21
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 17
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Claim-producao-oci-mama.json",
+    "size" : 3431,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 18
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 35
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ClaimResponse-claimresponse-aih-icc.json",
+    "size" : 1195,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 14
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 17
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ClaimResponse-claimresponse-apac-hemodialise.json",
+    "size" : 1211,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 34
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 12
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 62,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-condicao-drc.json",
+    "size" : 797,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 15
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-condicao-icc.json",
+    "size" : 800,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Coverage-coverage-sus-arranjo-publico.json",
+    "size" : 308,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-alta-uti.json",
+    "size" : 1643,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 21,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 34
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 22
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-consulta-nefrologia.json",
+    "size" : 1033,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 14
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-destino-uti.json",
+    "size" : 1568,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 11
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 18
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-hemodialise.json",
+    "size" : 915,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-oci-mama.json",
+    "size" : 916,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-origem-enfermaria.json",
+    "size" : 1667,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-reserva-clinico.json",
+    "size" : 1546,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 4
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 19
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Location-leito-clin-01.json",
+    "size" : 1178,
+    "processes" : [{
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 32
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Location-leito-origem-01.json",
+    "size" : 1173,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 29
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Location-leito-uti-01.json",
+    "size" : 1183,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 27
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Location-leito-uti-02.json",
+    "size" : 1187,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 23
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Measure-censo-leitos.json",
+    "size" : 691,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 7
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 29
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 13
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/MeasureReport-censo-hre-20261001.json",
+    "size" : 4842,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 32
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 43
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 20
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-org-central-regulacao.json",
+    "size" : 756,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 30
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-org-executante.json",
+    "size" : 713,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 19
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-org-gestor-ses.json",
+    "size" : 750,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 24
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-org-hospital-destino.json",
+    "size" : 729,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 24
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-org-ubs-solicitante.json",
+    "size" : 732,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-org-upa.json",
+    "size" : 714,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-paciente-joao.json",
+    "size" : 936,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 44
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 25
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-paciente-maria.json",
+    "size" : 942,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 25
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/PlanDefinition-protocolo-acesso-nefrologia.json",
+    "size" : 731,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 12
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/PlanDefinition-protocolo-oci-ic.json",
+    "size" : 7147,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 16
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 11
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 86
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 17
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 12
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/PlanDefinition-protocolo-oci-mama.json",
+    "size" : 2805,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 5
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 35
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-consulta-nefrologia.json",
+    "size" : 1382,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 25
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-consulta-urologia-excluida.json",
+    "size" : 1381,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 23
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-hemodialise.json",
+    "size" : 1224,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 21
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-leito-clinico.json",
+    "size" : 1569,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 26
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-leito-uti.json",
+    "size" : 1473,
+    "processes" : [{
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 21
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-oci-mama.json",
+    "size" : 1426,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-usg-abdome.json",
+    "size" : 1138,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 5
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 21
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-sr-vaga-zero.json",
+    "size" : 1390,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 18
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-transporte-uti.json",
+    "size" : 1396,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-agendamento-regulacao.json",
+    "size" : 74660,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 67
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 58
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 84
+    },
+    {
+      "activity" : "validate",
+      "start" : 22,
+      "length" : 406
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 87
+    },
+    {
+      "activity" : "generate2",
+      "start" : 41,
+      "length" : 908
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 1109
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 4
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 105,
+      "length" : 2
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-autorizacao-previa-sus.json",
+    "size" : 252118,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 28
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 171
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 79
+    },
+    {
+      "activity" : "loadInfo",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 71
+    },
+    {
+      "activity" : "validate",
+      "start" : 23,
+      "length" : 652
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 33,
+      "length" : 3
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 35,
+      "length" : 407
+    },
+    {
+      "activity" : "generate2",
+      "start" : 42,
+      "length" : 876
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 626
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 14
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 105,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-censo-leitos.json",
+    "size" : 98101,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 11
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 43
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 51
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 27
+    },
+    {
+      "activity" : "validate",
+      "start" : 23,
+      "length" : 234
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 36,
+      "length" : 168
+    },
+    {
+      "activity" : "generate2",
+      "start" : 43,
+      "length" : 236
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 141
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 5
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-data-entrada-fila.json",
+    "size" : 9522,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 17
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 24,
+      "length" : 3043
+    },
+    {
+      "activity" : "generate1",
+      "start" : 36,
+      "length" : 21
+    },
+    {
+      "activity" : "generate2",
+      "start" : 43,
+      "length" : 67
+    },
+    {
+      "activity" : "generate2",
+      "start" : 49,
+      "length" : 45
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-internacao-regulada.json",
+    "size" : 125314,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 9
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 61
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 105
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 14
+    },
+    {
+      "activity" : "validate",
+      "start" : 27,
+      "length" : 410
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 36,
+      "length" : 87
+    },
+    {
+      "activity" : "generate2",
+      "start" : 43,
+      "length" : 349
+    },
+    {
+      "activity" : "generate2",
+      "start" : 49,
+      "length" : 266
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 4
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 105,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-leito-regulado.json",
+    "size" : 107754,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 9
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 36
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 63
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 28
+    },
+    {
+      "activity" : "validate",
+      "start" : 27,
+      "length" : 141
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 36,
+      "length" : 130
+    },
+    {
+      "activity" : "generate2",
+      "start" : 43,
+      "length" : 289
+    },
+    {
+      "activity" : "generate2",
+      "start" : 49,
+      "length" : 223
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 5
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-local-origem.json",
+    "size" : 9627,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 7
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 27,
+      "length" : 17
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 36,
+      "length" : 27
+    },
+    {
+      "activity" : "generate2",
+      "start" : 44,
+      "length" : 55
+    },
+    {
+      "activity" : "generate2",
+      "start" : 49,
+      "length" : 57
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-prioridade-regulatoria.json",
+    "size" : 47145,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 16
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 18
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 22
+    },
+    {
+      "activity" : "validate",
+      "start" : 27,
+      "length" : 88
+    },
+    {
+      "activity" : "generate1",
+      "start" : 36,
+      "length" : 81
+    },
+    {
+      "activity" : "generate2",
+      "start" : 44,
+      "length" : 144
+    },
+    {
+      "activity" : "generate2",
+      "start" : 49,
+      "length" : 83
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 3
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-producao-sus.json",
+    "size" : 254533,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 17
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 72
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 82
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 54
+    },
+    {
+      "activity" : "validate",
+      "start" : 27,
+      "length" : 334
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 36,
+      "length" : 386
+    },
+    {
+      "activity" : "generate2",
+      "start" : 44,
+      "length" : 620
+    },
+    {
+      "activity" : "generate2",
+      "start" : 49,
+      "length" : 363
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 13
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 105,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-protocolo-oci.json",
+    "size" : 262114,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 16
+    },
+    {
+      "activity" : "load",
+      "start" : 15,
+      "length" : 76
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 82
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 60
+    },
+    {
+      "activity" : "validate",
+      "start" : 28,
+      "length" : 414
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 37,
+      "length" : 381
+    },
+    {
+      "activity" : "generate2",
+      "start" : 44,
+      "length" : 553
+    },
+    {
+      "activity" : "generate2",
+      "start" : 50,
+      "length" : 350
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 14
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-regra-reembolso-oci.json",
+    "size" : 93899,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 27
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 31
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 19
+    },
+    {
+      "activity" : "validate",
+      "start" : 28,
+      "length" : 127
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 37,
+      "length" : 110
+    },
+    {
+      "activity" : "generate2",
+      "start" : 45,
+      "length" : 196
+    },
+    {
+      "activity" : "generate2",
+      "start" : 50,
+      "length" : 123
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 5
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 105,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-requisicao-regulacao.json",
+    "size" : 84269,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 24
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 45
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 13
+    },
+    {
+      "activity" : "validate",
+      "start" : 28,
+      "length" : 126
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 37,
+      "length" : 85
+    },
+    {
+      "activity" : "generate2",
+      "start" : 45,
+      "length" : 275
+    },
+    {
+      "activity" : "generate2",
+      "start" : 50,
+      "length" : 89
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-resposta-autorizacao-sus.json",
+    "size" : 240803,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 17
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 62
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 47
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 59
+    },
+    {
+      "activity" : "validate",
+      "start" : 28,
+      "length" : 243
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 37,
+      "length" : 270
+    },
+    {
+      "activity" : "generate2",
+      "start" : 45,
+      "length" : 488
+    },
+    {
+      "activity" : "generate2",
+      "start" : 50,
+      "length" : 357
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 12
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 105,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-tarefa-regulacao.json",
+    "size" : 122989,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 35
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 38
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 38
+    },
+    {
+      "activity" : "validate",
+      "start" : 29,
+      "length" : 145
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "processProvenanceDetails",
+      "start" : 34,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 37,
+      "length" : 157
+    },
+    {
+      "activity" : "generate2",
+      "start" : 46,
+      "length" : 360
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 150
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-transporte-sanitario.json",
+    "size" : 83423,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 16,
+      "length" : 23
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 16,
+      "length" : 75
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 12
+    },
+    {
+      "activity" : "validate",
+      "start" : 29,
+      "length" : 61
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 69
+    },
+    {
+      "activity" : "generate2",
+      "start" : 46,
+      "length" : 212
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 132
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 62,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 105,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-autorizacao-hemodialise.json",
+    "size" : 2942,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 37
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 48
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 35
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-leito-clinico.json",
+    "size" : 1603,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 19
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 29
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 13
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-leito-uti.json",
+    "size" : 3223,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 32
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 49
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 13
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-regulacao-consulta.json",
+    "size" : 4259,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 24
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 144
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-regulacao-oci-mama.json",
+    "size" : 1984,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 16
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 20
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-regulacao-urologia-negada.json",
+    "size" : 2189,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 13
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 36
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-regulacao-usg-pendencia.json",
+    "size" : 1836,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 21,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 14
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 14
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-task-vaga-zero.json",
+    "size" : 2705,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 22,
+      "length" : 17
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 30
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 1966,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 4217
+  },
+  {
+    "name" : "/input/pagecontent/autorizacao.md",
+    "size" : 3971
+  },
+  {
+    "name" : "/input/pagecontent/transicao.md",
+    "size" : 1475
+  },
+  {
+    "name" : "/input/pagecontent/debitos-tecnicos.md",
+    "size" : 4949
+  },
+  {
+    "name" : "/input/pagecontent/recomendacoes-rnds.md",
+    "size" : 3590,
+    "processes" : [{
+      "activity" : "checkConformanceResources",
+      "start" : 33,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/fluxo.md",
+    "size" : 4083,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 3916
+  },
+  {
+    "name" : "/input/pagecontent/mapeamento-rira.md",
+    "size" : 3829
+  },
+  {
+    "name" : "/input/pagecontent/leitos.md",
+    "size" : 3543
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 31
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 31049,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 1
+    }]
+  }]
+}

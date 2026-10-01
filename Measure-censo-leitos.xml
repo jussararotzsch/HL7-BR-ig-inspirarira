@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Measure xmlns="http://hl7.org/fhir">
+  <id value="censo-leitos"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Measure censo-leitos</b></p><a name="censo-leitos"> </a><a name="hccenso-leitos"> </a><p><b>url</b>: <a href="Measure-censo-leitos.html">Measure Censo de leitos</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: CensoLeitos</p><p><b>title</b>: Censo de leitos</p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2026-10-01 16:52:20-0300</p><p><b>publisher</b>: Hospital Sírio-Libanês</p><p><b>contact</b>: Hospital Sírio-Libanês: <a href="https://www.hospitalsiriolibanes.org.br">https://www.hospitalsiriolibanes.org.br</a></p><p><b>description</b>: </p><div><p>Contagem de leitos por situação, estratificada por especialidade de leito do CNES.</p>
+</div><p><b>jurisdiction</b>: <span title="Códigos:{urn:iso:std:iso:3166 BR}">Brazil</span></p><p><b>scoring</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/measure-scoring cohort}">Cohort</span></p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/measure-type structure}">Structure</span></p></div>
+  </text>
+  <url value="http://fhir.hsl.org.br/ig/inspirarira/Measure/censo-leitos"/>
+  <version value="0.1.0"/>
+  <name value="CensoLeitos"/>
+  <title value="Censo de leitos"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-01T16:52:20-03:00"/>
+  <publisher value="Hospital Sírio-Libanês"/>
+  <contact>
+    <name value="Hospital Sírio-Libanês"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.hospitalsiriolibanes.org.br"/>
+    </telecom>
+  </contact>
+  <description value="Contagem de leitos por situação, estratificada por especialidade de leito do CNES."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <scoring>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"/>
+      <code value="cohort"/>
+    </coding>
+  </scoring>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/measure-type"/>
+      <code value="structure"/>
+    </coding>
+  </type>
+</Measure>

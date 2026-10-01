@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Appointment xmlns="http://hl7.org/fhir">
+  <id value="appt-consulta-nefrologia-falta"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Appointment appt-consulta-nefrologia-falta</b></p><a name="appt-consulta-nefrologia-falta"> </a><a name="hcappt-consulta-nefrologia-falta"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-agendamento-regulacao.html">Agendamento de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento</code>/AG-2026-004410</p><p><b>status</b>: No Show</p><p><b>serviceType</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}">Consulta médica em atenção especializada</span></p><p><b>specialty</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCBO 225109}">Médico nefrologista</span></p><p><b>supportingInformation</b>: <a href="Organization-org-central-regulacao.html">Organization Central de Regulação Ambulatorial Exemplo</a></p><p><b>start</b>: 2026-09-01 08:00:00-0300</p><p><b>end</b>: 2026-09-01 08:30:00-0300</p><p><b>basedOn</b>: <a href="ServiceRequest-sr-consulta-nefrologia.html">ServiceRequest Consulta médica em atenção especializada</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style="display: none">*</td><td><a href="Patient-paciente-maria.html">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></td><td>Accepted</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento"/>
+    <value value="AG-2026-004410"/>
+  </identifier>
+  <status value="noshow"/>
+  <serviceType>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+      <code value="0301010072"/>
+      <display value="Consulta médica em atenção especializada"/>
+    </coding>
+  </serviceType>
+  <specialty>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRCBO"/>
+      <code value="225109"/>
+      <display value="Médico nefrologista"/>
+    </coding>
+  </specialty>
+  <supportingInformation>
+    <reference value="Organization/org-central-regulacao"/>
+  </supportingInformation>
+  <start value="2026-09-01T08:00:00-03:00"/>
+  <end value="2026-09-01T08:30:00-03:00"/>
+  <basedOn>
+    <reference value="ServiceRequest/sr-consulta-nefrologia"/>
+  </basedOn>
+  <participant>
+    <actor>
+      <reference value="Patient/paciente-maria"/>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+</Appointment>

@@ -1,0 +1,165 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: FiveWs Pattern Mapping","Mapping: RIM Mapping"
+"MeasureReport","MeasureReport","","","",0,*,"","","","null {[]} {[]}
+","Censo de Leitos","Situação dos leitos de um estabelecimento num instante, estratificada por especialidade de leito do CNES. Calculado a partir dos LeitoRegulado e das InternacaoRegulada.","","","","","","","","","",,,,,"",,,,"MeasureReport",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
+dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}mrp-1:Measure Reports used for data collection SHALL NOT communicate group and score information {(type != 'data-collection') or group.exists().not()}mrp-2:Stratifiers SHALL be either a single criteria or a set of criteria components {group.stratifier.stratum.all(value.exists() xor component.exists())}","Entity. Role, or Act"
+"MeasureReport.id","MeasureReport.id","","","",0,1,"","","Y","id {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","The only time that a resource does not have an id is when it is being submitted to the server using a create operation.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
+"MeasureReport.meta","MeasureReport.meta","","","",0,1,"","","Y","Meta {[]} {[]}
+","Metadados do recurso","Metadados mantidos pela infraestrutura: versão, data de atualização, perfis e etiquetas.","","","","","","","","","",,,,,"",,,,"Resource.meta",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.implicitRules","MeasureReport.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
+","Regras sob as quais o conteúdo foi criado","Referência ao conjunto de regras usadas na criação do recurso.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.language","MeasureReport.language","","","",0,1,"","","","code {[]} {[]}
+","Idioma do conteúdo","Idioma em que o recurso foi escrito.","Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).","","","","","","","","",,"preferred","A human language.","http://hl7.org/fhir/ValueSet/languages|4.0.1","",,,,"Resource.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.text","MeasureReport.text","","narrative
+htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
+","Narrativa legível do recurso","Resumo textual do recurso, para leitura humana.","Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a ""text blob"" or where text is additionally entered raw or narrated and encoded information is added later.","","","","","","","","",,,,,"",,,,"DomainResource.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.text?"
+"MeasureReport.contained","MeasureReport.contained","","inline resources
+anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
+","Recursos contidos","Recursos inline sem existência independente fora deste recurso.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+"MeasureReport.extension","MeasureReport.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.modifierExtension","MeasureReport.modifierExtension","","","",0,*,"","Y","","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.identifier","MeasureReport.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
+","Identificador do relatório","Identificador de negócio.","Typically, this is used for identifiers that can go in an HL7 V3 II data type - e.g. to identify this {{title}} outside of FHIR, where the logical URL is not possible to use.","Allows externally provided and/or usable business identifiers to be easily associated with the module.","","","","","","","",,,,,"",,,,"MeasureReport.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.identifier"
+"MeasureReport.status","MeasureReport.status","","","",1,1,"Y","Y","Y","code {[]} {[]}
+","Situação","complete, pending ou error.","This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.","","","","","","","","",,"required","The status of the measure report.","http://hl7.org/fhir/ValueSet/measure-report-status|4.0.1","",,,,"MeasureReport.status",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.status"
+"MeasureReport.type","MeasureReport.type","","","",1,1,"","","Y","code {[]} {[]}
+","Tipo de relatório","individual, subject-list, summary ou data-collection.","Data-collection reports are used only to communicate data-of-interest for a measure. They do not necessarily include all the data for a particular subject or population, but they may.","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""summary""/>","","","",,"required","The type of the measure report.","http://hl7.org/fhir/ValueSet/measure-report-type|4.0.1","",,,,"MeasureReport.type",1,1,"mrp-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.class"
+"MeasureReport.measure","MeasureReport.measure","","","",1,1,"Y","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Measure|4.0.1]]}
+","Medida","Medida calculada.","","","","","","","","","",,,,,"",,,,"MeasureReport.measure",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.what[x]"
+"MeasureReport.subject","MeasureReport.subject","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Location|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group|4.0.1]]}
+","What individual(s) the report is for","Optional subject identifying the individual or individuals the report is for.","Não usado: em R4 MeasureReport.subject não aceita Organization. O estabelecimento recenseado é o reporter.","","","","","","","","",,,,,"",,,,"MeasureReport.subject",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.subject[x]","FiveWs.subject"
+"MeasureReport.date","MeasureReport.date","","","",1,1,"Y","","Y","dateTime {[]} {[]}
+","Data de geração","Quando o relatório foi gerado.","","","","","","","","","",,,,,"",,,,"MeasureReport.date",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.recorded"
+"MeasureReport.reporter","MeasureReport.reporter","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization]]}
+","Estabelecimento recenseado (CNES)","Quem informa os dados.","","","","","","","","","",,,,,"",,,,"MeasureReport.reporter",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.source"
+"MeasureReport.period","MeasureReport.period","","","",1,1,"Y","","Y","Period {[]} {[]}
+","Período","Período a que os dados se referem.","","","","","","","","","",,,,,"",,,,"MeasureReport.period",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.improvementNotation","MeasureReport.improvementNotation","","","",0,1,"","Y","Y","CodeableConcept {[]} {[]}
+","Sentido de melhora","Se valores maiores ou menores indicam melhora.","This element is typically defined by the measure, but reproduced here to ensure the measure score can be interpreted. The element is labeled as a modifier because it changes the interpretation of the reported measure score.","","","","","","","","",,"required","Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.","http://hl7.org/fhir/ValueSet/measure-improvement-notation|4.0.1","",,,,"MeasureReport.improvementNotation",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group","MeasureReport.group","","","",1,*,"Y","","","BackboneElement {[]} {[]}
+","Grupo","Resultados por grupo.","","","","","","","","","",,,,,"",,,,"MeasureReport.group",0,*,"mrp-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.id","MeasureReport.group.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"MeasureReport.group.extension","MeasureReport.group.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.modifierExtension","MeasureReport.group.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.code","MeasureReport.group.code","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+","Código do grupo","Identificação do grupo.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.population","MeasureReport.group.population","","","",1,*,"Y","","","BackboneElement {[]} {[]}
+","Contagens","Contagens do grupo.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.population",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.population.id","MeasureReport.group.population.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"MeasureReport.group.population.extension","MeasureReport.group.population.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.population.modifierExtension","MeasureReport.group.population.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.population.code","MeasureReport.group.population.code","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
+","Tipo de contagem","O que está sendo contado.","","","","","","","","","",,"required","","https://terminologia.saude.gov.br/fhir/ValueSet/BRPopulacaoCensoLeitos","",,,,"MeasureReport.group.population.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.population.count","MeasureReport.group.population.count","","","",1,1,"Y","","","integer {[]} {[]}
+","Quantidade","Valor da contagem.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.population.count",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.population.subjectResults","MeasureReport.group.population.subjectResults","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/List|4.0.1]]}
+","Lista de sujeitos","Sujeitos incluídos na contagem.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.population.subjectResults",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.measureScore","MeasureReport.group.measureScore","","","",0,1,"","","Y","Quantity {[]} {[]}
+","Escore","Valor calculado da medida.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.measureScore",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier","MeasureReport.group.stratifier","","","",0,*,"Y","","","BackboneElement {[]} {[]}
+","Estratificação","Resultados estratificados.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.id","MeasureReport.group.stratifier.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"MeasureReport.group.stratifier.extension","MeasureReport.group.stratifier.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.modifierExtension","MeasureReport.group.stratifier.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.code","MeasureReport.group.stratifier.code","","","",0,*,"Y","","","CodeableConcept {[]} {[]}
+","Critério de estratificação","Critério usado.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.code",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum","MeasureReport.group.stratifier.stratum","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Estrato","Resultado de um estrato.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.id","MeasureReport.group.stratifier.stratum.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"MeasureReport.group.stratifier.stratum.extension","MeasureReport.group.stratifier.stratum.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.stratum.modifierExtension","MeasureReport.group.stratifier.stratum.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.stratum.value","MeasureReport.group.stratifier.stratum.value","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
+","Valor do estrato","Valor que define o estrato.","","","","","","","","","",,"required","","https://terminologia.saude.gov.br/fhir/ValueSet/BREspecialidadeLeito","",,,,"MeasureReport.group.stratifier.stratum.value",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.component","MeasureReport.group.stratifier.stratum.component","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Componente do estrato","Componente do critério.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum.component",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.component.id","MeasureReport.group.stratifier.stratum.component.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"MeasureReport.group.stratifier.stratum.component.extension","MeasureReport.group.stratifier.stratum.component.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.stratum.component.modifierExtension","MeasureReport.group.stratifier.stratum.component.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.stratum.component.code","MeasureReport.group.stratifier.stratum.component.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Código do componente","Componente.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum.component.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.component.value","MeasureReport.group.stratifier.stratum.component.value","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Valor do componente","Valor.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum.component.value",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.population","MeasureReport.group.stratifier.stratum.population","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Contagens do estrato","Contagens no estrato.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum.population",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.population.id","MeasureReport.group.stratifier.stratum.population.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"MeasureReport.group.stratifier.stratum.population.extension","MeasureReport.group.stratifier.stratum.population.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.stratum.population.modifierExtension","MeasureReport.group.stratifier.stratum.population.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MeasureReport.group.stratifier.stratum.population.code","MeasureReport.group.stratifier.stratum.population.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Tipo de contagem","O que está sendo contado.","","","","","","","","","",,"required","","https://terminologia.saude.gov.br/fhir/ValueSet/BRPopulacaoCensoLeitos","",,,,"MeasureReport.group.stratifier.stratum.population.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.population.count","MeasureReport.group.stratifier.stratum.population.count","","","",1,1,"Y","","","integer {[]} {[]}
+","Quantidade","Valor da contagem.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum.population.count",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.population.subjectResults","MeasureReport.group.stratifier.stratum.population.subjectResults","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/List|4.0.1]]}
+","Lista de sujeitos","Sujeitos do estrato.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum.population.subjectResults",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.group.stratifier.stratum.measureScore","MeasureReport.group.stratifier.stratum.measureScore","","","",0,1,"","","","Quantity {[]} {[]}
+","Escore do estrato","Valor calculado no estrato.","","","","","","","","","",,,,,"",,,,"MeasureReport.group.stratifier.stratum.measureScore",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"MeasureReport.evaluatedResource","MeasureReport.evaluatedResource","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource|4.0.1]]}
+","Recursos avaliados","Recursos usados no cálculo.","","","","","","","","","",,,,,"",,,,"MeasureReport.evaluatedResource",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"

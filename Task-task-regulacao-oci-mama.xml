@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="task-regulacao-oci-mama"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Task task-regulacao-oci-mama</b></p><a name="task-regulacao-oci-mama"> </a><a name="hctask-regulacao-oci-mama"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-tarefa-regulacao.html">Tarefa de Regulação Assistencial</a></p></div><p><b>instantiatesUri</b>: <a href="https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama|0.1.0">http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama|0.1.0</a></p><p><b>basedOn</b>: <a href="ServiceRequest-sr-oci-mama.html">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria executado}">executado</span></p><p><b>intent</b>: order</p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-acesso}">regulacao-acesso</span></p><p><b>focus</b>: <a href="ServiceRequest-sr-oci-mama.html">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><p><b>for</b>: <a href="Patient-paciente-maria.html">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-08-11 09:05:00-0300</p><p><b>requester</b>: <a href="Organization-org-ubs-solicitante.html">Organization UBS Jardim Exemplo</a></p><p><b>owner</b>: <a href="Organization-org-central-regulacao.html">Organization Central de Regulação Ambulatorial Exemplo</a></p><h3>Restrictions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td>?? --&gt; 2026-09-17</td></tr></table><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria pertinencia}">pertinencia</span></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria pertinente}">pertinente</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao agendamento}">agendamento</span></p><p><b>value</b>: <a href="Appointment-appt-oci-mama.html">Appointment: identifier = http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento#AG-2026-004980; status = fulfilled; serviceType = CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA; start = 2026-08-18 09:00:00-0300; end = 2026-08-18 09:30:00-0300</a></p></blockquote></div>
+  </text>
+  <instantiatesUri value="http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama|0.1.0"/>
+  <basedOn>
+    <reference value="ServiceRequest/sr-oci-mama"/>
+  </basedOn>
+  <status value="completed"/>
+  <businessStatus>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria"/>
+      <code value="executado"/>
+    </coding>
+  </businessStatus>
+  <intent value="order"/>
+  <priority value="urgent"/>
+  <code>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao"/>
+      <code value="regulacao-acesso"/>
+    </coding>
+  </code>
+  <focus>
+    <reference value="ServiceRequest/sr-oci-mama"/>
+  </focus>
+  <for>
+    <reference value="Patient/paciente-maria"/>
+  </for>
+  <authoredOn value="2026-08-11T09:05:00-03:00"/>
+  <requester>
+    <reference value="Organization/org-ubs-solicitante"/>
+  </requester>
+  <owner>
+    <reference value="Organization/org-central-regulacao"/>
+  </owner>
+  <restriction>
+    <period>
+      <end value="2026-09-17"/>
+    </period>
+  </restriction>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria"/>
+        <code value="pertinencia"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria"/>
+        <code value="pertinente"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao"/>
+        <code value="agendamento"/>
+      </coding>
+    </type>
+    <valueReference>
+      <reference value="Appointment/appt-oci-mama"/>
+    </valueReference>
+  </output>
+</Task>

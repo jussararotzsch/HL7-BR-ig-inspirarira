@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Débitos técnicos - Guia de Implementação InspiraRIRA v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação InspiraRIRA</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Brazil
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Início</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fluxo
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="fluxo.html">Fluxo regulatório</a>
+      </li>
+      <li>
+        <a href="autorizacao.html">Autorização na Task</a>
+      </li>
+      <li>
+        <a href="leitos.html">Regulação de leitos</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="mapeamento-rira.html">Mapeamento RIRA</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Débitos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="debitos-tecnicos.html">Débitos técnicos</a>
+      </li>
+      <li>
+        <a href="recomendacoes-rnds.html">Recomendações à RNDS</a>
+      </li>
+      <li>
+        <a href="transicao.html">Transição</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefatos</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Débitos técnicos</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação InspiraRIRA - Compilação de desenvolvimento local (v0.1.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.hsl.org.br/ig/inspirarira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Débitos técnicos</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="débitos-técnicos">Débitos técnicos</h1>
+
+<p>Achados do comparativo RIRA x BR-Core x FHIR R4 e da construção deste guia, com o tratamento dado aqui.</p>
+
+<h2 id="do-comparativo">Do comparativo</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Débito</th>
+      <th>Grau</th>
+      <th>Tratamento neste guia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Composition reimplementa por fora uma máquina de estados que o FHIR tem nativa</td>
+      <td>Alto</td>
+      <td>Composition eliminada; workflow ServiceRequest, Task, Appointment, Encounter</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Composition.event 1..1: só um estado por documento, sem histórico</td>
+      <td>Alto</td>
+      <td>Histórico nas versões de cada recurso e em Task.partOf</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Atendimento duplicado (Encounter do RAC e event:attended)</td>
+      <td>Alto</td>
+      <td>Encounter é a única evidência</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Slices <code class="language-plaintext highlighter-rouge">excluded</code> e <code class="language-plaintext highlighter-rouge">cancelled</code> sem detail obrigatório, inconsistentes com os demais</td>
+      <td>Médio</td>
+      <td>Deixam de existir</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Dois mecanismos de referência (section.entry e event.detail)</td>
+      <td>Baixo</td>
+      <td>Eliminados</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Identifiers de negócio zerados em ServiceRequest e Appointment</td>
+      <td>Alto</td>
+      <td>1..* MS</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>ValueSets próprios de status e intent</td>
+      <td>Médio</td>
+      <td>Padrões FHIR; estados de negócio em Task.businessStatus</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Appointment.created reinterpretado como “Data da Autorização”</td>
+      <td>Alto</td>
+      <td>RespostaAutorizacaoSUS.created e preAuthPeriod</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Nenhum recurso para a autorização APAC/AIH</td>
+      <td>Alto</td>
+      <td>AutorizacaoPreviaSUS e RespostaAutorizacaoSUS, alinhados a Guia/RespostaGuia da ANS</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Motivo restrito a um Condition (BRCID10Avaliado 1..1)</td>
+      <td>Médio</td>
+      <td>Faixa do BR-Core, com invariante de indicação</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Appointment.cancelationReason zerado</td>
+      <td>Médio</td>
+      <td>MS</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>reasonReference (RIRA) x reasonCode (BR-Core) no Appointment</td>
+      <td>Médio</td>
+      <td>Ambos disponíveis; reasonReference MS</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Três perfis de paciente (BRIndividuo-1.0, br-core-patient, paciente ANS)</td>
+      <td>Alto</td>
+      <td>br-core-patient em todos os perfis</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>BRIndividuo-1.0 fora do repositório, não auditável</td>
+      <td>Alto</td>
+      <td>Não usado</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Solicitante e executante restritos a estabelecimento</td>
+      <td>Médio</td>
+      <td>Faixa do BR-Core</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="encontrados-na-construção">Encontrados na construção</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Achado</th>
+      <th>Impacto</th>
+      <th>Encaminhamento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16</td>
+      <td><code class="language-plaintext highlighter-rouge">BRProcedimentosNacionais</code> no guia de terminologia enumera TUSS-22; na RNDS, <code class="language-plaintext highlighter-rouge">BRProcedimentosNacionais-1.0</code> é SIGTAP</td>
+      <td>Alto: mesmo nome, conteúdos diferentes. O BR-Core herda o de TUSS em ServiceRequest.code e Appointment.serviceType</td>
+      <td>Este guia liga SIGTAP via <code class="language-plaintext highlighter-rouge">BRTabelaSUS</code>. Levar ao GT de terminologia</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Não há ValueSet OCI de cardiologia no guia de terminologia; <code class="language-plaintext highlighter-rouge">0902010069</code> só aparece no OCL</td>
+      <td>Médio</td>
+      <td>Proposto ValueSet <code class="language-plaintext highlighter-rouge">OCICardio</code> e a união <code class="language-plaintext highlighter-rouge">BROCISUS</code> no repositório de terminologia da regulação</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><code class="language-plaintext highlighter-rouge">BRStatusRegulacaoAssistencial</code> tem só NamingSystem, sem CodeSystem publicado</td>
+      <td>Médio: o ConceptMap de transição não valida os códigos de origem</td>
+      <td>Confirmar os códigos no pacote da RNDS</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>O BR-Core declara <code class="language-plaintext highlighter-rouge">$loinc = https://loinc.org/</code>; a URL canônica é <code class="language-plaintext highlighter-rouge">http://loinc.org</code></td>
+      <td>Médio</td>
+      <td>Corrigir no BR-Core</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>O repositório do BR-Core declara id <code class="language-plaintext highlighter-rouge">br.gov.saude.br-core.fhir</code> e canonical <code class="language-plaintext highlighter-rouge">br-core.saude.gov.br</code></td>
+      <td>Bloqueante para o build com IG Publisher se o pacote não estiver publicado com esse id</td>
+      <td>Confirmar id e versão publicados</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>O BR-Core 1.3.0 local compila com erros em br-core-patient (extensões IPS BR não resolvidas sem o pacote <code class="language-plaintext highlighter-rouge">br.gov.saude.ips.fhir</code>)</td>
+      <td>Baixo aqui</td>
+      <td>Não afeta este guia, que só referencia br-core-patient</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Não existe CodeSystem nacional de instrumento de registro (APAC, AIH, BPA-I, RAAS) no guia de terminologia</td>
+      <td>Médio</td>
+      <td>Proposto <code class="language-plaintext highlighter-rouge">BRInstrumentoFinanceiroSUS</code> no repositório de terminologia da regulação, para o OCL</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>br-core-encounter exige <code class="language-plaintext highlighter-rouge">hospitalization.dischargeDisposition</code> 1..1 mesmo em internação em curso ou reserva</td>
+      <td>Médio: obriga um desfecho antes da alta</td>
+      <td>Exemplos usam BRMotivoDesfecho 07 Permanência. Propor 0..1 no BR-Core com invariante para <code class="language-plaintext highlighter-rouge">finished</code></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Domínio LEITOS do SCNES não traz a relação especialidade -&gt; tipo de leito; descrições se repetem (CARDIOLOGIA 02/32, ONCOLOGIA 12/44, AIDS 31/69 etc.)</td>
+      <td>Médio: códigos só se distinguem pelo tipo</td>
+      <td>LeitoRegulado exige tipo e especialidade. Incluir a relação como propriedade no CodeSystem quando a fonte for obtida</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Não há terminologia nacional de tipo de transporte sanitário</td>
+      <td>Baixo</td>
+      <td><code class="language-plaintext highlighter-rouge">TransporteSanitario.code</code> só em texto nos exemplos</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Em R4, MeasureReport.subject não aceita Organization</td>
+      <td>Baixo</td>
+      <td>CensoLeitos usa o estabelecimento como <code class="language-plaintext highlighter-rouge">reporter</code></td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.category</code> e <code class="language-plaintext highlighter-rouge">Appointment.serviceCategory</code> aceitam 04 Atenção Hospitalar (<code class="language-plaintext highlighter-rouge">BRModalidadeAssistencialMIRA</code>), mas o RIRA não tem estrutura hospitalar: sem leito, internação, transferência nem AIH</td>
+      <td>Alto: o modelo promete uma cobertura que não entrega; um pedido hospitalar vira um agendamento</td>
+      <td>Regulação hospitalar modelada à parte (ver <a href="leitos.html">Regulação de leitos</a>); ver <a href="mapeamento-rira.html#fora-do-escopo-do-rira-atual">Fora do escopo do RIRA atual</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hospitalsiriolibanes.org.br">Hospital Sírio-Libanês</a>.  Package br.org.hsl.inspirarira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 1, 2026 16:52-0300">2026-10-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

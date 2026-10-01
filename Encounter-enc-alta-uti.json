@@ -1,0 +1,65 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "enc-alta-uti",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Encounter enc-alta-uti</b></p><a name=\"enc-alta-uti\"> </a><a name=\"hcenc-alta-uti\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-internacao-regulada.html\">Internação Regulada</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>priority</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento 02}\">Urgência</span></p><p><b>subject</b>: <a href=\"Patient-paciente-joao.html\">João Souza  Male, DoB: 1950-07-02 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-vaga-zero.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>period</b>: 2026-09-20 03:30:00-0300 --&gt; 2026-09-28 11:00:00-0300</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Origin</b></td><td><b>AdmitSource</b></td><td><b>DischargeDisposition</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-org-upa.html\">Organization UPA 24h Exemplo</a></td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRProcedencia 12}\">Demanda referenciada</span></td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDesfecho 01}\">Alta clínica</span></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-leito-uti-02.html\">Location UTI Adulto, leito 02</a></td><td>Completed</td><td>2026-09-20 03:30:00-0300 --&gt; 2026-09-28 11:00:00-0300</td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-org-hospital-destino.html\">Organization Hospital Regional Exemplo</a></p></div>"
+  },
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "IMP"
+  },
+  "priority" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento",
+      "code" : "02",
+      "display" : "Urgência"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-joao"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-vaga-zero"
+  }],
+  "period" : {
+    "start" : "2026-09-20T03:30:00-03:00",
+    "end" : "2026-09-28T11:00:00-03:00"
+  },
+  "hospitalization" : {
+    "origin" : {
+      "reference" : "Organization/org-upa"
+    },
+    "admitSource" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRProcedencia",
+        "code" : "12",
+        "display" : "Demanda referenciada"
+      }]
+    },
+    "dischargeDisposition" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDesfecho",
+        "code" : "01",
+        "display" : "Alta clínica"
+      }]
+    }
+  },
+  "location" : [{
+    "location" : {
+      "reference" : "Location/leito-uti-02"
+    },
+    "status" : "completed",
+    "period" : {
+      "start" : "2026-09-20T03:30:00-03:00",
+      "end" : "2026-09-28T11:00:00-03:00"
+    }
+  }],
+  "serviceProvider" : {
+    "reference" : "Organization/org-hospital-destino"
+  }
+}

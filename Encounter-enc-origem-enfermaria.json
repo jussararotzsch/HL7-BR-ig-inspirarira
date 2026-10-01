@@ -1,0 +1,65 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "enc-origem-enfermaria",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Encounter enc-origem-enfermaria</b></p><a name=\"enc-origem-enfermaria\"> </a><a name=\"hcenc-origem-enfermaria\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-internacao-regulada.html\">Internação Regulada</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>priority</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento 02}\">Urgência</span></p><p><b>subject</b>: <a href=\"Patient-paciente-joao.html\">João Souza  Male, DoB: 1950-07-02 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-leito-uti.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>period</b>: 2026-10-01 06:00:00-0300 --&gt; 2026-10-01 15:40:00-0300</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AdmitSource</b></td><td><b>Destination</b></td><td><b>DischargeDisposition</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRProcedencia 09}\">Demanda espontânea</span></td><td><a href=\"Organization-org-hospital-destino.html\">Organization Hospital Regional Exemplo</a></td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDesfecho 09}\">Transferência</span></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-leito-origem-01.html\">Location Enfermaria, leito 07</a></td><td>Completed</td><td>2026-10-01 06:30:00-0300 --&gt; 2026-10-01 15:40:00-0300</td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p></div>"
+  },
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "IMP"
+  },
+  "priority" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento",
+      "code" : "02",
+      "display" : "Urgência"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-joao"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-leito-uti"
+  }],
+  "period" : {
+    "start" : "2026-10-01T06:00:00-03:00",
+    "end" : "2026-10-01T15:40:00-03:00"
+  },
+  "hospitalization" : {
+    "admitSource" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRProcedencia",
+        "code" : "09",
+        "display" : "Demanda espontânea"
+      }]
+    },
+    "destination" : {
+      "reference" : "Organization/org-hospital-destino"
+    },
+    "dischargeDisposition" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDesfecho",
+        "code" : "09",
+        "display" : "Transferência"
+      }]
+    }
+  },
+  "location" : [{
+    "location" : {
+      "reference" : "Location/leito-origem-01"
+    },
+    "status" : "completed",
+    "period" : {
+      "start" : "2026-10-01T06:30:00-03:00",
+      "end" : "2026-10-01T15:40:00-03:00"
+    }
+  }],
+  "serviceProvider" : {
+    "reference" : "Organization/org-executante"
+  }
+}

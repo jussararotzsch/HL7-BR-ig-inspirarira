@@ -1,0 +1,947 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/action-cardinality-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionCardinalityBehavior",
+    "title" : "ActionCardinalityBehavior",
+    "description" : "Defines behavior for an action or a group for how many times that item may be repeated.",
+    "oids" : ["2.16.840.1.113883.4.642.4.808"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-cardinality-behavior.html" : "ActionCardinalityBehavior"
+  },
+  {
+    "url" : "http://hl7.org/fhir/action-condition-kind",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionConditionKind",
+    "title" : "ActionConditionKind",
+    "description" : "Defines the kinds of conditions that can appear on actions.",
+    "oids" : ["2.16.840.1.113883.4.642.4.816"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-condition-kind.html" : "ActionConditionKind"
+  },
+  {
+    "url" : "http://hl7.org/fhir/action-grouping-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionGroupingBehavior",
+    "title" : "ActionGroupingBehavior",
+    "description" : "Defines organization behavior of a group.",
+    "oids" : ["2.16.840.1.113883.4.642.4.800"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-grouping-behavior.html" : "ActionGroupingBehavior"
+  },
+  {
+    "url" : "http://hl7.org/fhir/action-participant-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionParticipantType",
+    "title" : "ActionParticipantType",
+    "description" : "The type of participant for the action.",
+    "oids" : ["2.16.840.1.113883.4.642.4.812"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-participant-type.html" : "ActionParticipantType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/action-precheck-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionPrecheckBehavior",
+    "title" : "ActionPrecheckBehavior",
+    "description" : "Defines selection frequency behavior for an action or group.",
+    "oids" : ["2.16.840.1.113883.4.642.4.806"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-precheck-behavior.html" : "ActionPrecheckBehavior"
+  },
+  {
+    "url" : "http://hl7.org/fhir/action-relationship-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionRelationshipType",
+    "title" : "ActionRelationshipType",
+    "description" : "Defines the types of relationships between actions.",
+    "oids" : ["2.16.840.1.113883.4.642.4.814"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-relationship-type.html" : "ActionRelationshipType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/action-required-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionRequiredBehavior",
+    "title" : "ActionRequiredBehavior",
+    "description" : "Defines expectations around whether an action or action group is required.",
+    "oids" : ["2.16.840.1.113883.4.642.4.804"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-required-behavior.html" : "ActionRequiredBehavior"
+  },
+  {
+    "url" : "http://hl7.org/fhir/action-selection-behavior",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ActionSelectionBehavior",
+    "title" : "ActionSelectionBehavior",
+    "description" : "Defines selection behavior of a group.",
+    "oids" : ["2.16.840.1.113883.4.642.4.802"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-selection-behavior.html" : "ActionSelectionBehavior"
+  },
+  {
+    "url" : "http://hl7.org/fhir/appointmentstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AppointmentStatus",
+    "title" : "AppointmentStatus",
+    "description" : "The free/busy status of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.485"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-appointmentstatus.html" : "AppointmentStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/claim-use",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Use",
+    "title" : "Use",
+    "description" : "The purpose of the Claim: predetermination, preauthorization, claim.",
+    "oids" : ["2.16.840.1.113883.4.642.4.545"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-claim-use.html" : "Use"
+  },
+  {
+    "url" : "http://hl7.org/fhir/days-of-week",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DaysOfWeek",
+    "title" : "DaysOfWeek",
+    "description" : "The days of the week.",
+    "oids" : ["2.16.840.1.113883.4.642.4.513"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-days-of-week.html" : "DaysOfWeek"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-location-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterLocationStatus",
+    "title" : "EncounterLocationStatus",
+    "description" : "The status of the location.",
+    "oids" : ["2.16.840.1.113883.4.642.4.263"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-location-status.html" : "EncounterLocationStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterStatus",
+    "title" : "EncounterStatus",
+    "description" : "Current state of the encounter.",
+    "oids" : ["2.16.840.1.113883.4.642.4.247"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-status.html" : "EncounterStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/fm-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "FinancialResourceStatusCodes",
+    "title" : "Financial Resource Status Codes",
+    "description" : "This value set includes Status codes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.593"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-fm-status.html" : "Financial Resource Status Codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/invoice-priceComponentType",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "InvoicePriceComponentType",
+    "title" : "InvoicePriceComponentType",
+    "description" : "Codes indicating the kind of the price component.",
+    "oids" : ["2.16.840.1.113883.4.642.4.869"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-invoice-priceComponentType.html" : "InvoicePriceComponentType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/location-mode",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LocationMode",
+    "title" : "LocationMode",
+    "description" : "Indicates whether a resource instance represents a specific location or a class of locations.",
+    "oids" : ["2.16.840.1.113883.4.642.4.331"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-location-mode.html" : "LocationMode"
+  },
+  {
+    "url" : "http://hl7.org/fhir/location-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LocationStatus",
+    "title" : "LocationStatus",
+    "description" : "Indicates whether the location is still in use.",
+    "oids" : ["2.16.840.1.113883.4.642.4.333"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-location-status.html" : "LocationStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/measure-report-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MeasureReportStatus",
+    "title" : "MeasureReportStatus",
+    "description" : "The status of the measure report.",
+    "oids" : ["2.16.840.1.113883.4.642.4.777"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-measure-report-status.html" : "MeasureReportStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/measure-report-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "MeasureReportType",
+    "title" : "MeasureReportType",
+    "description" : "The type of the measure report.",
+    "oids" : ["2.16.840.1.113883.4.642.4.779"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-measure-report-type.html" : "MeasureReportType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/note-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "NoteType",
+    "title" : "NoteType",
+    "description" : "The presentation types of notes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.16"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-note-type.html" : "NoteType"
+  },
+  {
+    "url" : "http://hl7.org/fhir/participantrequired",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantRequired",
+    "title" : "ParticipantRequired",
+    "description" : "Is the Participant required to attend the appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.489"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-participantrequired.html" : "ParticipantRequired"
+  },
+  {
+    "url" : "http://hl7.org/fhir/participationstatus",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipationStatus",
+    "title" : "ParticipationStatus",
+    "description" : "The Participation status of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.4.487"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-participationstatus.html" : "ParticipationStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/publication-status",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "PublicationStatus",
+    "title" : "PublicationStatus",
+    "description" : "The lifecycle status of an artifact.",
+    "oids" : ["2.16.840.1.113883.4.642.4.4"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-publication-status.html" : "PublicationStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/remittance-outcome",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ClaimProcessingCodes",
+    "title" : "Claim Processing Codes",
+    "description" : "This value set includes Claim Processing Outcome codes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.14"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-remittance-outcome.html" : "Claim Processing Codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestIntent",
+    "title" : "RequestIntent",
+    "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.114"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-request-intent.html" : "RequestIntent",
+    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "RequestPriority",
+    "description" : "Identifies the level of importance to be assigned to actioning the request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.116"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-request-priority.html" : "Request priority"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestStatus",
+    "title" : "RequestStatus",
+    "description" : "Codes identifying the lifecycle stage of a request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.112"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-request-status.html" : "RequestStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/resource-types",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ResourceType",
+    "title" : "ResourceType",
+    "description" : "One of the resource types defined as part of this version of FHIR.",
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-subject-type.html" : "Subject type"
+  },
+  {
+    "url" : "http://hl7.org/fhir/sid/ex-icd-10-procedures",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ICD-10ProcedureCodes",
+    "title" : "ICD-10 Procedure Codes",
+    "description" : "This value set includes sample ICD-10 Procedure codes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.575"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-icd-10-procedures.html" : "ICD-10 Procedure Codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/task-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskIntent",
+    "title" : "TaskIntent",
+    "description" : "Distinguishes whether the task is a proposal, plan or full order.",
+    "oids" : ["2.16.840.1.113883.4.642.4.1241"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-intent.html" : "TaskIntent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/task-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "TaskStatus",
+    "title" : "TaskStatus",
+    "description" : "The current status of the task.",
+    "oids" : ["2.16.840.1.113883.4.642.4.791"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-task-status.html" : "TaskStatus"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
+    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/FDI-surface",
+    "version" : "1.0.0",
+    "status" : "draft",
+    "name" : "SurfaceCodes",
+    "title" : "Surface Codes",
+    "description" : "This value set includes a smattering of FDI tooth surface codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1154"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-surface.html" : "Surface Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/action-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ActionType",
+    "title" : "ActionType",
+    "description" : "The type of action to be performed.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1246"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-action-type.html" : "ActionType"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/adjudication",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "AdjudicationValueCodes",
+    "title" : "Adjudication Value Codes",
+    "description" : "This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1171"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-adjudication.html" : "Adjudication Value Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/adjudication-error",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "AdjudicationErrorCodes",
+    "title" : "Adjudication Error Codes",
+    "description" : "This value set includes a smattering of adjudication codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1053"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-adjudication-error.html" : "AdjudicationError"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "AdjudicationReasonCodes",
+    "title" : "Adjudication Reason Codes",
+    "description" : "This value set includes smattering of Adjudication Reason codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1172"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-adjudication-reason.html" : "Adjudication Reason Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason",
+    "version" : "2.1.1",
+    "status" : "active",
+    "name" : "AppointmentCancellationReason",
+    "title" : "Appointment cancellation reason",
+    "description" : "This example value set defines a set of reasons for the cancellation of an appointment.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1382"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html" : "Appointment cancellation reason"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/claim-exception",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExceptionCodes",
+    "title" : "Exception Codes",
+    "description" : "This value set includes sample Exception codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1162"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-claim-exception.html" : "Exception Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/claim-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ClaimTypeCodes",
+    "title" : "Claim Type Codes",
+    "description" : "This value set includes Claim Type codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1156"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-claim-type.html" : "Claim Type Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/claimcareteamrole",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ClaimCareTeamRoleCodes",
+    "title" : "Claim Care Team Role Codes",
+    "description" : "Claim roles of the care team members providing products and services.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1165"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-claim-careteamrole.html" : "Claim Care Team Role Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ClaimInformationCategoryCodes",
+    "title" : "Claim Information Category Codes",
+    "description" : "This value set includes sample Information Category codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1163"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-claim-informationcategory.html" : "Claim Information Category Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/definition-topic",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "DefinitionTopic",
+    "title" : "DefinitionTopic",
+    "description" : "High-level categorization of the definition, used for searching, sorting, and filtering.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1244"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-definition-topic.html" : "DefinitionTopic"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "DiagnosisRole",
+    "title" : "Diagnosis Role",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1054"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-diagnosis-role.html" : "DiagnosisRole"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/diet",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "Diet",
+    "title" : "Diet",
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1091"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-diet.html" : "Diet"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SpecialArrangements",
+    "title" : "Special arrangements",
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1090"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-special-arrangements.html" : "Special arrangements"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+    "version" : "1.0.0",
+    "status" : "draft",
+    "name" : "USCLSCodes",
+    "title" : "USCLS Codes",
+    "description" : "This value set includes a smattering of USCLS codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1153"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-service-uscls.html" : "USCLS Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-benefitcategory",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "BenefitCategoryCodes",
+    "title" : "Benefit Category Codes",
+    "description" : "This value set includes examples of Benefit Category codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1175"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-benefitcategory.html" : "Benefit Category Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleDiagnosisOnAdmissionCodes",
+    "title" : "Example Diagnosis on Admission Codes",
+    "description" : "This value set includes example Diagnosis on Admission codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1170"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-diagnosis-on-admission.html" : "Example Diagnosis on Admission Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleDiagnosisRelatedGroupCodes",
+    "title" : "Example Diagnosis Related Group Codes",
+    "description" : "This value set includes example Diagnosis Related Group codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1166"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-diagnosisrelatedgroup.html" : "Example Diagnosis Related Group Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-diagnosistype",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleDiagnosisTypeCodes",
+    "title" : "Example Diagnosis Type Codes",
+    "description" : "This value set includes example Diagnosis Type codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1167"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-diagnosistype.html" : "Example Diagnosis Type Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-paymenttype",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExamplePaymentTypeCodes",
+    "title" : "Example Payment Type Codes",
+    "description" : "This value set includes example Payment Type codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1181"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-paymenttype.html" : "Example Payment Type Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-procedure-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleProcedureTypeCodes",
+    "title" : "Example Procedure Type Codes",
+    "description" : "This value set includes example Procedure Type codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1388"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-procedure-type.html" : "Example Procedure Type Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-programcode",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleProgramReasonCodes",
+    "title" : "Example Program Reason Codes",
+    "description" : "This value set includes sample Program Reason Span codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1161"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-program-code.html" : "Example Program Reason Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-providerqualification",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleProviderQualificationCodes",
+    "title" : "Example Provider Qualification Codes",
+    "description" : "This value set includes sample Provider Qualification codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1160"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-provider-qualification.html" : "Example Provider Qualification Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleRelatedClaimRelationshipCodes",
+    "title" : "Example Related Claim Relationship Codes",
+    "description" : "This value set includes sample Related Claim Relationship codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1159"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-related-claim-relationship.html" : "Example Related Claim Relationship Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-revenue-center",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleRevenueCenterCodes",
+    "title" : "Example Revenue Center Codes",
+    "description" : "This value set includes sample Revenue Center codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1168"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-ex-revenue-center.html" : "Example Revenue Center Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ExampleServicePlaceCodes",
+    "title" : "Example Service Place Codes",
+    "description" : "This value set includes a smattering of Service Place codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1157"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-service-place.html" : "Example Service Place Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/ex-tooth",
+    "version" : "1.0.0",
+    "status" : "draft",
+    "name" : "OralSiteCodes",
+    "title" : "Oral Site Codes",
+    "description" : "This value set includes a smattering of FDI oral site codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1152"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-tooth.html" : "Oral Site Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/forms-codes",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "FormCodes",
+    "title" : "Form Codes",
+    "description" : "This value set includes a sample set of Forms codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1052"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-forms.html" : "Forms"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/fundsreserve",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "FundsReservationCodes",
+    "title" : "Funds Reservation Codes",
+    "description" : "This value set includes sample funds reservation type codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1051"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-fundsreserve.html" : "FundsReserve"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/goal-category",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "GoalCategory",
+    "title" : "Goal category",
+    "description" : "Codes for grouping goals to use for filtering or presentation.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1097"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-goal-category.html" : "Goal category"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/goal-priority",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "GoalPriority",
+    "title" : "Goal priority",
+    "description" : "Indicates the level of importance associated with reaching or sustaining a goal.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1096"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-goal-priority.html" : "Goal priority"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "LocationType",
+    "title" : "Location type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.\r\rThis includes several 'non physical' codes which are still considered a location.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1108"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-location-physical-type.html" : "Location type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MeasureImprovementNotation",
+    "title" : "MeasureImprovementNotation",
+    "description" : "Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1395"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-measure-improvement-notation.html" : "MeasureImprovementNotation"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/missingtoothreason",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MissingToothReasonCodes",
+    "title" : "Missing Tooth Reason Codes",
+    "description" : "This value set includes sample Missing Tooth Reason codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1150"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-missing-tooth-reason.html" : "Missing Tooth Reason Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/modifiers",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ModifierTypeCodes",
+    "title" : "Modifier type Codes",
+    "description" : "This value set includes sample Modifier type codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1151"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-claim-modifiers.html" : "Modifier type Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/payeetype",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ClaimPayeeTypeCodes",
+    "title" : "Payee Type Codes",
+    "description" : "Codes indicating the type of party to be reimbursed for cost of products and services.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1050"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-payeetype.html" : "PayeeType"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/payment-adjustment-reason",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "PaymentAdjustmentReasonCodes",
+    "title" : "Payment Adjustment Reason Codes",
+    "description" : "This value set includes smattering of Payment Adjustment Reason codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1173"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-payment-adjustment-reason.html" : "Payment Adjustment Reason Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "PlanDefinitionType",
+    "title" : "PlanDefinitionType",
+    "description" : "The type of PlanDefinition.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1245"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-plan-definition-type.html" : "PlanDefinitionType"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/processpriority",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ProcessPriorityCodes",
+    "title" : "Process Priority Codes",
+    "description" : "This value set includes the financial processing priority codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1155"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-process-priority.html" : "Process Priority Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0092",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ReAdmissionIndicator",
+    "title" : "re-admissionIndicator",
+    "description" : "Code system of concepts which are used to specify that a patient is being re admitted to a healthcare facilityin from which they were discharged, and indicates the circumstances around such re-admission.  Used in HL7 Version 2.x messagine in the PV1 segment.",
+    "oids" : ["2.16.840.1.113883.18.36"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0116",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "BedStatus",
+    "title" : "bedStatus",
+    "description" : "Code system of concepts which specify the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.  Used in HL7 Version 2.x messaging in the DLD and PV1 segments.",
+    "oids" : ["2.16.840.1.113883.18.47"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0116.html" : "hl7VS-bedStatus"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "AppointmentReason",
+    "title" : "appointmentReason",
+    "description" : "Code system of concepts used to describe the kind of appointment or the reason why an appointment has been scheduled.  Used in HL7 Version 2.x messaging in the ARQ segment.",
+    "oids" : ["2.16.840.1.113883.18.169"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "version" : "10.0.0",
+    "status" : "active",
+    "name" : "ActCode",
+    "title" : "ActCode",
+    "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+    "oids" : ["2.16.840.1.113883.5.4"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActIncidentCode.html" : "ActIncidentCode",
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "EncounterSpecialCourtesy",
+    "title" : "EncounterSpecialCourtesy",
+    "description" : "**** MISSING DESCRIPTION ****",
+    "oids" : ["2.16.840.1.113883.5.40"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "NullFlavor",
+    "title" : "NullFlavor",
+    "description" : "A collection of codes specifying why a valid value is not present.",
+    "oids" : ["2.16.840.1.113883.5.1008"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html" : "Special courtesy"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "RoleCode",
+    "title" : "RoleCode",
+    "description" : "A set of codes further specifying the kind of Role; specific classification codes for further qualifying RoleClass codes.",
+    "oids" : ["2.16.840.1.113883.5.111"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html" : "ServiceDeliveryLocationRoleType"
+  }]
+}

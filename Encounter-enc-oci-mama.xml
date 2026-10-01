@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="enc-oci-mama"/>
+  <meta>
+    <profile value="https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Encounter enc-oci-mama</b></p><a name="enc-oci-mama"> </a><a name="hcenc-oci-mama"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter">br-core-encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>priority</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento 03}">Consulta agendada</span></p><p><b>subject</b>: <a href="Patient-paciente-maria.html">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>basedOn</b>: <a href="ServiceRequest-sr-oci-mama.html">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><p><b>appointment</b>: <a href="Appointment-appt-oci-mama.html">Appointment: identifier = http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento#AG-2026-004980; status = fulfilled; serviceType = CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA; start = 2026-08-18 09:00:00-0300; end = 2026-08-18 09:30:00-0300</a></p><p><b>period</b>: 2026-08-18 09:05:00-0300 --&gt; 2026-08-18 09:40:00-0300</p><p><b>serviceProvider</b>: <a href="Organization-org-executante.html">Organization Hospital Exemplo</a></p></div>
+  </text>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+  </class>
+  <priority>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento"/>
+      <code value="03"/>
+      <display value="Consulta agendada"/>
+    </coding>
+  </priority>
+  <subject>
+    <reference value="Patient/paciente-maria"/>
+  </subject>
+  <basedOn>
+    <reference value="ServiceRequest/sr-oci-mama"/>
+  </basedOn>
+  <appointment>
+    <reference value="Appointment/appt-oci-mama"/>
+  </appointment>
+  <period>
+    <start value="2026-08-18T09:05:00-03:00"/>
+    <end value="2026-08-18T09:40:00-03:00"/>
+  </period>
+  <serviceProvider>
+    <reference value="Organization/org-executante"/>
+  </serviceProvider>
+</Encounter>

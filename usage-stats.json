@@ -1,0 +1,198 @@
+{
+  "package": "br.org.hsl.inspirarira",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "BR",
+  "extensions": [
+    {
+      "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/data-entrada-fila",
+      "title": "Data de Entrada na Fila",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/local-origem",
+      "title": "Local de Origem",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/prioridade-regulatoria",
+      "title": "Prioridade Regulatória",
+      "types": [
+        "CodeableConcept",
+        "decimal",
+        "CodeableConcept",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    }
+  ],
+  "profiles": {
+    "Appointment": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao",
+        "title": "Agendamento de Regulação Assistencial"
+      }
+    ],
+    "Claim": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus",
+        "title": "Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)"
+      }
+    ],
+    "MeasureReport": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos",
+        "title": "Censo de Leitos"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada",
+        "title": "Internação Regulada"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/leito-regulado",
+        "title": "Leito Regulado"
+      }
+    ],
+    "PlanDefinition": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci",
+        "title": "Protocolo de Oferta de Cuidados Integrados (OCI)"
+      }
+    ],
+    "ChargeItemDefinition": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci",
+        "title": "Regra de Reembolso de OCI"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/transporte-sanitario",
+        "title": "Transporte Sanitário"
+      }
+    ],
+    "ClaimResponse": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus",
+        "title": "Resposta de Autorização SUS (APAC/AIH)"
+      }
+    ],
+    "Task": [
+      {
+        "url": "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao",
+        "title": "Tarefa de Regulação Assistencial"
+      }
+    ]
+  },
+  "usage": {
+    "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/data-entrada-fila": [
+      "Task"
+    ],
+    "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/local-origem": [
+      "ServiceRequest"
+    ],
+    "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/prioridade-regulatoria": [
+      "Task"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/additional-binding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ]
+  }
+}

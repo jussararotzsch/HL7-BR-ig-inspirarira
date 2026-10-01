@@ -1,0 +1,161 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Claim/producao-oci-mama> a fhir:Claim ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "producao-oci-mama"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/producao-sus>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Claim producao-oci-mama</b></p><a name=\"producao-oci-mama\"> </a><a name=\"hcproducao-oci-mama\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-producao-sus.html\">Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)</a></p></div><p><b>identifier</b>: <code>http://hospital-exemplo.org.br/fhir/sid/producao</code>/OCI-PROD-202609-0007</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/claim-type professional}\">Professional</span></p><p><b>subType</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS apac}\">apac</span></p><p><b>use</b>: Claim</p><p><b>patient</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>billablePeriod</b>: 2026-09-01 --&gt; 2026-09-30</p><p><b>created</b>: 2026-09-05 08:00:00-0300</p><p><b>insurer</b>: <a href=\"Organization-org-gestor-ses.html\">Organization Secretaria Estadual de Saúde Exemplo</a></p><p><b>provider</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p><p><b>priority</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/processpriority normal}\">Normal</span></p><p><b>referral</b>: <a href=\"ServiceRequest-sr-oci-mama.html\">ServiceRequest OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</a></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Sequence</b></td><td><b>Diagnosis[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10 N63}\">Nódulo mamário não especificado</span></td></tr></table><h3>Insurances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td><td><b>PreAuthRef</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td>true</td><td><a href=\"Coverage-coverage-sus-arranjo-publico.html\">Coverage: status = active; type = </a></td><td>3526100000410</td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>productOrService</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0901010014}\">OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</span></p><p><b>serviced</b>: 2026-08-18 --&gt; 2026-08-29</p><p><b>quantity</b>: 1</p><p><b>encounter</b>: <a href=\"Encounter-enc-oci-mama.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB); priority = Consulta agendada; period = 2026-08-18 09:05:00-0300 --&gt; 2026-08-18 09:40:00-0300</a></p><blockquote><p><b>detail</b></p><p><b>sequence</b>: 1</p><p><b>productOrService</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}\">CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</span></p></blockquote><blockquote><p><b>detail</b></p><p><b>sequence</b>: 2</p><p><b>productOrService</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0204030030}\">MAMOGRAFIA</span></p></blockquote><blockquote><p><b>detail</b></p><p><b>sequence</b>: 3</p><p><b>productOrService</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0205020097}\">ULTRASSONOGRAFIA MAMARIA BILATERAL</span></p></blockquote></blockquote></div>"
+  ] ;
+  fhir:Claim.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://hospital-exemplo.org.br/fhir/sid/producao" ] ;
+     fhir:Identifier.value [ fhir:value "OCI-PROD-202609-0007" ]
+  ] ;
+  fhir:Claim.status [ fhir:value "active"] ;
+  fhir:Claim.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ] ;
+       fhir:Coding.code [ fhir:value "professional" ]
+     ]
+  ] ;
+  fhir:Claim.subType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS" ] ;
+       fhir:Coding.code [ fhir:value "apac" ]
+     ]
+  ] ;
+  fhir:Claim.use [ fhir:value "claim"] ;
+  fhir:Claim.patient [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Claim.billablePeriod [
+     fhir:Period.start [ fhir:value "2026-09-01"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2026-09-30"^^xsd:date ]
+  ] ;
+  fhir:Claim.created [ fhir:value "2026-09-05T08:00:00-03:00"^^xsd:dateTime] ;
+  fhir:Claim.insurer [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-gestor-ses> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-gestor-ses" ]
+  ] ;
+  fhir:Claim.provider [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-executante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-executante" ]
+  ] ;
+  fhir:Claim.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/processpriority" ] ;
+       fhir:Coding.code [ fhir:value "normal" ]
+     ]
+  ] ;
+  fhir:Claim.referral [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-oci-mama> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-oci-mama" ]
+  ] ;
+  fhir:Claim.diagnosis [
+     fhir:index 0 ;
+     fhir:Claim.diagnosis.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.diagnosis.diagnosisCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCID10" ] ;
+         fhir:Coding.code [ fhir:value "N63" ] ;
+         fhir:Coding.display [ fhir:value "Nódulo mamário não especificado" ]
+       ]
+     ]
+  ] ;
+  fhir:Claim.insurance [
+     fhir:index 0 ;
+     fhir:Claim.insurance.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.insurance.focal [ fhir:value "true"^^xsd:boolean ] ;
+     fhir:Claim.insurance.coverage [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Coverage/coverage-sus-arranjo-publico> ;
+       fhir:Reference.reference [ fhir:value "Coverage/coverage-sus-arranjo-publico" ]
+     ] ;
+     fhir:Claim.insurance.preAuthRef [
+       fhir:value "3526100000410" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Claim.item [
+     fhir:index 0 ;
+     fhir:Claim.item.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.item.productOrService [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+         fhir:Coding.code [ fhir:value "0901010014" ] ;
+         fhir:Coding.display [ fhir:value "OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA" ]
+       ]
+     ] ;
+     fhir:Claim.item.servicedPeriod [
+       fhir:Period.start [ fhir:value "2026-08-18"^^xsd:date ] ;
+       fhir:Period.end [ fhir:value "2026-08-29"^^xsd:date ]
+     ] ;
+     fhir:Claim.item.quantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+     ] ;
+     fhir:Claim.item.encounter [
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-oci-mama> ;
+       fhir:Reference.reference [ fhir:value "Encounter/enc-oci-mama" ]
+     ] ;
+     fhir:Claim.item.detail [
+       fhir:index 0 ;
+       fhir:Claim.item.detail.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+       fhir:Claim.item.detail.productOrService [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0301010072" ] ;
+           fhir:Coding.display [ fhir:value "CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Claim.item.detail.sequence [ fhir:value "2"^^xsd:positiveInteger ] ;
+       fhir:Claim.item.detail.productOrService [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0204030030" ] ;
+           fhir:Coding.display [ fhir:value "MAMOGRAFIA" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:Claim.item.detail.sequence [ fhir:value "3"^^xsd:positiveInteger ] ;
+       fhir:Claim.item.detail.productOrService [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0205020097" ] ;
+           fhir:Coding.display [ fhir:value "ULTRASSONOGRAFIA MAMARIA BILATERAL" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Claim/producao-oci-mama.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

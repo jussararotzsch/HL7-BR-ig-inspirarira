@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="task-vaga-zero"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Task task-vaga-zero</b></p><a name="task-vaga-zero"> </a><a name="hctask-vaga-zero"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-tarefa-regulacao.html">Tarefa de Regulação Assistencial</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-sr-vaga-zero.html">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>status</b>: Completed</p><p><b>statusReason</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria risco-iminente}">risco-iminente</span></p><p><b>businessStatus</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria vaga-zero}">vaga-zero</span></p><p><b>intent</b>: order</p><p><b>priority</b>: STAT</p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-leito}">regulacao-leito</span></p><p><b>focus</b>: <a href="ServiceRequest-sr-vaga-zero.html">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>for</b>: <a href="Patient-paciente-joao.html">João Souza  Male, DoB: 1950-07-02 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-09-20 02:12:00-0300</p><p><b>requester</b>: <a href="Organization-org-upa.html">Organization UPA 24h Exemplo</a></p><p><b>owner</b>: <a href="Organization-org-central-regulacao.html">Organization Central de Regulação Ambulatorial Exemplo</a></p><p><b>note</b>: </p><blockquote><div><p>Edema agudo de pulmão refratário, sem suporte ventilatório invasivo na UPA. Nenhum leito de UTI adulto disponível na região às 02h30. Encaminhado ao hospital de referência regional em vaga zero.</p>
+</div></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria capacidade}">capacidade</span></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria indisponivel}">indisponivel</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria decisao}">decisao</span></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria aprovado}">aprovado</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao estabelecimento-destino}">estabelecimento-destino</span></p><p><b>value</b>: <a href="Organization-org-hospital-destino.html">Organization Hospital Regional Exemplo</a></p></blockquote></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/sr-vaga-zero"/>
+  </basedOn>
+  <status value="completed"/>
+  <statusReason>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria"/>
+      <code value="risco-iminente"/>
+    </coding>
+  </statusReason>
+  <businessStatus>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria"/>
+      <code value="vaga-zero"/>
+    </coding>
+  </businessStatus>
+  <intent value="order"/>
+  <priority value="stat"/>
+  <code>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao"/>
+      <code value="regulacao-leito"/>
+    </coding>
+  </code>
+  <focus>
+    <reference value="ServiceRequest/sr-vaga-zero"/>
+  </focus>
+  <for>
+    <reference value="Patient/paciente-joao"/>
+  </for>
+  <authoredOn value="2026-09-20T02:12:00-03:00"/>
+  <requester>
+    <reference value="Organization/org-upa"/>
+  </requester>
+  <owner>
+    <reference value="Organization/org-central-regulacao"/>
+  </owner>
+  <note>
+    <text value="Edema agudo de pulmão refratário, sem suporte ventilatório invasivo na UPA. Nenhum leito de UTI adulto disponível na região às 02h30. Encaminhado ao hospital de referência regional em vaga zero."/>
+  </note>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria"/>
+        <code value="capacidade"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria"/>
+        <code value="indisponivel"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria"/>
+        <code value="decisao"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria"/>
+        <code value="aprovado"/>
+      </coding>
+    </valueCodeableConcept>
+  </output>
+  <output>
+    <type>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao"/>
+        <code value="estabelecimento-destino"/>
+      </coding>
+    </type>
+    <valueReference>
+      <reference value="Organization/org-hospital-destino"/>
+    </valueReference>
+  </output>
+</Task>

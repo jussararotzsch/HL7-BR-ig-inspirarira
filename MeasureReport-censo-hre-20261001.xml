@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="censo-hre-20261001"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/censo-leitos"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: MeasureReport censo-hre-20261001</b></p><a name="censo-hre-20261001"> </a><a name="hccenso-hre-20261001"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-censo-leitos.html">Censo de Leitos</a></p></div><p><b>status</b>: Complete</p><p><b>type</b>: Summary</p><p><b>measure</b>: <a href="Measure-censo-leitos.html">Censo de leitos</a> versão: 0.1.0</p><p><b>date</b>: 2026-10-01 18:00:00-0300</p><p><b>reporter</b>: <a href="Organization-org-hospital-destino.html">Organization Hospital Regional Exemplo</a></p><p><b>period</b>: 2026-10-01 18:00:00-0300 --&gt; 2026-10-01 18:00:00-0300</p><blockquote><p><b>group</b></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos existentes}">existentes</span></p><p><b>count</b>: 3</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos ocupados}">ocupados</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos higienizacao}">higienizacao</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos reservados}">reservados</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos livres}">livres</span></p><p><b>count</b>: 0</p></blockquote><blockquote><p><b>stratifier</b></p><p><b>code</b>: <span title="Códigos:">Especialidade de leito (CNES)</span></p><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 75}">UTI ADULTO - TIPO II</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos existentes}">existentes</span></p><p><b>count</b>: 2</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos ocupados}">ocupados</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos higienizacao}">higienizacao</span></p><p><b>count</b>: 1</p></blockquote></blockquote><blockquote><p><b>stratum</b></p><p><b>value</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 33}">CLINICA GERAL</span></p><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos existentes}">existentes</span></p><p><b>count</b>: 1</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos reservados}">reservados</span></p><p><b>count</b>: 1</p></blockquote></blockquote></blockquote></blockquote></div>
+  </text>
+  <status value="complete"/>
+  <type value="summary"/>
+  <measure value="http://fhir.hsl.org.br/ig/inspirarira/Measure/censo-leitos|0.1.0"/>
+  <date value="2026-10-01T18:00:00-03:00"/>
+  <reporter>
+    <reference value="Organization/org-hospital-destino"/>
+  </reporter>
+  <period>
+    <start value="2026-10-01T18:00:00-03:00"/>
+    <end value="2026-10-01T18:00:00-03:00"/>
+  </period>
+  <group>
+    <population>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+          <code value="existentes"/>
+        </coding>
+      </code>
+      <count value="3"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+          <code value="ocupados"/>
+        </coding>
+      </code>
+      <count value="1"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+          <code value="higienizacao"/>
+        </coding>
+      </code>
+      <count value="1"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+          <code value="reservados"/>
+        </coding>
+      </code>
+      <count value="1"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+          <code value="livres"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <stratifier>
+      <code>
+        <text value="Especialidade de leito (CNES)"/>
+      </code>
+      <stratum>
+        <value>
+          <coding>
+            <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito"/>
+            <code value="75"/>
+            <display value="UTI ADULTO - TIPO II"/>
+          </coding>
+        </value>
+        <population>
+          <code>
+            <coding>
+              <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+              <code value="existentes"/>
+            </coding>
+          </code>
+          <count value="2"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+              <code value="ocupados"/>
+            </coding>
+          </code>
+          <count value="1"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+              <code value="higienizacao"/>
+            </coding>
+          </code>
+          <count value="1"/>
+        </population>
+      </stratum>
+      <stratum>
+        <value>
+          <coding>
+            <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito"/>
+            <code value="33"/>
+            <display value="CLINICA GERAL"/>
+          </coding>
+        </value>
+        <population>
+          <code>
+            <coding>
+              <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+              <code value="existentes"/>
+            </coding>
+          </code>
+          <count value="1"/>
+        </population>
+        <population>
+          <code>
+            <coding>
+              <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRPopulacaoCensoLeitos"/>
+              <code value="reservados"/>
+            </coding>
+          </code>
+          <count value="1"/>
+        </population>
+      </stratum>
+    </stratifier>
+  </group>
+</MeasureReport>

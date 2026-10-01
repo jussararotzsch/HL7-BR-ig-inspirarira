@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ClaimResponse/claimresponse-aih-icc> a fhir:ClaimResponse ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "claimresponse-aih-icc"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ClaimResponse claimresponse-aih-icc</b></p><a name=\"claimresponse-aih-icc\"> </a><a name=\"hcclaimresponse-aih-icc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-resposta-autorizacao-sus.html\">Resposta de Autorização SUS (APAC/AIH)</a></p></div><p><b>identifier</b>: <code>http://ses-exemplo.saude.sp.gov.br/fhir/sid/aih</code>/3526200000091</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/claim-type institutional}\">Institutional</span></p><p><b>subType</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS aih}\">aih</span></p><p><b>use</b>: Preauthorization</p><p><b>patient</b>: <a href=\"Patient-paciente-joao.html\">João Souza  Male, DoB: 1950-07-02 ( Health Card Number (use: official, ))</a></p><p><b>created</b>: 2026-10-01 18:20:00-0300</p><p><b>insurer</b>: <a href=\"Organization-org-gestor-ses.html\">Organization Secretaria Estadual de Saúde Exemplo</a></p><p><b>requestor</b>: <a href=\"Organization-org-hospital-destino.html\">Organization Hospital Regional Exemplo</a></p><p><b>request</b>: <a href=\"Claim-claim-aih-icc.html\">Claim: identifier = http://hre.exemplo.gov.br/fhir/sid/laudo-aih#LAUDO-AIH-2026-3310; status = active; type = Institutional; subType = aih; use = preauthorization; created = 2026-10-01 17:00:00-0300; priority = Immediate</a></p><p><b>outcome</b>: Processing Complete</p><p><b>disposition</b>: AIH autorizada</p><p><b>preAuthRef</b>: 3526200000091</p><p><b>preAuthPeriod</b>: 2026-10-01 --&gt; 2026-10-31</p></div>"
+  ] ;
+  fhir:ClaimResponse.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://ses-exemplo.saude.sp.gov.br/fhir/sid/aih" ] ;
+     fhir:Identifier.value [ fhir:value "3526200000091" ]
+  ] ;
+  fhir:ClaimResponse.status [ fhir:value "active"] ;
+  fhir:ClaimResponse.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ] ;
+       fhir:Coding.code [ fhir:value "institutional" ]
+     ]
+  ] ;
+  fhir:ClaimResponse.subType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS" ] ;
+       fhir:Coding.code [ fhir:value "aih" ]
+     ]
+  ] ;
+  fhir:ClaimResponse.use [ fhir:value "preauthorization"] ;
+  fhir:ClaimResponse.patient [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-joao> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-joao" ]
+  ] ;
+  fhir:ClaimResponse.created [ fhir:value "2026-10-01T18:20:00-03:00"^^xsd:dateTime] ;
+  fhir:ClaimResponse.insurer [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-gestor-ses> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-gestor-ses" ]
+  ] ;
+  fhir:ClaimResponse.requestor [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-hospital-destino> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-hospital-destino" ]
+  ] ;
+  fhir:ClaimResponse.request [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Claim/claim-aih-icc> ;
+     fhir:Reference.reference [ fhir:value "Claim/claim-aih-icc" ]
+  ] ;
+  fhir:ClaimResponse.outcome [ fhir:value "complete"] ;
+  fhir:ClaimResponse.disposition [ fhir:value "AIH autorizada"] ;
+  fhir:ClaimResponse.preAuthRef [ fhir:value "3526200000091"] ;
+  fhir:ClaimResponse.preAuthPeriod [
+     fhir:Period.start [ fhir:value "2026-10-01"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2026-10-31"^^xsd:date ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ClaimResponse/claimresponse-aih-icc.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

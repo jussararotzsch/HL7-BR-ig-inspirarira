@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-consulta-nefrologia> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "enc-consulta-nefrologia"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter" ;
+       fhir:index 0 ;
+       fhir:link <https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Encounter enc-consulta-nefrologia</b></p><a name=\"enc-consulta-nefrologia\"> </a><a name=\"hcenc-consulta-nefrologia\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter\">br-core-encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>priority</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento 03}\">Consulta agendada</span></p><p><b>subject</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-consulta-nefrologia.html\">ServiceRequest Consulta médica em atenção especializada</a></p><p><b>appointment</b>: <a href=\"Appointment-appt-consulta-nefrologia.html\">Appointment: identifier = http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/agendamento#AG-2026-005102; status = fulfilled; serviceType = Consulta médica em atenção especializada; specialty = Médico nefrologista; start = 2026-09-15 10:00:00-0300; end = 2026-09-15 10:30:00-0300</a></p><p><b>period</b>: 2026-09-15 10:05:00-0300 --&gt; 2026-09-15 10:35:00-0300</p><p><b>reasonReference</b>: <a href=\"Condition-condicao-drc.html\">Condition Doença renal em estádio final</a></p><p><b>serviceProvider</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p></div>"
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "AMB" ]
+  ] ;
+  fhir:Encounter.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento" ] ;
+       fhir:Coding.code [ fhir:value "03" ] ;
+       fhir:Coding.display [ fhir:value "Consulta agendada" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Encounter.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-consulta-nefrologia> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-consulta-nefrologia" ]
+  ] ;
+  fhir:Encounter.appointment [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-consulta-nefrologia> ;
+     fhir:Reference.reference [ fhir:value "Appointment/appt-consulta-nefrologia" ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-09-15T10:05:00-03:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-09-15T10:35:00-03:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.reasonReference [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Condition/condicao-drc> ;
+     fhir:Reference.reference [ fhir:value "Condition/condicao-drc" ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-executante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-executante" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-consulta-nefrologia.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

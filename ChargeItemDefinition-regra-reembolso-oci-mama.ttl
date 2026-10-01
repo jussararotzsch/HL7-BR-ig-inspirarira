@@ -1,0 +1,93 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-mama> a fhir:ChargeItemDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "regra-reembolso-oci-mama"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/regra-reembolso-oci>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ChargeItemDefinition regra-reembolso-oci-mama</b></p><a name=\"regra-reembolso-oci-mama\"> </a><a name=\"hcregra-reembolso-oci-mama\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-regra-reembolso-oci.html\">Regra de Reembolso de OCI</a></p></div><p><b>url</b>: <a href=\"ChargeItemDefinition-regra-reembolso-oci-mama.html\">ChargeItemDefinition Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama</a></p><p><b>version</b>: 0.1.0</p><p><b>title</b>: Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama</p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2026-10-01 16:52:20-0300</p><p><b>publisher</b>: Hospital Sírio-Libanês</p><p><b>contact</b>: Hospital Sírio-Libanês: <a href=\"https://www.hospitalsiriolibanes.org.br\">https://www.hospitalsiriolibanes.org.br</a></p><p><b>jurisdiction</b>: <span title=\"Códigos:{urn:iso:std:iso:3166 BR}\">Brazil</span></p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0901010014}\">OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</span></p><blockquote><p><b>applicability</b></p><p><b>description</b>: Procedimentos obrigatórios realizados: consulta especializada e mamografia.</p><p><b>language</b>: text/fhirpath</p><p><b>expression</b>: Claim.item.detail.productOrService.coding.where(code = '0301010072').exists() and Claim.item.detail.productOrService.coding.where(code = '0204030030').exists()</p></blockquote><blockquote><p><b>applicability</b></p><p><b>description</b>: OCI concluída no prazo: todos os atendimentos em até 30 dias do primeiro.</p><p><b>language</b>: text/fhirpath</p><p><b>expression</b>: Claim.item.servicedPeriod.exists() and (Claim.item.servicedPeriod.start + 30 days) &gt;= Claim.item.servicedPeriod.end</p></blockquote><blockquote><p><b>applicability</b></p><p><b>description</b>: Produção vinculada a requisição regulada e ao cuidado executado.</p><p><b>language</b>: text/fhirpath</p><p><b>expression</b>: Claim.referral.exists() and Claim.item.encounter.exists()</p></blockquote><blockquote><p><b>propertyGroup</b></p><h3>PriceComponents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>base price</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0901010014}\">OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</span></td></tr></table></blockquote></div>"
+  ] ;
+  fhir:ChargeItemDefinition.url [ fhir:value "http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-mama"] ;
+  fhir:ChargeItemDefinition.version [ fhir:value "0.1.0"] ;
+  fhir:ChargeItemDefinition.title [ fhir:value "Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama"] ;
+  fhir:ChargeItemDefinition.status [ fhir:value "draft"] ;
+  fhir:ChargeItemDefinition.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ChargeItemDefinition.date [ fhir:value "2026-10-01T16:52:20-03:00"^^xsd:dateTime] ;
+  fhir:ChargeItemDefinition.publisher [ fhir:value "Hospital Sírio-Libanês"] ;
+  fhir:ChargeItemDefinition.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Hospital Sírio-Libanês" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.hospitalsiriolibanes.org.br" ]
+     ]
+  ] ;
+  fhir:ChargeItemDefinition.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ] ;
+       fhir:Coding.display [ fhir:value "Brazil" ]
+     ]
+  ] ;
+  fhir:ChargeItemDefinition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0901010014" ] ;
+       fhir:Coding.display [ fhir:value "OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA" ]
+     ]
+  ] ;
+  fhir:ChargeItemDefinition.applicability [
+     fhir:index 0 ;
+     fhir:ChargeItemDefinition.applicability.description [ fhir:value "Procedimentos obrigatórios realizados: consulta especializada e mamografia." ] ;
+     fhir:ChargeItemDefinition.applicability.language [ fhir:value "text/fhirpath" ] ;
+     fhir:ChargeItemDefinition.applicability.expression [ fhir:value "Claim.item.detail.productOrService.coding.where(code = '0301010072').exists() and Claim.item.detail.productOrService.coding.where(code = '0204030030').exists()" ]
+  ], [
+     fhir:index 1 ;
+     fhir:ChargeItemDefinition.applicability.description [ fhir:value "OCI concluída no prazo: todos os atendimentos em até 30 dias do primeiro." ] ;
+     fhir:ChargeItemDefinition.applicability.language [ fhir:value "text/fhirpath" ] ;
+     fhir:ChargeItemDefinition.applicability.expression [ fhir:value "Claim.item.servicedPeriod.exists() and (Claim.item.servicedPeriod.start + 30 days) >= Claim.item.servicedPeriod.end" ]
+  ], [
+     fhir:index 2 ;
+     fhir:ChargeItemDefinition.applicability.description [ fhir:value "Produção vinculada a requisição regulada e ao cuidado executado." ] ;
+     fhir:ChargeItemDefinition.applicability.language [ fhir:value "text/fhirpath" ] ;
+     fhir:ChargeItemDefinition.applicability.expression [ fhir:value "Claim.referral.exists() and Claim.item.encounter.exists()" ]
+  ] ;
+  fhir:ChargeItemDefinition.propertyGroup [
+     fhir:index 0 ;
+     fhir:ChargeItemDefinition.propertyGroup.priceComponent [
+       fhir:index 0 ;
+       fhir:ChargeItemDefinition.propertyGroup.priceComponent.type [ fhir:value "base" ] ;
+       fhir:ChargeItemDefinition.propertyGroup.priceComponent.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0901010014" ] ;
+           fhir:Coding.display [ fhir:value "OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-mama.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

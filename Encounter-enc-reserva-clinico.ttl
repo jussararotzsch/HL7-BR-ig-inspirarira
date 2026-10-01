@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-reserva-clinico> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "enc-reserva-clinico"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/internacao-regulada>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Encounter enc-reserva-clinico</b></p><a name=\"enc-reserva-clinico\"> </a><a name=\"hcenc-reserva-clinico\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-internacao-regulada.html\">Internação Regulada</a></p></div><p><b>status</b>: Planned</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>priority</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento 01}\">Eletivo</span></p><p><b>subject</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-leito-clinico.html\">ServiceRequest TRATAMENTO DE INSUFICIENCIA CARDIACA</a></p><p><b>period</b>: 2026-10-02 08:00:00-0300 --&gt; (em curso)</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AdmitSource</b></td><td><b>DischargeDisposition</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRProcedencia 12}\">Demanda referenciada</span></td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDesfecho 07}\">Permanência</span></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-leito-clin-01.html\">Location Clínica Médica, leito 01</a></td><td>Reserved</td><td>2026-10-01 14:00:00-0300 --&gt; 2026-10-02 10:00:00-0300</td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-org-hospital-destino.html\">Organization Hospital Regional Exemplo</a></p></div>"
+  ] ;
+  fhir:Encounter.status [ fhir:value "planned"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "IMP" ]
+  ] ;
+  fhir:Encounter.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRCaraterAtendimento" ] ;
+       fhir:Coding.code [ fhir:value "01" ] ;
+       fhir:Coding.display [ fhir:value "Eletivo" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Encounter.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-leito-clinico> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-leito-clinico" ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-10-02T08:00:00-03:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.admitSource [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRProcedencia" ] ;
+         fhir:Coding.code [ fhir:value "12" ] ;
+         fhir:Coding.display [ fhir:value "Demanda referenciada" ]
+       ]
+     ] ;
+     fhir:Encounter.hospitalization.dischargeDisposition [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDesfecho" ] ;
+         fhir:Coding.code [ fhir:value "07" ] ;
+         fhir:Coding.display [ fhir:value "Permanência" ]
+       ]
+     ]
+  ] ;
+  fhir:Encounter.location [
+     fhir:index 0 ;
+     fhir:Encounter.location.location [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Location/leito-clin-01> ;
+       fhir:Reference.reference [ fhir:value "Location/leito-clin-01" ]
+     ] ;
+     fhir:Encounter.location.status [ fhir:value "reserved" ] ;
+     fhir:Encounter.location.period [
+       fhir:Period.start [ fhir:value "2026-10-01T14:00:00-03:00"^^xsd:dateTime ] ;
+       fhir:Period.end [ fhir:value "2026-10-02T10:00:00-03:00"^^xsd:dateTime ]
+     ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-hospital-destino> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-hospital-destino" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Encounter/enc-reserva-clinico.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

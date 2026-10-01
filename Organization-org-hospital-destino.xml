@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="org-hospital-destino"/>
+  <meta>
+    <profile value="https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Organization org-hospital-destino</b></p><a name="org-hospital-destino"> </a><a name="hcorg-hospital-destino"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization">BRCoreOrganization</a></p></div><p><b>identifier</b>: Provider number/0000004 (utilização: official, )</p><p><b>name</b>: Hospital Regional Exemplo</p><p><b>alias</b>: HRE</p><p><b>address</b>: Rua Exemplo, 100 São Paulo SP BR </p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PRN"/>
+      </coding>
+    </type>
+    <system value="https://saude.gov.br/fhir/sid/cnes"/>
+    <value value="0000004"/>
+  </identifier>
+  <name value="Hospital Regional Exemplo"/>
+  <alias value="HRE"/>
+  <address>
+    <line value="Rua Exemplo, 100"/>
+    <city value="São Paulo"/>
+    <state value="SP"/>
+    <country value="BR"/>
+  </address>
+</Organization>

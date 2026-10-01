@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClaimResponse xmlns="http://hl7.org/fhir">
+  <id value="claimresponse-apac-hemodialise"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: ClaimResponse claimresponse-apac-hemodialise</b></p><a name="claimresponse-apac-hemodialise"> </a><a name="hcclaimresponse-apac-hemodialise"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-resposta-autorizacao-sus.html">Resposta de Autorização SUS (APAC/AIH)</a></p></div><p><b>identifier</b>: <code>http://ses-exemplo.saude.sp.gov.br/fhir/sid/apac</code>/3526100000001</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/claim-type institutional}">Institutional</span></p><p><b>subType</b>: <span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS apac}">apac</span></p><p><b>use</b>: Preauthorization</p><p><b>patient</b>: <a href="Patient-paciente-maria.html">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>created</b>: 2026-10-09 15:30:00-0300</p><p><b>insurer</b>: <a href="Organization-org-gestor-ses.html">Organization Secretaria Estadual de Saúde Exemplo</a></p><p><b>requestor</b>: <a href="Organization-org-executante.html">Organization Hospital Exemplo</a></p><p><b>request</b>: <a href="Claim-claim-apac-hemodialise.html">Claim: identifier = http://hospital-exemplo.org.br/fhir/sid/laudo-apac#LAUDO-2026-7781; status = active; type = Institutional; subType = apac; use = preauthorization; created = 2026-10-08 09:00:00-0300; priority = Normal</a></p><p><b>outcome</b>: Processing Complete</p><p><b>disposition</b>: APAC autorizada</p><p><b>preAuthRef</b>: 3526100000001</p><p><b>preAuthPeriod</b>: 2026-10-13 --&gt; 2027-01-12</p></div>
+  </text>
+  <identifier>
+    <system value="http://ses-exemplo.saude.sp.gov.br/fhir/sid/apac"/>
+    <value value="3526100000001"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="institutional"/>
+    </coding>
+  </type>
+  <subType>
+    <coding>
+      <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRInstrumentoFinanceiroSUS"/>
+      <code value="apac"/>
+    </coding>
+  </subType>
+  <use value="preauthorization"/>
+  <patient>
+    <reference value="Patient/paciente-maria"/>
+  </patient>
+  <created value="2026-10-09T15:30:00-03:00"/>
+  <insurer>
+    <reference value="Organization/org-gestor-ses"/>
+  </insurer>
+  <requestor>
+    <reference value="Organization/org-executante"/>
+  </requestor>
+  <request>
+    <reference value="Claim/claim-apac-hemodialise"/>
+  </request>
+  <outcome value="complete"/>
+  <disposition value="APAC autorizada"/>
+  <preAuthRef value="3526100000001"/>
+  <preAuthPeriod>
+    <start value="2026-10-13"/>
+    <end value="2027-01-12"/>
+  </preAuthPeriod>
+</ClaimResponse>

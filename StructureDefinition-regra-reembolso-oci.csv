@@ -1,0 +1,156 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping","Mapping: Workflow Pattern","Mapping: FiveWs Pattern Mapping","Mapping: Object Implementation Information"
+"ChargeItemDefinition","ChargeItemDefinition","","","",0,*,"","","","null {[]} {[]}
+","Regra de Reembolso de OCI","Condições de pagamento e valor de referência de uma OCI do SUS. As condições (applicability) são avaliadas sobre o Registro de Produção SUS: procedimentos obrigatórios realizados, conclusão no prazo e habilitação do executante. Pagamento por pacote, não por procedimento isolado.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition",0,*,"","cid-0:Name should be usable as an identifier for the module by machine processing applications such as code generation {name.matches('[A-Z]([A-Za-z0-9_]){0,254}')}
+dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}","Entity. Role, or Act","N/A"
+"ChargeItemDefinition.id","ChargeItemDefinition.id","","","",0,1,"","","Y","id {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","The only time that a resource does not have an id is when it is being submitted to the server using a create operation.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
+"ChargeItemDefinition.meta","ChargeItemDefinition.meta","","","",0,1,"","","Y","Meta {[]} {[]}
+","Metadados do recurso","Metadados mantidos pela infraestrutura: versão, data de atualização, perfis e etiquetas.","","","","","","","","","",,,,,"",,,,"Resource.meta",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ChargeItemDefinition.implicitRules","ChargeItemDefinition.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
+","Regras sob as quais o conteúdo foi criado","Referência ao conjunto de regras usadas na criação do recurso.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ChargeItemDefinition.language","ChargeItemDefinition.language","","","",0,1,"","","","code {[]} {[]}
+","Idioma do conteúdo","Idioma em que o recurso foi escrito.","Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).","","","","","","","","",,"preferred","A human language.","http://hl7.org/fhir/ValueSet/languages|4.0.1","",,,,"Resource.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ChargeItemDefinition.text","ChargeItemDefinition.text","","narrative
+htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
+","Narrativa legível do recurso","Resumo textual do recurso, para leitura humana.","Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a ""text blob"" or where text is additionally entered raw or narrated and encoded information is added later.","","","","","","","","",,,,,"",,,,"DomainResource.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.text?"
+"ChargeItemDefinition.contained","ChargeItemDefinition.contained","","inline resources
+anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
+","Recursos contidos","Recursos inline sem existência independente fora deste recurso.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+"ChargeItemDefinition.extension","ChargeItemDefinition.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.modifierExtension","ChargeItemDefinition.modifierExtension","","","",0,*,"","Y","","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.url","ChargeItemDefinition.url","","","",1,1,"Y","","Y","uri {[]} {[]}
+","URL canônica","Identificador canônico, globalmente único, do artefato.","Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+
+The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](http://hl7.org/fhir/R4/resource.html#versions). 
+
+In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](http://hl7.org/fhir/R4/resource.html#meta) element to indicate where the current master source of the resource can be found.","Allows the charge item definition to be referenced by a single globally unique identifier.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.url",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.url","FiveWs.identifier"
+"ChargeItemDefinition.identifier","ChargeItemDefinition.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
+","Identificador de negócio","Identificador externo atribuído ao recurso pelo sistema de origem.","Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this charge item definition outside of FHIR, where it is not possible to use the logical URI.","Allows externally provided and/or usable business identifiers to be easily associated with the module.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.identifier","FiveWs.identifier","no-gen-base"
+"ChargeItemDefinition.version","ChargeItemDefinition.version","","","",1,1,"Y","","Y","string {[]} {[]}
+","Versão","Versão de negócio do artefato.","There may be different charge item definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the charge item definition with the format [url]|[version].","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.version",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.version","FiveWs.version"
+"ChargeItemDefinition.title","ChargeItemDefinition.title","","","",1,1,"Y","","Y","string {[]} {[]}
+","Título","Nome legível por pessoas.","This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.title",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.title"
+"ChargeItemDefinition.derivedFromUri","ChargeItemDefinition.derivedFromUri","","","",0,*,"Y","","Y","uri {[]} {[]}
+","Norma que institui a OCI e a regra de pagamento","Norma ou documento de que a regra deriva.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.derivedFromUri",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.partOf","ChargeItemDefinition.partOf","","container
+","",0,*,"","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition|4.0.1]]}
+","Definição maior","Definição da qual esta faz parte.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.partOf",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.replaces","ChargeItemDefinition.replaces","","supersedes
+priorrenewed order","",0,*,"","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition|4.0.1]]}
+","Definição substituída","Definição anterior substituída.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.replaces",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.status","ChargeItemDefinition.status","","","",1,1,"Y","Y","Y","code {[]} {[]}
+","Situação","Situação do recurso no seu ciclo de vida.","Allows filtering of charge item definitions that are appropriate for use versus not.","","","","","","","","",,"required","The lifecycle status of an artifact.","http://hl7.org/fhir/ValueSet/publication-status|4.0.1","",,,,"ChargeItemDefinition.status",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.status {different ValueSet}","FiveWs.status"
+"ChargeItemDefinition.experimental","ChargeItemDefinition.experimental","","","",0,1,"","","Y","boolean {[]} {[]}
+","Uso experimental","Indica que o artefato é para teste e não para uso real.","Allows filtering of charge item definitions that are appropriate for use versus not.","Enables experimental content to be developed following the same lifecycle that would be used for a production-level charge item definition.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.experimental",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.experimental","FiveWs.class"
+"ChargeItemDefinition.date","ChargeItemDefinition.date","","Revision Date
+","",0,1,"","","Y","dateTime {[]} {[]}
+","Data","Data da última alteração relevante.","Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the charge item definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.date",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.date","FiveWs.recorded"
+"ChargeItemDefinition.publisher","ChargeItemDefinition.publisher","","","",0,1,"","","Y","string {[]} {[]}
+","Publicador","Organização ou pessoa responsável pela publicação.","Usually an organization but may be an individual. The publisher (or steward) of the charge item definition is the organization or individual primarily responsible for the maintenance and upkeep of the charge item definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the charge item definition. This item SHOULD be populated unless the information is available from context.","Helps establish the ""authority/credibility"" of the charge item definition.  May also allow for contact.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.publisher",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.publisher {as string instead of CodeableConcept}","FiveWs.witness"
+"ChargeItemDefinition.contact","ChargeItemDefinition.contact","","","",0,*,"","","Y","ContactDetail {[]} {[]}
+","Contato do publicador","Dados de contato do publicador.","May be a web site, an email address, a telephone number, etc.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.contact",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.contact"
+"ChargeItemDefinition.description","ChargeItemDefinition.description","","","",0,1,"","","Y","markdown {[]} {[]}
+","Descrição","Descrição em linguagem natural.","This description can be used to capture details such as why the charge item definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the charge item definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the charge item definition is presumed to be the predominant language in the place the charge item definition was created).","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.description"
+"ChargeItemDefinition.useContext","ChargeItemDefinition.useContext","","","",0,*,"","","Y","UsageContext {[]} {[]}
+","Contexto de uso","Contexto em que o conteúdo se aplica.","When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.","Assist in searching for appropriate content.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.useContext",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.useContext"
+"ChargeItemDefinition.jurisdiction","ChargeItemDefinition.jurisdiction","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
+","Jurisdição","Jurisdição em que o artefato se aplica.","It may be possible for the charge item definition to be used in jurisdictions other than those for which it was originally designed or intended.","","","","","","","","",,"extensible","Countries and regions within which this artifact is targeted for use.","http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1","",,,,"ChargeItemDefinition.jurisdiction",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.jurisdiction"
+"ChargeItemDefinition.copyright","ChargeItemDefinition.copyright","","License
+Restrictions","",0,1,"","","","markdown {[]} {[]}
+","Direitos de uso","Restrições de uso e publicação.","","Consumers must be able to determine any legal restrictions on the use of the charge item definition and/or its content.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.copyright",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.copyright","no-gen-base"
+"ChargeItemDefinition.approvalDate","ChargeItemDefinition.approvalDate","","","",0,1,"","","","date {[]} {[]}
+","Data de aprovação","Data em que o publicador aprovou o conteúdo.","The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.approvalDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.approvalDate","no-gen-base"
+"ChargeItemDefinition.lastReviewDate","ChargeItemDefinition.lastReviewDate","","","",0,1,"","","","date {[]} {[]}
+","Data da última revisão","Data da última revisão do conteúdo.","If specified, this date follows the original approval date.","Gives a sense of how ""current"" the content is.  Resources that have not been reviewed in a long time may have a risk of being less appropriate/relevant.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.lastReviewDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.lastReviewDate","no-gen-base"
+"ChargeItemDefinition.effectivePeriod","ChargeItemDefinition.effectivePeriod","","","",0,1,"Y","","Y","Period {[]} {[]}
+","Competências em que a regra vale","Período em que o artefato está vigente.","DEVERIA ser informado: competências em que a regra vale. Mantido 0..1 porque o IG Publisher 2.x acusa falso positivo de cardinalidade neste elemento na conversão R4/R5.","Allows establishing a transition before a resource comes into effect and also allows for a sunsetting  process when new versions of the charge item definition are or are expected to be used instead.","","","","","","","",,,,,"",,,,"ChargeItemDefinition.effectivePeriod",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A","Definition.effectivePeriod","no-gen-base"
+"ChargeItemDefinition.code","ChargeItemDefinition.code","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
+","Código SIGTAP da OCI (grupo 09)","Código do item cobrado.","","","","","","","","","",,"extensible","","https://terminologia.saude.gov.br/fhir/ValueSet/BROCISUS","",,,,"ChargeItemDefinition.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.instance","ChargeItemDefinition.instance","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Medication|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Substance|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device|4.0.1]]}
+","Instâncias","Recursos específicos a que se aplica.","In case of highly customized, individually produced or fitted devices/substances, the pricing information may be different for each instance of the product. This reference links pricing details to specific product instances.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.instance",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.applicability","ChargeItemDefinition.applicability","","","",1,*,"Y","","","BackboneElement {[]} {[]}
+","Condição de pagamento","Condição que deve ser verdadeira para que a regra se aplique.","The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.applicability",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.applicability.id","ChargeItemDefinition.applicability.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ChargeItemDefinition.applicability.extension","ChargeItemDefinition.applicability.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.applicability.modifierExtension","ChargeItemDefinition.applicability.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.applicability.description","ChargeItemDefinition.applicability.description","","","",1,1,"Y","","","string {[]} {[]}
+","Descrição da condição","Descrição em texto.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.applicability.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.applicability.language","ChargeItemDefinition.applicability.language","","","",1,1,"Y","","","string {[]} {[]}
+","Linguagem","Linguagem da expressão.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.applicability.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.applicability.expression","ChargeItemDefinition.applicability.expression","","","",1,1,"Y","","","string {[]} {[]}
+","Expressão","Expressão que avalia a condição.","FHIRPath avaliado sobre o Claim de produção (ProducaoSUS).","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.applicability.expression",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.propertyGroup","ChargeItemDefinition.propertyGroup","","","",1,*,"Y","","","BackboneElement {[]} {[]}
+","Grupo de preço","Componentes de preço e suas condições.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.propertyGroup",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.propertyGroup.id","ChargeItemDefinition.propertyGroup.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ChargeItemDefinition.propertyGroup.extension","ChargeItemDefinition.propertyGroup.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.propertyGroup.modifierExtension","ChargeItemDefinition.propertyGroup.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.propertyGroup.applicability","ChargeItemDefinition.propertyGroup.applicability","","","",0,*,"","","","null {[]} {[]}
+","Condições do grupo","Condições do grupo de preço.","The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.propertyGroup.applicability",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.propertyGroup.priceComponent","ChargeItemDefinition.propertyGroup.priceComponent","","","",1,*,"Y","","","BackboneElement {[]} {[]}
+","Componente de preço","Valor base, acréscimo, desconto ou tributo.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.propertyGroup.priceComponent",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.propertyGroup.priceComponent.id","ChargeItemDefinition.propertyGroup.priceComponent.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ChargeItemDefinition.propertyGroup.priceComponent.extension","ChargeItemDefinition.propertyGroup.priceComponent.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.propertyGroup.priceComponent.modifierExtension","ChargeItemDefinition.propertyGroup.priceComponent.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ChargeItemDefinition.propertyGroup.priceComponent.type","ChargeItemDefinition.propertyGroup.priceComponent.type","","","",1,1,"Y","","","code {[]} {[]}
+","Tipo de componente","base, surcharge, deduction, discount, tax ou informational.","","","","","","","","","",,"required","Codes indicating the kind of the price component.","http://hl7.org/fhir/ValueSet/invoice-priceComponentType|4.0.1","",,,,"ChargeItemDefinition.propertyGroup.priceComponent.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.propertyGroup.priceComponent.code","ChargeItemDefinition.propertyGroup.priceComponent.code","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
+","Código do componente","Código do componente.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.propertyGroup.priceComponent.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.propertyGroup.priceComponent.factor","ChargeItemDefinition.propertyGroup.priceComponent.factor","","","",0,1,"","","","decimal {[]} {[]}
+","Fator","Fator aplicado.","","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.propertyGroup.priceComponent.factor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"
+"ChargeItemDefinition.propertyGroup.priceComponent.amount","ChargeItemDefinition.propertyGroup.priceComponent.amount","","","",0,1,"Y","","","Money {[]} {[]}
+","Valor","Valor monetário.","Valor SIGTAP da competência. A fonte de verdade do valor é o SIGTAP; este elemento é referência para cálculo e auditoria.","","","","","","","","",,,,,"",,,,"ChargeItemDefinition.propertyGroup.priceComponent.amount",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","N/A"

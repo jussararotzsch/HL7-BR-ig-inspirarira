@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Mapeamento RIRA - Guia de Implementação InspiraRIRA v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação InspiraRIRA</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Brazil
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Início</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fluxo
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="fluxo.html">Fluxo regulatório</a>
+      </li>
+      <li>
+        <a href="autorizacao.html">Autorização na Task</a>
+      </li>
+      <li>
+        <a href="leitos.html">Regulação de leitos</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="mapeamento-rira.html">Mapeamento RIRA</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Débitos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="debitos-tecnicos.html">Débitos técnicos</a>
+      </li>
+      <li>
+        <a href="recomendacoes-rnds.html">Recomendações à RNDS</a>
+      </li>
+      <li>
+        <a href="transicao.html">Transição</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefatos</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Mapeamento RIRA</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação InspiraRIRA - Compilação de desenvolvimento local (v0.1.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.hsl.org.br/ig/inspirarira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Mapeamento RIRA</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="mapeamento-rira">Mapeamento RIRA</h1>
+
+<p>Cada slice de <code class="language-plaintext highlighter-rouge">Composition.event</code> de <code class="language-plaintext highlighter-rouge">BRRegulacaoAssistencial</code> e o estado nativo que o substitui. A versão computável está no ConceptMap <a href="https://terminologia.saude.gov.br/fhir/ConceptMap/BRRIRAEventoParaFluxoNativo">BRRIRAEventoParaFluxoNativo</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>RIRA hoje</th>
+      <th>Modelo nativo</th>
+      <th>Exemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Composition (documento com 7 slices de event)</td>
+      <td>RequisicaoRegulacao + TarefaRegulacao + AgendamentoRegulacao + Encounter; Claim/ClaimResponse só quando há APAC/AIH</td>
+      <td>todos</td>
+    </tr>
+    <tr>
+      <td>event:pending</td>
+      <td>ServiceRequest <code class="language-plaintext highlighter-rouge">active</code>; Task <code class="language-plaintext highlighter-rouge">received</code>/<code class="language-plaintext highlighter-rouge">recebido</code> até <code class="language-plaintext highlighter-rouge">ready</code>/<code class="language-plaintext highlighter-rouge">fila-elegivel</code></td>
+      <td>A1, A4</td>
+    </tr>
+    <tr>
+      <td>event:returned-to-requester</td>
+      <td>Task <code class="language-plaintext highlighter-rouge">on-hold</code>, <code class="language-plaintext highlighter-rouge">pendencia-documental</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> e output de completude</td>
+      <td>C2</td>
+    </tr>
+    <tr>
+      <td>event:booked</td>
+      <td>Appointment <code class="language-plaintext highlighter-rouge">booked</code>; Task <code class="language-plaintext highlighter-rouge">completed</code>/<code class="language-plaintext highlighter-rouge">agendado</code> com output para o Appointment</td>
+      <td>A3</td>
+    </tr>
+    <tr>
+      <td>event:attended</td>
+      <td>Appointment <code class="language-plaintext highlighter-rouge">fulfilled</code> + Encounter; Task <code class="language-plaintext highlighter-rouge">executado</code></td>
+      <td>A5, B7</td>
+    </tr>
+    <tr>
+      <td>event:cancelled</td>
+      <td>Appointment <code class="language-plaintext highlighter-rouge">cancelled</code> com <code class="language-plaintext highlighter-rouge">cancelationReason</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>event:absence</td>
+      <td>Appointment <code class="language-plaintext highlighter-rouge">noshow</code>; Task volta à fila preservando <code class="language-plaintext highlighter-rouge">dataEntradaFila</code></td>
+      <td>A2</td>
+    </tr>
+    <tr>
+      <td>event:excluded</td>
+      <td>ServiceRequest <code class="language-plaintext highlighter-rouge">revoked</code> (clínica) ou <code class="language-plaintext highlighter-rouge">entered-in-error</code> (cadastro); Task <code class="language-plaintext highlighter-rouge">rejected</code>/<code class="language-plaintext highlighter-rouge">cancelado-clinicamente</code></td>
+      <td>C3, C4</td>
+    </tr>
+    <tr>
+      <td>Composition.section (1..1, só o Appointment)</td>
+      <td>Eliminada. Cada recurso é pesquisável por <code class="language-plaintext highlighter-rouge">basedOn</code> e <code class="language-plaintext highlighter-rouge">focus</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Appointment.created como “Data da Autorização”</td>
+      <td>RespostaAutorizacaoSUS.created e preAuthPeriod</td>
+      <td>B4</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="elementos-dos-perfis">Elementos dos perfis</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>RIRA</th>
+      <th>Este guia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ServiceRequest.identifier</td>
+      <td>0..0</td>
+      <td>1..* MS</td>
+    </tr>
+    <tr>
+      <td>ServiceRequest.status / intent</td>
+      <td>ValueSets próprios</td>
+      <td>request-status e request-intent padrão</td>
+    </tr>
+    <tr>
+      <td>ServiceRequest.reasonReference</td>
+      <td>1..1 BRCID10Avaliado</td>
+      <td>0..* Condition, Observation, DiagnosticReport, DocumentReference, com invariante rr-1</td>
+    </tr>
+    <tr>
+      <td>ServiceRequest.encounter</td>
+      <td>0..0</td>
+      <td>0..1 MS, Encounter de origem</td>
+    </tr>
+    <tr>
+      <td>ServiceRequest.subject</td>
+      <td>BRIndividuo-1.0</td>
+      <td>br-core-patient</td>
+    </tr>
+    <tr>
+      <td>Appointment.identifier</td>
+      <td>0..0</td>
+      <td>1..* MS</td>
+    </tr>
+    <tr>
+      <td>Appointment.status</td>
+      <td>ValueSet próprio</td>
+      <td>appointmentstatus padrão</td>
+    </tr>
+    <tr>
+      <td>Appointment.cancelationReason</td>
+      <td>0..0</td>
+      <td>MS</td>
+    </tr>
+    <tr>
+      <td>Appointment.supportingInformation:regulatoryOrganization</td>
+      <td>slice por identifier.system</td>
+      <td>slice <code class="language-plaintext highlighter-rouge">regulador</code> por tipo; novo slice <code class="language-plaintext highlighter-rouge">autorizacao</code></td>
+    </tr>
+    <tr>
+      <td>Appointment.basedOn</td>
+      <td>1..1</td>
+      <td>1..* MS (mantido)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fora-do-escopo-do-rira-atual">Fora do escopo do RIRA atual</h2>
+
+<p>O RIRA de hoje é, na prática, regulação ambulatorial. O binding de modalidade (<code class="language-plaintext highlighter-rouge">BRModalidadeAssistencialMIRA</code>) aceita 04 Atenção Hospitalar, mas o modelo termina num Appointment (booked, attended, absence, cancelled) e não tem leito, internação, transferência nem instrumento financeiro. Os artefatos abaixo não substituem nada do RIRA: são escopo novo, vindo do guia do GT Financeiro.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tema</th>
+      <th>Artefatos deste guia</th>
+      <th>Situação no RIRA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Leito</td>
+      <td>LeitoRegulado, BRTipoLeito, BREspecialidadeLeito</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>Reserva e internação</td>
+      <td>InternacaoRegulada</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>Transferência inter-hospitalar</td>
+      <td>RequisicaoRegulacao com encounter de origem, TransporteSanitario, LocalOrigem</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>Vaga zero</td>
+      <td>TarefaRegulacao (<code class="language-plaintext highlighter-rouge">businessStatus = vaga-zero</code>, invariante tr-4)</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>Alta e liberação do leito</td>
+      <td>InternacaoRegulada <code class="language-plaintext highlighter-rouge">finished</code>, LeitoRegulado H/U</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>Censo de leitos</td>
+      <td>CensoLeitos, BRPopulacaoCensoLeitos</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>AIH</td>
+      <td>AutorizacaoPreviaSUS e ProducaoSUS com <code class="language-plaintext highlighter-rouge">subType = aih</code></td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>APAC</td>
+      <td>AutorizacaoPreviaSUS, RespostaAutorizacaoSUS, ProducaoSUS</td>
+      <td>Reduzida a <code class="language-plaintext highlighter-rouge">Appointment.created</code> como “Data da Autorização”</td>
+    </tr>
+    <tr>
+      <td>BPA-I e RAAS</td>
+      <td>ProducaoSUS</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>OCI e reembolso</td>
+      <td>ProtocoloOCI, RegraReembolsoOCI, BROCISUS</td>
+      <td>Inexistente</td>
+    </tr>
+    <tr>
+      <td>Decisão regulatória estruturada</td>
+      <td>TarefaRegulacao (dimensão, resultado, motivo, protocolo)</td>
+      <td>Inexistente</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hospitalsiriolibanes.org.br">Hospital Sírio-Libanês</a>.  Package br.org.hsl.inspirarira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 1, 2026 16:52-0300">2026-10-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

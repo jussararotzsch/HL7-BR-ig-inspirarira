@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="protocolo-acesso-nefrologia"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: PlanDefinition protocolo-acesso-nefrologia</b></p><a name="protocolo-acesso-nefrologia"> </a><a name="hcprotocolo-acesso-nefrologia"> </a><p><b>url</b>: <a href="PlanDefinition-protocolo-acesso-nefrologia.html">PlanDefinition Protocolo de acesso à nefrologia</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: ProtocoloAcessoNefrologia</p><p><b>title</b>: Protocolo de acesso à nefrologia</p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/plan-definition-type clinical-protocol}">Clinical Protocol</span></p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2026-10-01 16:52:20-0300</p><p><b>publisher</b>: Hospital Sírio-Libanês</p><p><b>contact</b>: Hospital Sírio-Libanês: <a href="https://www.hospitalsiriolibanes.org.br">https://www.hospitalsiriolibanes.org.br</a></p><p><b>jurisdiction</b>: <span title="Códigos:{urn:iso:std:iso:3166 BR}">Brazil</span></p><h3>Actions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Title</b></td><td><b>Description</b></td></tr><tr><td style="display: none">*</td><td>Qualificar e priorizar pedido de consulta em nefrologia</td><td>Exige TFG estimada e exame de urina recentes. Prioriza por estágio da DRC, risco da espera e fragilidade.</td></tr></table></div>
+  </text>
+  <url value="http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-acesso-nefrologia"/>
+  <version value="0.1.0"/>
+  <name value="ProtocoloAcessoNefrologia"/>
+  <title value="Protocolo de acesso à nefrologia"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="clinical-protocol"/>
+    </coding>
+  </type>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-01T16:52:20-03:00"/>
+  <publisher value="Hospital Sírio-Libanês"/>
+  <contact>
+    <name value="Hospital Sírio-Libanês"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.hospitalsiriolibanes.org.br"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <action>
+    <title value="Qualificar e priorizar pedido de consulta em nefrologia"/>
+    <description value="Exige TFG estimada e exame de urina recentes. Prioriza por estágio da DRC, risco da espera e fragilidade."/>
+  </action>
+</PlanDefinition>

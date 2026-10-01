@@ -1,0 +1,259 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-ic> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "protocolo-oci-ic"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: PlanDefinition protocolo-oci-ic</b></p><a name=\"protocolo-oci-ic\"> </a><a name=\"hcprotocolo-oci-ic\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-protocolo-oci.html\">Protocolo de Oferta de Cuidados Integrados (OCI)</a></p></div><p><b>url</b>: <a href=\"PlanDefinition-protocolo-oci-ic.html\">PlanDefinition OCI Avaliação diagnóstica de insuficiência cardíaca</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: ProtocoloOCIIC</p><p><b>title</b>: OCI Avaliação diagnóstica de insuficiência cardíaca</p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/plan-definition-type order-set}\">Order Set</span></p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2026-10-01 16:52:20-0300</p><p><b>publisher</b>: Hospital Sírio-Libanês</p><p><b>contact</b>: Hospital Sírio-Libanês: <a href=\"https://www.hospitalsiriolibanes.org.br\">https://www.hospitalsiriolibanes.org.br</a></p><h3>UseContexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-usage-context-type.html#usage-context-type-focus\">UsageContextType: focus</a> (Clinical Focus)</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0902010069}\">OCI AVALIAÇÃO DIAGNÓSTICA - INSUFICIÊNCIA CARDÍACA</span></td></tr></table><p><b>jurisdiction</b>: <span title=\"Códigos:{urn:iso:std:iso:3166 BR}\">Brazil</span></p><h3>RelatedArtifacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Resource</b></td></tr><tr><td style=\"display: none\">*</td><td>Depends On</td><td><a href=\"ChargeItemDefinition-regra-reembolso-oci-ic.html\">Reembolso da OCI Investigação diagnóstica de insuficiência cardíaca</a></td></tr><tr><td style=\"display: none\">*</td><td>Composed Of</td><td><a href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUSOCI-IC\">https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUSOCI-IC</a></td></tr></table><blockquote><p><b>action</b></p><p><b>title</b>: Investigação diagnóstica de insuficiência cardíaca</p><p><b>timing</b>: Nenhum ecrã para Duration  (value: 60; unit: dias; system: http://unitsofmeasure.org; code: d)</p><h3>Actions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Title</b></td><td><b>Code</b></td><td><b>RequiredBehavior</b></td></tr><tr><td style=\"display: none\">*</td><td>Hemograma completo</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0202020380}\">HEMOGRAMA COMPLETO</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Dosagem de creatinina</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0202010317}\">DOSAGEM DE CREATININA</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Dosagem de sodio</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0202010635}\">DOSAGEM DE SODIO</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Ecocardiografia transesofagica</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0205010024}\">ECOCARDIOGRAFIA TRANSESOFAGICA</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Consulta medica em atenção especializada</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}\">CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Eletrocardiograma</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0211020036}\">ELETROCARDIOGRAMA</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Teleconsulta médica na atenção especializada</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010307}\">TELECONSULTA MÉDICA NA ATENÇÃO ESPECIALIZADA</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Teste de esforço / teste ergometrico</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0211020060}\">TESTE DE ESFORÇO / TESTE ERGOMETRICO</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Monitoramento pelo sistema holter 24 hs (3 canais)</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0211020044}\">MONITORAMENTO PELO SISTEMA HOLTER 24 HS (3 CANAIS)</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Dosagem de peptídeos natriuréticos tipo b (bnp e nt-probnp)</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0202010791}\">DOSAGEM DE PEPTÍDEOS NATRIURÉTICOS TIPO B (BNP E NT-PROBNP)</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Ecocardiografia de estresse</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0205010016}\">ECOCARDIOGRAFIA DE ESTRESSE</span></td><td>Could</td></tr><tr><td style=\"display: none\">*</td><td>Cintilografia de miocardio para localizacao de necrose (minimo 3 projecoes )</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0208010041}\">CINTILOGRAFIA DE MIOCARDIO PARA LOCALIZACAO DE NECROSE (MINIMO 3 PROJECOES )</span></td><td>Could</td></tr></table></blockquote></div>"
+  ] ;
+  fhir:PlanDefinition.url [ fhir:value "http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-ic"] ;
+  fhir:PlanDefinition.version [ fhir:value "0.1.0"] ;
+  fhir:PlanDefinition.name [ fhir:value "ProtocoloOCIIC"] ;
+  fhir:PlanDefinition.title [ fhir:value "OCI Avaliação diagnóstica de insuficiência cardíaca"] ;
+  fhir:PlanDefinition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/plan-definition-type" ] ;
+       fhir:Coding.code [ fhir:value "order-set" ]
+     ]
+  ] ;
+  fhir:PlanDefinition.status [ fhir:value "draft"] ;
+  fhir:PlanDefinition.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:PlanDefinition.date [ fhir:value "2026-10-01T16:52:20-03:00"^^xsd:dateTime] ;
+  fhir:PlanDefinition.publisher [ fhir:value "Hospital Sírio-Libanês"] ;
+  fhir:PlanDefinition.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Hospital Sírio-Libanês" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.hospitalsiriolibanes.org.br" ]
+     ]
+  ] ;
+  fhir:PlanDefinition.useContext [
+     fhir:index 0 ;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ] ;
+       fhir:Coding.code [ fhir:value "focus" ]
+     ] ;
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+         fhir:Coding.code [ fhir:value "0902010069" ] ;
+         fhir:Coding.display [ fhir:value "OCI AVALIAÇÃO DIAGNÓSTICA - INSUFICIÊNCIA CARDÍACA" ]
+       ]
+     ]
+  ] ;
+  fhir:PlanDefinition.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "BR" ] ;
+       fhir:Coding.display [ fhir:value "Brazil" ]
+     ]
+  ] ;
+  fhir:PlanDefinition.relatedArtifact [
+     fhir:index 0 ;
+     fhir:RelatedArtifact.type [ fhir:value "depends-on" ] ;
+     fhir:RelatedArtifact.resource [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-ic" ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-ic>
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:RelatedArtifact.type [ fhir:value "composed-of" ] ;
+     fhir:RelatedArtifact.resource [
+       fhir:value "https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUSOCI-IC" ;
+       fhir:link <https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUSOCI-IC>
+     ]
+  ] ;
+  fhir:PlanDefinition.action [
+     fhir:index 0 ;
+     fhir:PlanDefinition.action.title [ fhir:value "Investigação diagnóstica de insuficiência cardíaca" ] ;
+     fhir:PlanDefinition.action.timingDuration [
+       fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "dias" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "d" ]
+     ] ;
+     fhir:PlanDefinition.action.action [
+       fhir:index 0 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Hemograma completo" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0202020380" ] ;
+           fhir:Coding.display [ fhir:value "HEMOGRAMA COMPLETO" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 1 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Dosagem de creatinina" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0202010317" ] ;
+           fhir:Coding.display [ fhir:value "DOSAGEM DE CREATININA" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 2 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Dosagem de sodio" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0202010635" ] ;
+           fhir:Coding.display [ fhir:value "DOSAGEM DE SODIO" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 3 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Ecocardiografia transesofagica" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0205010024" ] ;
+           fhir:Coding.display [ fhir:value "ECOCARDIOGRAFIA TRANSESOFAGICA" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 4 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Consulta medica em atenção especializada" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0301010072" ] ;
+           fhir:Coding.display [ fhir:value "CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 5 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Eletrocardiograma" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0211020036" ] ;
+           fhir:Coding.display [ fhir:value "ELETROCARDIOGRAMA" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 6 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Teleconsulta médica na atenção especializada" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0301010307" ] ;
+           fhir:Coding.display [ fhir:value "TELECONSULTA MÉDICA NA ATENÇÃO ESPECIALIZADA" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 7 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Teste de esforço / teste ergometrico" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0211020060" ] ;
+           fhir:Coding.display [ fhir:value "TESTE DE ESFORÇO / TESTE ERGOMETRICO" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 8 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Monitoramento pelo sistema holter 24 hs (3 canais)" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0211020044" ] ;
+           fhir:Coding.display [ fhir:value "MONITORAMENTO PELO SISTEMA HOLTER 24 HS (3 CANAIS)" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 9 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Dosagem de peptídeos natriuréticos tipo b (bnp e nt-probnp)" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0202010791" ] ;
+           fhir:Coding.display [ fhir:value "DOSAGEM DE PEPTÍDEOS NATRIURÉTICOS TIPO B (BNP E NT-PROBNP)" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 10 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Ecocardiografia de estresse" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0205010016" ] ;
+           fhir:Coding.display [ fhir:value "ECOCARDIOGRAFIA DE ESTRESSE" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ], [
+       fhir:index 11 ;
+       fhir:PlanDefinition.action.title [ fhir:value "Cintilografia de miocardio para localizacao de necrose (minimo 3 projecoes )" ] ;
+       fhir:PlanDefinition.action.code [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+           fhir:Coding.code [ fhir:value "0208010041" ] ;
+           fhir:Coding.display [ fhir:value "CINTILOGRAFIA DE MIOCARDIO PARA LOCALIZACAO DE NECROSE (MINIMO 3 PROJECOES )" ]
+         ]
+       ] ;
+       fhir:PlanDefinition.action.requiredBehavior [ fhir:value "could" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-ic.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

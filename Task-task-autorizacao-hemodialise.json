@@ -1,0 +1,100 @@
+{
+  "resourceType" : "Task",
+  "id" : "task-autorizacao-hemodialise",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-autorizacao-hemodialise</b></p><a name=\"task-autorizacao-hemodialise\"> </a><a name=\"hctask-autorizacao-hemodialise\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/tarefa</code>/TR-2026-001540</p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-hemodialise.html\">ServiceRequest Hemodiálise (máximo 3 sessões por semana)</a></p><p><b>status</b>: Completed</p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria autorizado}\">autorizado</span></p><p><b>intent</b>: order</p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao autorizacao}\">autorizacao</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-hemodialise.html\">ServiceRequest Hemodiálise (máximo 3 sessões por semana)</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-10-08 09:05:00-0300</p><p><b>lastModified</b>: 2026-10-09 15:30:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-executante.html\">Organization Hospital Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-gestor-ses.html\">Organization Secretaria Estadual de Saúde Exemplo</a></p><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria pertinencia}\">pertinencia</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria pertinente}\">pertinente</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria cobertura}\">cobertura</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria coberto}\">coberto</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria decisao}\">decisao</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria aprovado}\">aprovado</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao autorizacao-administrativa}\">autorizacao-administrativa</span></p><p><b>value</b>: <a href=\"ClaimResponse-claimresponse-apac-hemodialise.html\">ClaimResponse: identifier = http://ses-exemplo.saude.sp.gov.br/fhir/sid/apac#3526100000001; status = active; type = Institutional; subType = apac; use = preauthorization; created = 2026-10-09 15:30:00-0300; outcome = complete; disposition = APAC autorizada; preAuthRef = 3526100000001; preAuthPeriod = 2026-10-13 --&gt; 2027-01-12</a></p></blockquote></div>"
+  },
+  "identifier" : [{
+    "system" : "http://regulacao-exemplo.saude.sp.gov.br/fhir/sid/tarefa",
+    "value" : "TR-2026-001540"
+  }],
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-hemodialise"
+  }],
+  "status" : "completed",
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria",
+      "code" : "autorizado"
+    }]
+  },
+  "intent" : "order",
+  "priority" : "urgent",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao",
+      "code" : "autorizacao"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/sr-hemodialise"
+  },
+  "for" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "authoredOn" : "2026-10-08T09:05:00-03:00",
+  "lastModified" : "2026-10-09T15:30:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-executante"
+  },
+  "owner" : {
+    "reference" : "Organization/org-gestor-ses"
+  },
+  "output" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria",
+        "code" : "pertinencia"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria",
+        "code" : "pertinente"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria",
+        "code" : "cobertura"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria",
+        "code" : "coberto"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria",
+        "code" : "decisao"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria",
+        "code" : "aprovado"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoSaidaTarefaRegulacao",
+        "code" : "autorizacao-administrativa"
+      }]
+    },
+    "valueReference" : {
+      "reference" : "ClaimResponse/claimresponse-apac-hemodialise"
+    }
+  }]
+}

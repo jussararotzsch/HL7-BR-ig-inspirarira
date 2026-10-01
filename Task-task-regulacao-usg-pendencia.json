@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Task",
+  "id" : "task-regulacao-usg-pendencia",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-regulacao-usg-pendencia</b></p><a name=\"task-regulacao-usg-pendencia\"> </a><a name=\"hctask-regulacao-usg-pendencia\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-usg-abdome.html\">ServiceRequest Ultrassonografia de abdomen total</a></p><p><b>status</b>: On Hold</p><p><b>statusReason</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria informacao-clinica-insuficiente}\">informacao-clinica-insuficiente</span></p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria pendencia-documental}\">pendencia-documental</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-acesso}\">regulacao-acesso</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-usg-abdome.html\">ServiceRequest Ultrassonografia de abdomen total</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-09-10 10:05:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><p><b>note</b>: </p><blockquote><div><p>Informar tempo de evolução, achados do exame físico e exames laboratoriais prévios.</p>\n</div></blockquote><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria completude}\">completude</span></td><td><span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria incompleto}\">incompleto</span></td></tr></table></div>"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-usg-abdome"
+  }],
+  "status" : "on-hold",
+  "statusReason" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria",
+      "code" : "informacao-clinica-insuficiente"
+    }]
+  },
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria",
+      "code" : "pendencia-documental"
+    }]
+  },
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao",
+      "code" : "regulacao-acesso"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/sr-usg-abdome"
+  },
+  "for" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "authoredOn" : "2026-09-10T10:05:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-ubs-solicitante"
+  },
+  "owner" : {
+    "reference" : "Organization/org-central-regulacao"
+  },
+  "note" : [{
+    "text" : "Informar tempo de evolução, achados do exame físico e exames laboratoriais prévios."
+  }],
+  "output" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria",
+        "code" : "completude"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria",
+        "code" : "incompleto"
+      }]
+    }
+  }]
+}

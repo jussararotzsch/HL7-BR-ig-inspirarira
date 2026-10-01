@@ -1,0 +1,419 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: Workflow Pattern","Mapping: FiveWs Pattern Mapping","Mapping: RIM Mapping"
+"ClaimResponse","ClaimResponse","","Remittance Advice
+","",0,*,"","","","null {[]} {[]}
+","Resposta de Autorização SUS (APAC/AIH)","Emissão, negativa ou crítica da APAC/AIH pelo gestor autorizador. Carrega o número e a validade da autorização. Estrutura alinhada ao perfil RespostaGuia (ClaimResponse) da ANS.","","","","","","","","","",,,,,"",,,,"ClaimResponse",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
+dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}ra-1:Autorização concluída (outcome = complete) DEVE informar o número (preAuthRef) e a validade (preAuthPeriod). {outcome = 'complete' implies (preAuthRef.exists() and preAuthPeriod.exists())}","Event","Entity. Role, or Act"
+"ClaimResponse.id","ClaimResponse.id","","","",0,1,"","","Y","id {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","The only time that a resource does not have an id is when it is being submitted to the server using a create operation.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
+"ClaimResponse.meta","ClaimResponse.meta","","","",0,1,"","","Y","Meta {[]} {[]}
+","Metadados do recurso","Metadados mantidos pela infraestrutura: versão, data de atualização, perfis e etiquetas.","","","","","","","","","",,,,,"",,,,"Resource.meta",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.implicitRules","ClaimResponse.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
+","Regras sob as quais o conteúdo foi criado","Referência ao conjunto de regras usadas na criação do recurso.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.language","ClaimResponse.language","","","",0,1,"","","","code {[]} {[]}
+","Idioma do conteúdo","Idioma em que o recurso foi escrito.","Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).","","","","","","","","",,"preferred","A human language.","http://hl7.org/fhir/ValueSet/languages|4.0.1","",,,,"Resource.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.text","ClaimResponse.text","","narrative
+htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
+","Narrativa legível do recurso","Resumo textual do recurso, para leitura humana.","Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a ""text blob"" or where text is additionally entered raw or narrated and encoded information is added later.","","","","","","","","",,,,,"",,,,"DomainResource.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.text?"
+"ClaimResponse.contained","ClaimResponse.contained","","inline resources
+anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
+","Recursos contidos","Recursos inline sem existência independente fora deste recurso.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+"ClaimResponse.extension","ClaimResponse.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.modifierExtension","ClaimResponse.modifierExtension","","","",0,*,"","Y","","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.identifier","ClaimResponse.identifier","","","",0,*,"Y","","","Identifier {[]} {[]}
+","Identificador da resposta","Identificador de negócio da resposta.","","Allows claim responses to be distinguished and referenced.","","","","","","","",,,,,"",,,,"ClaimResponse.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Event.identifier","FiveWs.identifier"
+"ClaimResponse.status","ClaimResponse.status","","","",1,1,"Y","Y","Y","code {[]} {[]}
+","Situação","active, cancelled, draft ou entered-in-error.","This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.","Need to track the status of the resource as 'draft' resources may undergo further edits while 'active' resources are immutable and may only have their status changed to 'cancelled'.","","","","","","","",,"required","A code specifying the state of the resource instance.","http://hl7.org/fhir/ValueSet/fm-status|4.0.1","",,,,"ClaimResponse.status",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Event.status","FiveWs.status"
+"ClaimResponse.type","ClaimResponse.type","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
+","Tipo","Categoria ampla da solicitação respondida.","This may contain the local bill type codes, for example the US UB-04 bill type code or the CMS bill type.","Some jurisdictions need a finer grained claim type for routing and adjudication.","","","","","","","",,"extensible","The type or discipline-style of the claim.","http://hl7.org/fhir/ValueSet/claim-type|4.0.1","",,,,"ClaimResponse.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.class"
+"ClaimResponse.subType","ClaimResponse.subType","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
+","Subtipo","Instrumento específico (APAC, AIH).","This may contain the local bill type codes, for example the US UB-04 bill type code or the CMS bill type.","Some jurisdictions need a finer grained claim type for routing and adjudication.","","","","","","","",,"required","","https://terminologia.saude.gov.br/fhir/ValueSet/BRInstrumentoAutorizacaoSUS","",,,,"ClaimResponse.subType",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.class"
+"ClaimResponse.use","ClaimResponse.use","","","",1,1,"Y","","Y","code {[]} {[]}
+","Finalidade","claim, preauthorization ou predetermination.","","This element is required to understand the nature of the request for adjudication.","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""preauthorization""/>","","","",,"required","Claim, preauthorization, predetermination.","http://hl7.org/fhir/ValueSet/claim-use|4.0.1","",,,,"ClaimResponse.use",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.class"
+"ClaimResponse.patient","ClaimResponse.patient","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-patient]]}
+","Paciente","Paciente a que se refere a resposta.","","The patient must be supplied to the insurer so that confirmation of coverage and service hstory may be considered as part of the authorization and/or adjudiction.","","","","","","","",,,,,"",,,,"ClaimResponse.patient",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.subject[x]","FiveWs.subject"
+"ClaimResponse.created","ClaimResponse.created","","","",1,1,"Y","","Y","dateTime {[]} {[]}
+","Data da autorização","Data de criação da resposta.","Resolve a 'Data da Autorização' que o RIRA alocava em Appointment.created.","Need to record a timestamp for use by both the recipient and the issuer.","","","","","","","",,,,,"",,,,"ClaimResponse.created",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Event.occurrence[x]","FiveWs.recorded"
+"ClaimResponse.insurer","ClaimResponse.insurer","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization]]}
+","Gestor ou operadora","Quem emitiu a resposta.","","To be a valid claim, preauthorization or predetermination there must be a party who is responsible for adjudicating the contents against a policy which provides benefits for the patient.","","","","","","","",,,,,"",,,,"ClaimResponse.insurer",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Event.performer"
+"ClaimResponse.requestor","ClaimResponse.requestor","","","",1,1,"Y","","","Reference {[]} {[CanonicalType[https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization], CanonicalType[https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-practitionerrole]]}
+","Solicitante","Quem apresentou a solicitação.","Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below.","","","","","","","","",,,,,"",,,,"ClaimResponse.requestor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.source"
+"ClaimResponse.request","ClaimResponse.request","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/autorizacao-previa-sus]]}
+","Solicitação respondida","Referência à solicitação original.","","","","","","","","","",,,,,"",,,,"ClaimResponse.request",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Event.basedOn","FiveWs.why[x]"
+"ClaimResponse.outcome","ClaimResponse.outcome","","","",1,1,"Y","","Y","code {[]} {[]}
+","Resultado do processamento","queued, complete, error ou partial.","remittance-outcome: complete (emitida), partial, error (negada ou devolvida pelo autorizador), queued.","To advise the requestor of an overall processing outcome.","","","","","","","",,"required","The result of the claim processing.","http://hl7.org/fhir/ValueSet/remittance-outcome|4.0.1","",,,,"ClaimResponse.outcome",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.disposition","ClaimResponse.disposition","","","",0,1,"Y","","","string {[]} {[]}
+","Mensagem do resultado","Descrição textual do resultado.","","Provided for user display.","","","","","","","",,,,,"",,,,"ClaimResponse.disposition",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Event.note"
+"ClaimResponse.preAuthRef","ClaimResponse.preAuthRef","","","",0,1,"Y","","","string {[]} {[]}
+","Número da APAC/AIH","Número da autorização prévia emitida.","This value is only present on preauthorization adjudications.","On subsequent claims, the insurer may require the provider to quote this value.","","","","","","","",,,,,"",,,,"ClaimResponse.preAuthRef",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.preAuthPeriod","ClaimResponse.preAuthPeriod","","","",0,1,"Y","","","Period {[]} {[]}
+","Validade da APAC/AIH","Período de validade da autorização.","","To convey to the provider when the authorized products and services must be supplied for the authorized adjudication to apply.","","","","","","","",,,,,"",,,,"ClaimResponse.preAuthPeriod",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payeeType","ClaimResponse.payeeType","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Tipo de beneficiário","Categoria de quem recebe o pagamento.","","Need to know who should receive payment with the most common situations being the Provider (assignment of benefits) or the Subscriber.","","","","","","","",,"example","A code for the party to be reimbursed.","http://hl7.org/fhir/ValueSet/payeetype|4.0.1","",,,,"ClaimResponse.payeeType",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item","ClaimResponse.item","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Análise por item","Resultado para cada item da solicitação.","","The adjudication for items provided on the claim.","","","","","","","",,,,,"",,,,"ClaimResponse.item",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.id","ClaimResponse.item.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.item.extension","ClaimResponse.item.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.modifierExtension","ClaimResponse.item.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.itemSequence","ClaimResponse.item.itemSequence","","","",1,1,"","","","positiveInt {[]} {[]}
+","Item analisado","Sequência do item na solicitação.","","Necessary to provide a mechanism to link the adjudication result to the submitted claim item.","","","","","","","",,,,,"",,,,"ClaimResponse.item.itemSequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.noteNumber","ClaimResponse.item.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
+","Notas aplicáveis","Números das notas que se aplicam.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.item.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.adjudication","ClaimResponse.item.adjudication","","","",1,*,"","","","BackboneElement {[]} {[]}
+","Resultado da análise","Resultado da análise pelo autorizador: valores e motivos.","","The adjudication results conveys the insurer's assessment of the item provided in the claim under the terms of the patient's insurance coverage.","","","","","","","",,,,,"",,,,"ClaimResponse.item.adjudication",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.adjudication.id","ClaimResponse.item.adjudication.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.item.adjudication.extension","ClaimResponse.item.adjudication.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.adjudication.modifierExtension","ClaimResponse.item.adjudication.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.adjudication.category","ClaimResponse.item.adjudication.category","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Tipo do valor","Tipo de resultado: elegível, coparticipação, glosa.","For example codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.","Needed to enable understanding of the context of the other information in the adjudication.","","","","","","","",,"example","The adjudication codes.","http://hl7.org/fhir/ValueSet/adjudication|4.0.1","",,,,"ClaimResponse.item.adjudication.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.adjudication.reason","ClaimResponse.item.adjudication.reason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Motivo","Motivo do resultado.","For example may indicate that the funds for this benefit type have been exhausted.","To support understanding of variance from adjudication expectations.","","","","","","","",,"example","The adjudication reason codes.","http://hl7.org/fhir/ValueSet/adjudication-reason|4.0.1","",,,,"ClaimResponse.item.adjudication.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.adjudication.amount","ClaimResponse.item.adjudication.amount","","","",0,1,"","","","Money {[]} {[]}
+","Valor","Valor monetário.","For example: amount submitted, eligible amount, co-payment, and benefit payable.","Most adjuciation categories convey a monetary amount.","","","","","","","",,,,,"",,,,"ClaimResponse.item.adjudication.amount",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.adjudication.value","ClaimResponse.item.adjudication.value","","","",0,1,"","","","decimal {[]} {[]}
+","Valor não monetário","Percentual ou quantidade.","For example: eligible percentage or co-payment percentage.","Some adjudication categories convey a percentage or a fixed value.","","","","","","","",,,,,"",,,,"ClaimResponse.item.adjudication.value",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail","ClaimResponse.item.detail","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Detalhe","Componente do item.","","The adjudication for details provided on the claim.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail.id","ClaimResponse.item.detail.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.item.detail.extension","ClaimResponse.item.detail.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.detail.modifierExtension","ClaimResponse.item.detail.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.detail.detailSequence","ClaimResponse.item.detail.detailSequence","","","",1,1,"","","","positiveInt {[]} {[]}
+","Detalhe analisado","Sequência do detalhe na solicitação.","","Necessary to provide a mechanism to link the adjudication result to the submitted claim detail.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.detailSequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail.noteNumber","ClaimResponse.item.detail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
+","Notas aplicáveis","Números das notas que se aplicam.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail.adjudication","ClaimResponse.item.detail.adjudication","","","",1,*,"","","","null {[]} {[]}
+","Resultado da análise","Resultado da análise pelo autorizador: valores e motivos.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.adjudication",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail.subDetail","ClaimResponse.item.detail.subDetail","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Subdetalhe","Componente do detalhe.","","The adjudication for sub-details provided on the claim.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail.subDetail.id","ClaimResponse.item.detail.subDetail.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.item.detail.subDetail.extension","ClaimResponse.item.detail.subDetail.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.detail.subDetail.modifierExtension","ClaimResponse.item.detail.subDetail.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.item.detail.subDetail.subDetailSequence","ClaimResponse.item.detail.subDetail.subDetailSequence","","","",1,1,"","","","positiveInt {[]} {[]}
+","Subdetalhe analisado","Sequência do subdetalhe na solicitação.","","Necessary to provide a mechanism to link the adjudication result to the submitted claim sub-detail.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.subDetailSequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail.subDetail.noteNumber","ClaimResponse.item.detail.subDetail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
+","Notas aplicáveis","Números das notas que se aplicam.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.item.detail.subDetail.adjudication","ClaimResponse.item.detail.subDetail.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Resultado da análise","Resultado da análise pelo autorizador: valores e motivos.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem","ClaimResponse.addItem","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Itens incluídos pelo pagador","Itens acrescentados pelo pagador.","","Insurers may redefine the provided product or service or may package and/or decompose groups of products and services. The addItems allows the insurer to provide their line item list with linkage to the submitted items/details/sub-details. In a preauthorization the insurer may use the addItem structure to provide additional information on authorized products and services.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.id","ClaimResponse.addItem.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.addItem.extension","ClaimResponse.addItem.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.addItem.modifierExtension","ClaimResponse.addItem.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.addItem.itemSequence","ClaimResponse.addItem.itemSequence","","","",0,*,"","","","positiveInt {[]} {[]}
+","Item relacionado","Sequência do item da solicitação.","","Provides references to the claim items.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.itemSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detailSequence","ClaimResponse.addItem.detailSequence","","","",0,*,"","","","positiveInt {[]} {[]}
+","Detalhe relacionado","Sequência do detalhe da solicitação.","","Provides references to the claim details within the claim item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detailSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.subdetailSequence","ClaimResponse.addItem.subdetailSequence","","","",0,*,"","","","positiveInt {[]} {[]}
+","Subdetalhe relacionado","Sequência do subdetalhe da solicitação.","","Provides references to the claim sub-details within the claim detail.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.subdetailSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.provider","ClaimResponse.addItem.provider","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization|4.0.1]]}
+","Prestadores autorizados","Prestadores autorizados para o item.","","Insurer may provide authorization specifically to a restricted set of providers rather than an open authorization.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.provider",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.source"
+"ClaimResponse.addItem.productOrService","ClaimResponse.addItem.productOrService","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Procedimento ou produto","Código do procedimento, serviço ou produto.","If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.","Necessary to state what was provided or done.","","","","","","","",,"example","Allowable service and product codes.","http://hl7.org/fhir/ValueSet/service-uscls|4.0.1","",,,,"ClaimResponse.addItem.productOrService",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.modifier","ClaimResponse.addItem.modifier","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Modificadores do serviço","Códigos que qualificam o serviço ou produto.","For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.","To support inclusion of the item for adjudication or to charge an elevated fee.","","","","","","","",,"example","Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen.","http://hl7.org/fhir/ValueSet/claim-modifiers|4.0.1","",,,,"ClaimResponse.addItem.modifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.C, 24.D mods"
+"ClaimResponse.addItem.programCode","ClaimResponse.addItem.programCode","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Programa","Programa ao qual o serviço se vincula.","For example: Neonatal program, child dental program or drug users recovery program.","Commonly used in in the identification of publicly provided program focused on population segments or disease classifications.","","","","","","","",,"example","Program specific reason codes.","http://hl7.org/fhir/ValueSet/ex-program-code|4.0.1","",,,,"ClaimResponse.addItem.programCode",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.H"
+"ClaimResponse.addItem.serviced[x]","ClaimResponse.addItem.serviced[x]","","","",0,1,"","","","date {[]} {[]}
+Period {[]} {[]}","Data ou período do atendimento","Data ou período em que o serviço foi prestado.","","Needed to determine whether the  service or product was provided during the term of the insurance coverage.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.serviced[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.done[x]","24.A"
+"ClaimResponse.addItem.location[x]","ClaimResponse.addItem.location[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+Address {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location|4.0.1]]}","Local do atendimento","Onde o serviço foi prestado.","","The location can alter whether the item was acceptable for insurance purposes or impact the determination of the benefit amount.","","","","","","","",,"example","Place of service: pharmacy, school, prison, etc.","http://hl7.org/fhir/ValueSet/service-place|4.0.1","",,,,"ClaimResponse.addItem.location[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","FiveWs.where[x]","24.B"
+"ClaimResponse.addItem.quantity","ClaimResponse.addItem.quantity","","","",0,1,"","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1]]} {[]}
+","Quantidade","Quantidade de serviços ou produtos.","","Required when the product or service code does not convey the quantity provided.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.quantity",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.G"
+"ClaimResponse.addItem.unitPrice","ClaimResponse.addItem.unitPrice","","","",0,1,"","","","Money {[]} {[]}
+","Valor unitário","Valor de uma unidade.","","The amount charged to the patient by the provider for a single unit.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.unitPrice",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.factor","ClaimResponse.addItem.factor","","","",0,1,"","","","decimal {[]} {[]}
+","Fator de preço","Fator multiplicador aplicado ao valor.","To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).","When discounts are provided to a patient (example: Senior's discount) then this must be documented for adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.factor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.net","ClaimResponse.addItem.net","","","",0,1,"","","","Money {[]} {[]}
+","Valor total","Quantidade multiplicada pelo valor unitário e pelo fator.","For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.","Provides the total amount claimed  for the group (if a grouper) or the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.net",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.F"
+"ClaimResponse.addItem.bodySite","ClaimResponse.addItem.bodySite","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Local anatômico","Região anatômica.","For example: Providing a tooth code allows an insurer to identify a provider performing a filling on a tooth that was previously removed.","Allows insurer to validate specific procedures.","","","","","","","",,"example","The code for the teeth, quadrant, sextant and arch.","http://hl7.org/fhir/ValueSet/tooth|4.0.1","",,,,"ClaimResponse.addItem.bodySite",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.subSite","ClaimResponse.addItem.subSite","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Sublocal anatômico","Subdivisão do local anatômico.","","Allows insurer to validate specific procedures.","","","","","","","",,"example","The code for the tooth surface and surface combinations.","http://hl7.org/fhir/ValueSet/surface|4.0.1","",,,,"ClaimResponse.addItem.subSite",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.noteNumber","ClaimResponse.addItem.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
+","Notas aplicáveis","Números das notas que se aplicam.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.adjudication","ClaimResponse.addItem.adjudication","","","",1,*,"","","","null {[]} {[]}
+","Resultado da análise","Resultado da análise pelo autorizador: valores e motivos.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.adjudication",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail","ClaimResponse.addItem.detail","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Detalhe","Componente do item.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.id","ClaimResponse.addItem.detail.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.addItem.detail.extension","ClaimResponse.addItem.detail.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.addItem.detail.modifierExtension","ClaimResponse.addItem.detail.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.addItem.detail.productOrService","ClaimResponse.addItem.detail.productOrService","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Procedimento ou produto","Código do procedimento, serviço ou produto.","If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.","Necessary to state what was provided or done.","","","","","","","",,"example","Allowable service and product codes.","http://hl7.org/fhir/ValueSet/service-uscls|4.0.1","",,,,"ClaimResponse.addItem.detail.productOrService",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.modifier","ClaimResponse.addItem.detail.modifier","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Modificadores do serviço","Códigos que qualificam o serviço ou produto.","For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.","To support inclusion of the item for adjudication or to charge an elevated fee.","","","","","","","",,"example","Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen.","http://hl7.org/fhir/ValueSet/claim-modifiers|4.0.1","",,,,"ClaimResponse.addItem.detail.modifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.C, 24.D mods"
+"ClaimResponse.addItem.detail.quantity","ClaimResponse.addItem.detail.quantity","","","",0,1,"","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1]]} {[]}
+","Quantidade","Quantidade de serviços ou produtos.","","Required when the product or service code does not convey the quantity provided.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.quantity",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.G"
+"ClaimResponse.addItem.detail.unitPrice","ClaimResponse.addItem.detail.unitPrice","","","",0,1,"","","","Money {[]} {[]}
+","Valor unitário","Valor de uma unidade.","","The amount charged to the patient by the provider for a single unit.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.unitPrice",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.factor","ClaimResponse.addItem.detail.factor","","","",0,1,"","","","decimal {[]} {[]}
+","Fator de preço","Fator multiplicador aplicado ao valor.","To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).","When discounts are provided to a patient (example: Senior's discount) then this must be documented for adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.factor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.net","ClaimResponse.addItem.detail.net","","","",0,1,"","","","Money {[]} {[]}
+","Valor total","Quantidade multiplicada pelo valor unitário e pelo fator.","For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.","Provides the total amount claimed  for the group (if a grouper) or the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.net",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.F"
+"ClaimResponse.addItem.detail.noteNumber","ClaimResponse.addItem.detail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
+","Notas aplicáveis","Números das notas que se aplicam.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.adjudication","ClaimResponse.addItem.detail.adjudication","","","",1,*,"","","","null {[]} {[]}
+","Resultado da análise","Resultado da análise pelo autorizador: valores e motivos.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.adjudication",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.subDetail","ClaimResponse.addItem.detail.subDetail","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Subdetalhe","Componente do detalhe.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.subDetail.id","ClaimResponse.addItem.detail.subDetail.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.addItem.detail.subDetail.extension","ClaimResponse.addItem.detail.subDetail.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.addItem.detail.subDetail.modifierExtension","ClaimResponse.addItem.detail.subDetail.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.addItem.detail.subDetail.productOrService","ClaimResponse.addItem.detail.subDetail.productOrService","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Procedimento ou produto","Código do procedimento, serviço ou produto.","If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.","Necessary to state what was provided or done.","","","","","","","",,"example","Allowable service and product codes.","http://hl7.org/fhir/ValueSet/service-uscls|4.0.1","",,,,"ClaimResponse.addItem.detail.subDetail.productOrService",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.subDetail.modifier","ClaimResponse.addItem.detail.subDetail.modifier","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Modificadores do serviço","Códigos que qualificam o serviço ou produto.","For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.","To support inclusion of the item for adjudication or to charge an elevated fee.","","","","","","","",,"example","Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen.","http://hl7.org/fhir/ValueSet/claim-modifiers|4.0.1","",,,,"ClaimResponse.addItem.detail.subDetail.modifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.C, 24.D mods"
+"ClaimResponse.addItem.detail.subDetail.quantity","ClaimResponse.addItem.detail.subDetail.quantity","","","",0,1,"","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1]]} {[]}
+","Quantidade","Quantidade de serviços ou produtos.","","Required when the product or service code does not convey the quantity provided.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.quantity",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.G"
+"ClaimResponse.addItem.detail.subDetail.unitPrice","ClaimResponse.addItem.detail.subDetail.unitPrice","","","",0,1,"","","","Money {[]} {[]}
+","Valor unitário","Valor de uma unidade.","","The amount charged to the patient by the provider for a single unit.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.unitPrice",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.subDetail.factor","ClaimResponse.addItem.detail.subDetail.factor","","","",0,1,"","","","decimal {[]} {[]}
+","Fator de preço","Fator multiplicador aplicado ao valor.","To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).","When discounts are provided to a patient (example: Senior's discount) then this must be documented for adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.factor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.subDetail.net","ClaimResponse.addItem.detail.subDetail.net","","","",0,1,"","","","Money {[]} {[]}
+","Valor total","Quantidade multiplicada pelo valor unitário e pelo fator.","For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.","Provides the total amount claimed  for the group (if a grouper) or the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.net",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","24.F"
+"ClaimResponse.addItem.detail.subDetail.noteNumber","ClaimResponse.addItem.detail.subDetail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
+","Notas aplicáveis","Números das notas que se aplicam.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.addItem.detail.subDetail.adjudication","ClaimResponse.addItem.detail.subDetail.adjudication","","","",1,*,"","","","null {[]} {[]}
+","Resultado da análise","Resultado da análise pelo autorizador: valores e motivos.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.adjudication",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.adjudication","ClaimResponse.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Resultado geral","Resultado da análise no nível da solicitação.","","Some insurers will receive line-items but provide the adjudication only at a summary or header-level.","","","","","","","",,,,,"",,,,"ClaimResponse.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.total","ClaimResponse.total","","","",0,*,"","","Y","BackboneElement {[]} {[]}
+","Totais","Totais por categoria.","Totals for amounts submitted, co-pays, benefits payable etc.","To provide the requestor with financial totals by category for the adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.total",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.total.id","ClaimResponse.total.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.total.extension","ClaimResponse.total.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.total.modifierExtension","ClaimResponse.total.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.total.category","ClaimResponse.total.category","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
+","Categoria do total","Tipo de total.","For example codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.","Needed to convey the type of total provided.","","","","","","","",,"example","The adjudication codes.","http://hl7.org/fhir/ValueSet/adjudication|4.0.1","",,,,"ClaimResponse.total.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.total.amount","ClaimResponse.total.amount","","","",1,1,"","","Y","Money {[]} {[]}
+","Valor","Valor monetário do total.","","Needed to convey the total monetary amount.","","","","","","","",,,,,"",,,,"ClaimResponse.total.amount",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payment","ClaimResponse.payment","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Pagamento","Detalhes do pagamento.","","Needed to convey references to the financial instrument that has been used if payment has been made.","","","","","","","",,,,,"",,,,"ClaimResponse.payment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payment.id","ClaimResponse.payment.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.payment.extension","ClaimResponse.payment.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.payment.modifierExtension","ClaimResponse.payment.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.payment.type","ClaimResponse.payment.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Tipo de pagamento","Parcial ou integral.","","To advise the requestor when the insurer believes all payments to have been completed.","","","","","","","",,"example","The type (partial, complete) of the payment.","http://hl7.org/fhir/ValueSet/ex-paymenttype|4.0.1","",,,,"ClaimResponse.payment.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payment.adjustment","ClaimResponse.payment.adjustment","","","",0,1,"","","","Money {[]} {[]}
+","Ajuste","Valor de ajuste.","Insurers will deduct amounts owing from the provider (adjustment), such as a prior overpayment, from the amount owing to the provider (benefits payable) when payment is made to the provider.","To advise the requestor of adjustments applied to the payment.","","","","","","","",,,,,"",,,,"ClaimResponse.payment.adjustment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payment.adjustmentReason","ClaimResponse.payment.adjustmentReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Motivo do ajuste","Motivo do ajuste.","","Needed to clarify the monetary adjustment.","","","","","","","",,"example","Payment Adjustment reason codes.","http://hl7.org/fhir/ValueSet/payment-adjustment-reason|4.0.1","",,,,"ClaimResponse.payment.adjustmentReason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payment.date","ClaimResponse.payment.date","","","",0,1,"","","","date {[]} {[]}
+","Data do pagamento","Data prevista ou efetiva.","","To advise the payee when payment can be expected.","","","","","","","",,,,,"",,,,"ClaimResponse.payment.date",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payment.amount","ClaimResponse.payment.amount","","","",1,1,"","","","Money {[]} {[]}
+","Valor monetário","Valor monetário.","","Needed to provide the actual payment amount.","","","","","","","",,,,,"",,,,"ClaimResponse.payment.amount",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.payment.identifier","ClaimResponse.payment.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","Identificador do pagamento","Identificador do pagamento.","For example: EFT number or check number.","Enable the receiver to reconcile when payment received.","","","","","","","",,,,,"",,,,"ClaimResponse.payment.identifier",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.fundsReserve","ClaimResponse.fundsReserve","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Reserva de recursos","Situação da reserva de recursos.","Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.","Needed to advise the submitting provider on whether the rquest for reservation of funds has been honored.","","","","","","","",,"example","For whom funds are to be reserved: (Patient, Provider, None).","http://hl7.org/fhir/ValueSet/fundsreserve|4.0.1","",,,,"ClaimResponse.fundsReserve",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.formCode","ClaimResponse.formCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Formulário de impressão","Código do formulário.","May be needed to identify specific jurisdictional forms.","Needed to specify the specific form used for producing output for this response.","","","","","","","",,"example","The forms codes.","http://hl7.org/fhir/ValueSet/forms|4.0.1","",,,,"ClaimResponse.formCode",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.form","ClaimResponse.form","","","",0,1,"","","","Attachment {[]} {[]}
+","Formulário","Formulário anexo.","Needed to permit insurers to include the actual form.","Needed to include the specific form used for producing output for this response.","","","","","","","",,,,,"",,,,"ClaimResponse.form",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.processNote","ClaimResponse.processNote","","","",0,*,"Y","","","BackboneElement {[]} {[]}
+","Notas do processamento","Observações do pagador.","","Provides the insurer specific textual explanations associated with the processing.","","","","","","","",,,,,"",,,,"ClaimResponse.processNote",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.processNote.id","ClaimResponse.processNote.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.processNote.extension","ClaimResponse.processNote.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.processNote.modifierExtension","ClaimResponse.processNote.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.processNote.number","ClaimResponse.processNote.number","","","",0,1,"","","","positiveInt {[]} {[]}
+","Número da nota","Identificador da nota.","","Necessary to provide a mechanism to link from adjudications.","","","","","","","",,,,,"",,,,"ClaimResponse.processNote.number",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.processNote.type","ClaimResponse.processNote.type","","","",0,1,"","","","code {[]} {[]}
+","Tipo de nota","display, print ou printoper.","","To convey the expectation for when the text is used.","","","","","","","",,"required","The presentation types of notes.","http://hl7.org/fhir/ValueSet/note-type|4.0.1","",,,,"ClaimResponse.processNote.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.processNote.text","ClaimResponse.processNote.text","","","",1,1,"","","","string {[]} {[]}
+","Narrativa legível do recurso","Resumo textual do recurso, para leitura humana.","","Required to provide human readable explanation.","","","","","","","",,,,,"",,,,"ClaimResponse.processNote.text",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.processNote.language","ClaimResponse.processNote.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Idioma do conteúdo","Idioma em que o recurso foi escrito.","Only required if the language is different from the resource language.","Note text may vary from the resource defined language.","","","","","","","",,"preferred","A human language.","http://hl7.org/fhir/ValueSet/languages|4.0.1","",,,,"ClaimResponse.processNote.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.communicationRequest","ClaimResponse.communicationRequest","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/CommunicationRequest|4.0.1]]}
+","Pedidos de informação","Pedidos de informação adicional.","For example: professional reports, documents, images, clinical resources, or accident reports.","Need to communicate insurer request for additional information required to support the adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.communicationRequest",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.insurance","ClaimResponse.insurance","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Cobertura","Coberturas consideradas.","All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.","At least one insurer is required for a claim to be a claim.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Coverage"
+"ClaimResponse.insurance.id","ClaimResponse.insurance.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.insurance.extension","ClaimResponse.insurance.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.insurance.modifierExtension","ClaimResponse.insurance.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.insurance.sequence","ClaimResponse.insurance.sequence","","","",1,1,"","","","positiveInt {[]} {[]}
+","Número sequencial","Número que identifica a ocorrência dentro da lista.","","To maintain order of the coverages.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance.sequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.insurance.focal","ClaimResponse.insurance.focal","","","",1,1,"","","","boolean {[]} {[]}
+","Cobertura principal","Indica a cobertura usada.","A patient may (will) have multiple insurance policies which provide reimbursement for healthcare services and products. For example a person may also be covered by their spouse's policy and both appear in the list (and may be from the same insurer). This flag will be set to true for only one of the listed policies and that policy will be used for adjudicating this claim. Other claims would be created to request adjudication against the other listed policies.","To identify which coverage in the list is being used to adjudicate this claim.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance.focal",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.insurance.coverage","ClaimResponse.insurance.coverage","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Coverage|4.0.1]]}
+","Cobertura","Referência à Coverage.","","Required to allow the adjudicator to locate the correct policy and history within their information system.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance.coverage",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.insurance.businessArrangement","ClaimResponse.insurance.businessArrangement","","","",0,1,"","","","string {[]} {[]}
+","Acordo de negócio","Identificador de acordo.","","Providers may have multiple business arrangements with a given insurer and must supply the specific contract number for adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance.businessArrangement",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.insurance.claimResponse","ClaimResponse.insurance.claimResponse","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ClaimResponse|4.0.1]]}
+","Resposta anterior","Resposta de processamento anterior.","Must not be specified when 'focal=true' for this insurance.","An insurer need the adjudication results from prior insurers to determine the outstanding balance remaining by item for the items in the curent claim.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance.claimResponse",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.error","ClaimResponse.error","","","",0,*,"Y","","","BackboneElement {[]} {[]}
+","Críticas","Erros encontrados no processamento.","If the request contains errors then an error element should be provided and no adjudication related sections (item, addItem, or payment) should be present.","Need to communicate processing issues to the requestor.","","","","","","","",,,,,"",,,,"ClaimResponse.error",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.error.id","ClaimResponse.error.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"ClaimResponse.error.extension","ClaimResponse.error.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.error.modifierExtension","ClaimResponse.error.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"ClaimResponse.error.itemSequence","ClaimResponse.error.itemSequence","","","",0,1,"","","","positiveInt {[]} {[]}
+","Item com crítica","Sequência do item.","","Provides references to the claim items.","","","","","","","",,,,,"",,,,"ClaimResponse.error.itemSequence",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.error.detailSequence","ClaimResponse.error.detailSequence","","","",0,1,"","","","positiveInt {[]} {[]}
+","Detalhe com crítica","Sequência do detalhe.","","Provides references to the claim details within the claim item.","","","","","","","",,,,,"",,,,"ClaimResponse.error.detailSequence",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.error.subDetailSequence","ClaimResponse.error.subDetailSequence","","","",0,1,"","","","positiveInt {[]} {[]}
+","Subdetalhe com crítica","Sequência do subdetalhe.","","Provides references to the claim sub-details within the claim detail.","","","","","","","",,,,,"",,,,"ClaimResponse.error.subDetailSequence",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"ClaimResponse.error.code","ClaimResponse.error.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Código da crítica","Código do erro.","","Required to convey processing errors.","","","","","","","",,"example","The adjudication error codes.","http://hl7.org/fhir/ValueSet/adjudication-error|4.0.1","",,,,"ClaimResponse.error.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"

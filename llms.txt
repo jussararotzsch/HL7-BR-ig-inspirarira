@@ -1,0 +1,103 @@
+# br.org.hsl.inspirarira#0.1.0: Guia de Implementação InspiraRIRA
+
+## Pages
+
+* [Início](index.md)
+* [Recomendações à RNDS](recomendacoes-rnds.md)
+* [Transição e convivência](transicao.md)
+* [Fluxo regulatório](fluxo.md)
+* [Mapeamento RIRA](mapeamento-rira.md)
+* [Débitos técnicos](debitos-tecnicos.md)
+* [Regulação de leitos](leitos.md)
+* [Autorização na Task](autorizacao.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### Resource Profiles
+
+* [Agendamento de Regulação Assistencial](StructureDefinition-agendamento-regulacao.md)
+* [Solicitação de Autorização SUS (APAC/AIH)](StructureDefinition-autorizacao-previa-sus.md)
+* [Censo de Leitos](StructureDefinition-censo-leitos.md)
+* [Internação Regulada](StructureDefinition-internacao-regulada.md)
+* [Leito Regulado](StructureDefinition-leito-regulado.md)
+* [Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)](StructureDefinition-producao-sus.md)
+* [Protocolo de Oferta de Cuidados Integrados (OCI)](StructureDefinition-protocolo-oci.md)
+* [Regra de Reembolso de OCI](StructureDefinition-regra-reembolso-oci.md)
+* [Requisição de Regulação Assistencial](StructureDefinition-requisicao-regulacao.md)
+* [Resposta de Autorização SUS (APAC/AIH)](StructureDefinition-resposta-autorizacao-sus.md)
+* [Tarefa de Regulação Assistencial](StructureDefinition-tarefa-regulacao.md)
+* [Transporte Sanitário](StructureDefinition-transporte-sanitario.md)
+
+### Extensions
+
+* [Data de Entrada na Fila](StructureDefinition-data-entrada-fila.md)
+* [Local de Origem](StructureDefinition-local-origem.md)
+* [Prioridade Regulatória](StructureDefinition-prioridade-regulatoria.md)
+
+### ImplementationGuides
+
+* [Guia de Implementação InspiraRIRA](index.md)
+
+### Measures
+
+* [Censo de leitos](Measure-censo-leitos.md)
+
+### Examples
+
+* [appt-consulta-nefrologia-falta (Appointment)](Appointment-appt-consulta-nefrologia-falta.md)
+* [appt-consulta-nefrologia (Appointment)](Appointment-appt-consulta-nefrologia.md)
+* [appt-hemodialise (Appointment)](Appointment-appt-hemodialise.md)
+* [appt-oci-mama (Appointment)](Appointment-appt-oci-mama.md)
+* [Reembolso da OCI Investigação diagnóstica de insuficiência cardíaca (ChargeItemDefinition)](ChargeItemDefinition-regra-reembolso-oci-ic.md)
+* [Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama (ChargeItemDefinition)](ChargeItemDefinition-regra-reembolso-oci-mama.md)
+* [bpai-consulta-nefrologia (Claim)](Claim-bpai-consulta-nefrologia.md)
+* [claim-aih-icc (Claim)](Claim-claim-aih-icc.md)
+* [claim-apac-hemodialise (Claim)](Claim-claim-apac-hemodialise.md)
+* [producao-apac-hemodialise (Claim)](Claim-producao-apac-hemodialise.md)
+* [producao-oci-mama (Claim)](Claim-producao-oci-mama.md)
+* [claimresponse-aih-icc (ClaimResponse)](ClaimResponse-claimresponse-aih-icc.md)
+* [claimresponse-apac-hemodialise (ClaimResponse)](ClaimResponse-claimresponse-apac-hemodialise.md)
+* [condicao-drc (Condition)](Condition-condicao-drc.md)
+* [condicao-icc (Condition)](Condition-condicao-icc.md)
+* [coverage-sus-arranjo-publico (Coverage)](Coverage-coverage-sus-arranjo-publico.md)
+* [enc-alta-uti (Encounter)](Encounter-enc-alta-uti.md)
+* [enc-consulta-nefrologia (Encounter)](Encounter-enc-consulta-nefrologia.md)
+* [enc-destino-uti (Encounter)](Encounter-enc-destino-uti.md)
+* [enc-hemodialise (Encounter)](Encounter-enc-hemodialise.md)
+* [enc-oci-mama (Encounter)](Encounter-enc-oci-mama.md)
+* [enc-origem-enfermaria (Encounter)](Encounter-enc-origem-enfermaria.md)
+* [enc-reserva-clinico (Encounter)](Encounter-enc-reserva-clinico.md)
+* [Clínica Médica, leito 01 (Location)](Location-leito-clin-01.md)
+* [Enfermaria, leito 07 (Location)](Location-leito-origem-01.md)
+* [UTI Adulto, leito 01 (Location)](Location-leito-uti-01.md)
+* [UTI Adulto, leito 02 (Location)](Location-leito-uti-02.md)
+* [censo-hre-20261001 (MeasureReport)](MeasureReport-censo-hre-20261001.md)
+* [Central de Regulação Ambulatorial Exemplo (Organization)](Organization-org-central-regulacao.md)
+* [Hospital Exemplo (Organization)](Organization-org-executante.md)
+* [Secretaria Estadual de Saúde Exemplo (Organization)](Organization-org-gestor-ses.md)
+* [Hospital Regional Exemplo (Organization)](Organization-org-hospital-destino.md)
+* [UBS Jardim Exemplo (Organization)](Organization-org-ubs-solicitante.md)
+* [UPA 24h Exemplo (Organization)](Organization-org-upa.md)
+* [paciente-joao (Patient)](Patient-paciente-joao.md)
+* [paciente-maria (Patient)](Patient-paciente-maria.md)
+* [Protocolo de acesso à nefrologia (PlanDefinition)](PlanDefinition-protocolo-acesso-nefrologia.md)
+* [OCI Avaliação diagnóstica de insuficiência cardíaca (PlanDefinition)](PlanDefinition-protocolo-oci-ic.md)
+* [OCI Avaliação diagnóstica inicial de câncer de mama (PlanDefinition)](PlanDefinition-protocolo-oci-mama.md)
+* [sr-consulta-nefrologia (ServiceRequest)](ServiceRequest-sr-consulta-nefrologia.md)
+* [sr-consulta-urologia-excluida (ServiceRequest)](ServiceRequest-sr-consulta-urologia-excluida.md)
+* [sr-hemodialise (ServiceRequest)](ServiceRequest-sr-hemodialise.md)
+* [sr-leito-clinico (ServiceRequest)](ServiceRequest-sr-leito-clinico.md)
+* [sr-leito-uti (ServiceRequest)](ServiceRequest-sr-leito-uti.md)
+* [sr-oci-mama (ServiceRequest)](ServiceRequest-sr-oci-mama.md)
+* [sr-usg-abdome (ServiceRequest)](ServiceRequest-sr-usg-abdome.md)
+* [sr-vaga-zero (ServiceRequest)](ServiceRequest-sr-vaga-zero.md)
+* [transporte-uti (ServiceRequest)](ServiceRequest-transporte-uti.md)
+* [task-autorizacao-hemodialise (Task)](Task-task-autorizacao-hemodialise.md)
+* [task-leito-clinico (Task)](Task-task-leito-clinico.md)
+* [task-leito-uti (Task)](Task-task-leito-uti.md)
+* [task-regulacao-consulta (Task)](Task-task-regulacao-consulta.md)
+* [task-regulacao-oci-mama (Task)](Task-task-regulacao-oci-mama.md)
+* [task-regulacao-urologia-negada (Task)](Task-task-regulacao-urologia-negada.md)
+* [task-regulacao-usg-pendencia (Task)](Task-task-regulacao-usg-pendencia.md)
+* [task-vaga-zero (Task)](Task-task-vaga-zero.md)

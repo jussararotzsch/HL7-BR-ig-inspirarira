@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-hemodialise> a fhir:Appointment ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "appt-hemodialise"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Appointment appt-hemodialise</b></p><a name=\"appt-hemodialise\"> </a><a name=\"hcappt-hemodialise\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-agendamento-regulacao.html\">Agendamento de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://hospital-exemplo.org.br/fhir/sid/agendamento</code>/AG-HD-2026-0311</p><p><b>status</b>: Fulfilled</p><p><b>serviceType</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0305010107}\">Hemodiálise (máximo 3 sessões por semana)</span></p><p><b>supportingInformation</b>: </p><ul><li><a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></li><li><a href=\"ClaimResponse-claimresponse-apac-hemodialise.html\">ClaimResponse: identifier = http://ses-exemplo.saude.sp.gov.br/fhir/sid/apac#3526100000001; status = active; type = Institutional; subType = apac; use = preauthorization; created = 2026-10-09 15:30:00-0300; outcome = complete; disposition = APAC autorizada; preAuthRef = 3526100000001; preAuthPeriod = 2026-10-13 --&gt; 2027-01-12</a></li></ul><p><b>start</b>: 2026-10-13 07:00:00-0300</p><p><b>end</b>: 2026-10-13 11:00:00-0300</p><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-hemodialise.html\">ServiceRequest Hemodiálise (máximo 3 sessões por semana)</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></td><td>Accepted</td></tr></table></div>"
+  ] ;
+  fhir:Appointment.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://hospital-exemplo.org.br/fhir/sid/agendamento" ] ;
+     fhir:Identifier.value [ fhir:value "AG-HD-2026-0311" ]
+  ] ;
+  fhir:Appointment.status [ fhir:value "fulfilled"] ;
+  fhir:Appointment.serviceType [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS" ] ;
+       fhir:Coding.code [ fhir:value "0305010107" ] ;
+       fhir:Coding.display [ fhir:value "Hemodiálise (máximo 3 sessões por semana)" ]
+     ]
+  ] ;
+  fhir:Appointment.supportingInformation [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-central-regulacao> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-central-regulacao" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ClaimResponse/claimresponse-apac-hemodialise> ;
+     fhir:Reference.reference [ fhir:value "ClaimResponse/claimresponse-apac-hemodialise" ]
+  ] ;
+  fhir:Appointment.start [ fhir:value "2026-10-13T07:00:00-03:00"^^xsd:dateTime] ;
+  fhir:Appointment.end [ fhir:value "2026-10-13T11:00:00-03:00"^^xsd:dateTime] ;
+  fhir:Appointment.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-hemodialise> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-hemodialise" ]
+  ] ;
+  fhir:Appointment.participant [
+     fhir:index 0 ;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+       fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+     ] ;
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Appointment/appt-hemodialise.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

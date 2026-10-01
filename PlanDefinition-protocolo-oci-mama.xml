@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="protocolo-oci-mama"/>
+  <meta>
+    <profile value="http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/protocolo-oci"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: PlanDefinition protocolo-oci-mama</b></p><a name="protocolo-oci-mama"> </a><a name="hcprotocolo-oci-mama"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-protocolo-oci.html">Protocolo de Oferta de Cuidados Integrados (OCI)</a></p></div><p><b>url</b>: <a href="PlanDefinition-protocolo-oci-mama.html">PlanDefinition OCI Avaliação diagnóstica inicial de câncer de mama</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: ProtocoloOCIMama</p><p><b>title</b>: OCI Avaliação diagnóstica inicial de câncer de mama</p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/plan-definition-type order-set}">Order Set</span></p><p><b>status</b>: Draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2026-10-01 16:52:20-0300</p><p><b>publisher</b>: Hospital Sírio-Libanês</p><p><b>contact</b>: Hospital Sírio-Libanês: <a href="https://www.hospitalsiriolibanes.org.br">https://www.hospitalsiriolibanes.org.br</a></p><h3>UseContexts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><a href="http://terminology.hl7.org/7.1.0/CodeSystem-usage-context-type.html#usage-context-type-focus">UsageContextType: focus</a> (Clinical Focus)</td><td><span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0901010014}">OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA</span></td></tr></table><p><b>jurisdiction</b>: <span title="Códigos:{urn:iso:std:iso:3166 BR}">Brazil</span></p><h3>RelatedArtifacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Resource</b></td></tr><tr><td style="display: none">*</td><td>Depends On</td><td><a href="ChargeItemDefinition-regra-reembolso-oci-mama.html">Reembolso da OCI Avaliação diagnóstica inicial de câncer de mama</a></td></tr></table><blockquote><p><b>action</b></p><p><b>title</b>: Avaliação diagnóstica inicial de câncer de mama</p><p><b>timing</b>: Nenhum ecrã para Duration  (value: 30; unit: dias; system: http://unitsofmeasure.org; code: d)</p><h3>Actions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Title</b></td><td><b>Code</b></td><td><b>RequiredBehavior</b></td></tr><tr><td style="display: none">*</td><td>Consulta especializada</td><td><span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0301010072}">CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA</span></td><td>Must</td></tr><tr><td style="display: none">*</td><td>Mamografia</td><td><span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0204030030}">MAMOGRAFIA</span></td><td>Must</td></tr><tr><td style="display: none">*</td><td>Ultrassonografia mamária</td><td><span title="Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0205020097}">ULTRASSONOGRAFIA MAMARIA BILATERAL</span></td><td>Could</td></tr></table></blockquote></div>
+  </text>
+  <url value="http://fhir.hsl.org.br/ig/inspirarira/PlanDefinition/protocolo-oci-mama"/>
+  <version value="0.1.0"/>
+  <name value="ProtocoloOCIMama"/>
+  <title value="OCI Avaliação diagnóstica inicial de câncer de mama"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="order-set"/>
+    </coding>
+  </type>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-01T16:52:20-03:00"/>
+  <publisher value="Hospital Sírio-Libanês"/>
+  <contact>
+    <name value="Hospital Sírio-Libanês"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.hospitalsiriolibanes.org.br"/>
+    </telecom>
+  </contact>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+        <code value="0901010014"/>
+        <display value="OCI AVALIAÇÃO DIAGNÓSTICA INICIAL DE CÂNCER DE MAMA"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <relatedArtifact>
+    <type value="depends-on"/>
+    <resource value="http://fhir.hsl.org.br/ig/inspirarira/ChargeItemDefinition/regra-reembolso-oci-mama"/>
+  </relatedArtifact>
+  <action>
+    <title value="Avaliação diagnóstica inicial de câncer de mama"/>
+    <timingDuration>
+      <value value="30"/>
+      <unit value="dias"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="d"/>
+    </timingDuration>
+    <action>
+      <title value="Consulta especializada"/>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+          <code value="0301010072"/>
+          <display value="CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA"/>
+        </coding>
+      </code>
+      <requiredBehavior value="must"/>
+    </action>
+    <action>
+      <title value="Mamografia"/>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+          <code value="0204030030"/>
+          <display value="MAMOGRAFIA"/>
+        </coding>
+      </code>
+      <requiredBehavior value="must"/>
+    </action>
+    <action>
+      <title value="Ultrassonografia mamária"/>
+      <code>
+        <coding>
+          <system value="https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS"/>
+          <code value="0205020097"/>
+          <display value="ULTRASSONOGRAFIA MAMARIA BILATERAL"/>
+        </coding>
+      </code>
+      <requiredBehavior value="could"/>
+    </action>
+  </action>
+</PlanDefinition>

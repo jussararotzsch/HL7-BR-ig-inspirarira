@@ -1,0 +1,1912 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "agendamento-regulacao",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: StructureDefinition agendamento-regulacao</b></p><a name=\"agendamento-regulacao\"> </a><a name=\"hcagendamento-regulacao\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"O nome lógico do elemento\">Nome</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informações sobre a utilização do elemento\">Bandeiras</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Número mínimo e máximo de vezes que o elemento pode aparecer na instância\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Referência ao tipo do elemento\">Tipo</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informações adicionais sobre o elemento\">Descrição e condicionalismos</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Recursos\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment\" title=\"Agendamento resultante da regulação. Só DEVE ser criado quando houver proposta de data, local e serviço. Os estados booked, fulfilled, cancelled e noshow substituem os slices event:booked, event:attended, event:cancelled e event:absence do RIRA.\">Appointment</a><a name=\"Appointment\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R4/conformance-rules.html#constraints\" title=\"Este elemento tem ou é afetado por restrições ( ag-1 )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-appointment\">BRCoreAppointment</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Agendamento de Regulação Assistencial<br class=\"constraint\"/><span title=\"null\" class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"O agendamento DEVE ter o paciente como participante.\" class=\"constraint\">ag-1</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.identifier\">identifier</a><a name=\"Appointment.identifier\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identificadores do agendamento</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.status\">status</a><a name=\"Appointment.status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Status do agendamento</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.cancelationReason\">cancelationReason</a><a name=\"Appointment.cancelationReason\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Motivo do cancelamento</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.serviceCategory\">serviceCategory</a><a name=\"Appointment.serviceCategory\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Categoria do serviço</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.serviceType\">serviceType</a><a name=\"Appointment.serviceType\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Tipo de serviço</span><br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Vínculo: </span><a href=\"https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUS\" class=\"binding\">https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUS</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.specialty\">specialty</a><a name=\"Appointment.specialty\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Especialidade clínica</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.reasonReference\">reasonReference</a><a name=\"Appointment.reasonReference\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/condition.html\">Condition</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/procedure.html\">Procedure</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/observation.html\">Observation</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/immunizationrecommendation.html\">ImmunizationRecommendation</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Motivo (referência) do agendamento</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck13.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Definição de fatia\" class=\"hierarchy\"/> <a style=\"font-style: italic; font-style: italic\" href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.supportingInformation\">Fatias para supportingInformation</a><a name=\"Appointment.supportingInformation\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000; font-style: italic\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-style: italic\"/><span style=\"opacity: 0.5; font-style: italic\">0</span><span style=\"opacity: 0.5; font-style: italic\">..</span><span style=\"opacity: 0.5; font-style: italic\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"font-style: italic; font-style: italic\" href=\"http://hl7.org/fhir/R4/references.html\">Reference</a><span style=\"font-style: italic\">(</span><a style=\"opacity: 0.5; font-style: italic; opacity: 0.5; font-style: italic\" href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a><span style=\"font-style: italic\">)</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5; font-style: italic\">Informações de apoio</span><br style=\"font-style: italic\"/><span style=\"font-weight:bold; font-style: italic\">Fatia: </span><span style=\"font-style: italic\">Não ordenado, Aberto por type:resolve()</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck134.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_slicer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice_item.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item de fatia\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.supportingInformation:regulador\" title=\"Fatia regulador\">supportingInformation:regulador</a><a name=\"Appointment.supportingInformation:regulador\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization\">BRCoreOrganization</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Estabelecimento regulador</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end_slicer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_slice_item.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item de fatia\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.supportingInformation:autorizacao\" title=\"Fatia autorizacao\">supportingInformation:autorizacao</a><a name=\"Appointment.supportingInformation:autorizacao\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-resposta-autorizacao-sus.html\">Resposta de Autorização SUS (APAC/AIH)</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Autorização APAC/AIH, quando exigida</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.start\">start</a><a name=\"Appointment.start\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#instant\">instant</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Início planejado</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.end\">end</a><a name=\"Appointment.end\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#instant\">instant</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Término planejado</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.slot\">slot</a><a name=\"Appointment.slot\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/slot.html\">Slot</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Slots reservados</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.created\">created</a><a name=\"Appointment.created\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Data de criação</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Referência a outro recurso\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.basedOn\">basedOn</a><a name=\"Appointment.basedOn\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-requisicao-regulacao.html\">Requisição de Regulação Assistencial</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Solicitação que originou o agendamento</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.participant\">participant</a><a name=\"Appointment.participant\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\">BackboneElement</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Participantes do agendamento</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.participant.id\" title=\"Identificador único do elemento dentro do recurso, para referências internas.\">id</a><a name=\"Appointment.participant.id\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Identificador do elemento</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_extension_simple.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Extensão simples\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.participant.extension\" title=\"Extensões que acrescentam informação não prevista no modelo base.\">extension</a><a name=\"Appointment.participant.extension\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/extensibility.html#Extension\">Extension</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Extensões adicionais</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_modifier_extension_simple.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Extensão simples\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.participant.modifierExtension\" title=\"Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.\">modifierExtension</a><a name=\"Appointment.participant.modifierExtension\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/extensibility.html#Extension\">Extension</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Extensões que não podem ser ignoradas</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.participant.actor\">actor</a><a name=\"Appointment.participant.actor\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-patient\">BRCorePatient</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-practitioner\">BRCorePractitioner</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://simplifier.net/resolve?scope=br.gov.saude.br-core.fhir@1.3.0&amp;canonical=https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-healthcareservice\">br-core-healthcareservice</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Entidade participante</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Elemento\" class=\"hierarchy\"/> <a href=\"StructureDefinition-agendamento-regulacao-definitions.html#Appointment.participant.status\">status</a><a name=\"Appointment.participant.status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Este elemento deve ser suportado\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Status de participação</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legenda para este formato\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentação para este formato</a></td></tr></table></div>"
+  },
+  "url" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao",
+  "version" : "0.1.0",
+  "name" : "AgendamentoRegulacao",
+  "title" : "Agendamento de Regulação Assistencial",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-01T16:52:20-03:00",
+  "publisher" : "Hospital Sírio-Libanês",
+  "contact" : [{
+    "name" : "Hospital Sírio-Libanês",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.hospitalsiriolibanes.org.br"
+    }]
+  }],
+  "description" : "Agendamento resultante da regulação. Só DEVE ser criado quando houver proposta de data, local e serviço. Os estados booked, fulfilled, cancelled e noshow substituem os slices event:booked, event:attended, event:cancelled e event:absence do RIRA.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR",
+      "display" : "Brazil"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "ical",
+    "uri" : "http://ietf.org/rfc/2445",
+    "name" : "iCalendar"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Appointment",
+  "baseDefinition" : "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-appointment",
+  "derivation" : "constraint",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "1.3.0"
+    }],
+    "element" : [{
+      "id" : "Appointment",
+      "path" : "Appointment",
+      "short" : "Agendamento de Regulação Assistencial",
+      "definition" : "Agendamento resultante da regulação. Só DEVE ser criado quando houver proposta de data, local e serviço. Os estados booked, fulfilled, cancelled e noshow substituem os slices event:booked, event:attended, event:cancelled e event:absence do RIRA.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment",
+        "min" : 0,
+        "max" : "*"
+      },
+      "constraint" : [{
+        "key" : "app-2",
+        "severity" : "error",
+        "human" : "Either start and end are specified, or neither",
+        "expression" : "start.exists() = end.exists()",
+        "xpath" : "((exists(f:start) and exists(f:end)) or (not(exists(f:start)) and not(exists(f:end))))",
+        "source" : "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-appointment"
+      },
+      {
+        "key" : "app-3",
+        "severity" : "error",
+        "human" : "Only proposed or cancelled appointments can be missing start/end dates",
+        "expression" : "(start.exists() and end.exists()) or (status in ('proposed' | 'cancelled' | 'waitlist'))",
+        "xpath" : "((exists(f:start) and exists(f:end)) or (f:status/@value='proposed') or (f:status/@value='cancelled') or (f:status/@value='waitlist'))",
+        "source" : "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-appointment"
+      },
+      {
+        "key" : "app-4",
+        "severity" : "error",
+        "human" : "Cancelation reason is only used for appointments that have been cancelled, or no-show",
+        "expression" : "Appointment.cancelationReason.exists() implies (Appointment.status='no-show' or Appointment.status='cancelled')",
+        "xpath" : "not(exists(f:cancellationReason)) or f:status/@value=('no-show', 'cancelled')",
+        "source" : "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-appointment"
+      },
+      {
+        "key" : "dom-2",
+        "severity" : "error",
+        "human" : "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+        "expression" : "contained.contained.empty()",
+        "xpath" : "not(parent::f:contained and f:contained)",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "key" : "dom-3",
+        "severity" : "error",
+        "human" : "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource",
+        "expression" : "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()",
+        "xpath" : "not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "key" : "dom-4",
+        "severity" : "error",
+        "human" : "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+        "expression" : "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
+        "xpath" : "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "key" : "dom-5",
+        "severity" : "error",
+        "human" : "If a resource is contained in another resource, it SHALL NOT have a security label",
+        "expression" : "contained.meta.security.empty()",
+        "xpath" : "not(exists(f:contained/*/f:meta/f:security))",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+          "valueBoolean" : true
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
+          "valueMarkdown" : "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
+        }],
+        "key" : "dom-6",
+        "severity" : "warning",
+        "human" : "A resource should have narrative for robust management",
+        "expression" : "text.`div`.exists()",
+        "xpath" : "exists(f:text/h:div)",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "key" : "ag-1",
+        "severity" : "error",
+        "human" : "O agendamento DEVE ter o paciente como participante.",
+        "expression" : "participant.actor.where(reference.startsWith('Patient/')).exists()",
+        "source" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "workflow",
+        "map" : "Request"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Act[@moodCode <= 'INT']"
+      },
+      {
+        "identity" : "ical",
+        "map" : "VEVENT"
+      }]
+    },
+    {
+      "id" : "Appointment.id",
+      "path" : "Appointment.id",
+      "short" : "Identificador lógico deste artefato",
+      "definition" : "Identificador lógico deste artefato",
+      "comment" : "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Resource.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "id"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "id" : "Appointment.meta",
+      "path" : "Appointment.meta",
+      "short" : "Metadados sobre o recurso",
+      "definition" : "Metadados sobre o recurso",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Resource.meta",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Meta"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "id" : "Appointment.implicitRules",
+      "path" : "Appointment.implicitRules",
+      "short" : "Conjunto de regras usadas para criar o conteúdo",
+      "definition" : "Um conjunto de regras sob as quais este conteúdo foi criado",
+      "comment" : "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Resource.implicitRules",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "uri"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : true,
+      "isModifierReason" : "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "isSummary" : true
+    },
+    {
+      "id" : "Appointment.language",
+      "path" : "Appointment.language",
+      "short" : "Idioma do recurso",
+      "definition" : "Idioma do recurso",
+      "comment" : "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Resource.language",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+          "valueCanonical" : "http://hl7.org/fhir/ValueSet/all-languages"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "Language"
+        }],
+        "strength" : "preferred",
+        "description" : "A human language.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/languages"
+      }
+    },
+    {
+      "id" : "Appointment.text",
+      "path" : "Appointment.text",
+      "short" : "Resumo narrativo em linguagem natural",
+      "definition" : "Resumo do texto do recurso em linguagem natural",
+      "comment" : "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+      "alias" : ["narrative",
+      "html",
+      "xhtml",
+      "display"],
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "DomainResource.text",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Narrative"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "Act.text?"
+      }]
+    },
+    {
+      "id" : "Appointment.contained",
+      "path" : "Appointment.contained",
+      "short" : "Recursos aninhados",
+      "definition" : "Recursos contidos neste recurso",
+      "comment" : "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+      "alias" : ["inline resources",
+      "anonymous resources",
+      "contained resources"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "DomainResource.contained",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Resource"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "id" : "Appointment.extension",
+      "path" : "Appointment.extension",
+      "short" : "Extensões adicionais não previstas no modelo base",
+      "definition" : "Extensões adicionais que não fazem parte do modelo base",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "DomainResource.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "id" : "Appointment.modifierExtension",
+      "path" : "Appointment.modifierExtension",
+      "short" : "Extensões que não podem ser ignoradas",
+      "definition" : "Extensões adicionais que não podem ser ignoradas, mesmo que não reconhecidas",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "requirements" : "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "DomainResource.modifierExtension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : true,
+      "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "id" : "Appointment.identifier",
+      "path" : "Appointment.identifier",
+      "short" : "Identificadores do agendamento",
+      "definition" : "Identificadores para este Appointment (p.ex. identificador do sistema local ou da RNDS)",
+      "comment" : "No RIRA era 0..0.",
+      "min" : 1,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.identifier",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.identifier"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.identifier"
+      },
+      {
+        "identity" : "v2",
+        "map" : "SCH-1, SCH-2, ARQ-1, ARQ-2"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".id"
+      },
+      {
+        "identity" : "ical",
+        "map" : "UID"
+      }]
+    },
+    {
+      "id" : "Appointment.status",
+      "path" : "Appointment.status",
+      "short" : "Status do agendamento",
+      "definition" : "Situação atual do agendamento (proposto, pendente, agendado, concluído, cancelado, etc.)",
+      "comment" : "appointmentstatus padrão, herdado do BR-Core. O ValueSet próprio de status de agendamento do RIRA deixa de ser usado.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.status",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : true,
+      "isModifierReason" : "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/appointmentstatus"
+      },
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.status"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.status"
+      },
+      {
+        "identity" : "v2",
+        "map" : "SCH-25"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".statusCode"
+      },
+      {
+        "identity" : "ical",
+        "map" : "STATUS"
+      }]
+    },
+    {
+      "id" : "Appointment.cancelationReason",
+      "path" : "Appointment.cancelationReason",
+      "short" : "Motivo do cancelamento",
+      "definition" : "Razão codificada para cancelamento do agendamento",
+      "comment" : "No RIRA era 0..0.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.cancelationReason",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason"
+      },
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Appointment.serviceCategory",
+      "path" : "Appointment.serviceCategory",
+      "short" : "Categoria do serviço",
+      "definition" : "Categoria ampla do serviço de saúde",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.serviceCategory",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://terminologia.saude.gov.br/fhir/ValueSet/BRModalidadeAssistencial"
+      },
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a, might be inferred from the ServiceDeliveryLocation"
+      },
+      {
+        "identity" : "ical",
+        "map" : "CATEGORIES"
+      }]
+    },
+    {
+      "id" : "Appointment.serviceType",
+      "path" : "Appointment.serviceType",
+      "short" : "Tipo de serviço",
+      "definition" : "Tipo específico de serviço/atendimento a ser realizado",
+      "comment" : "For a provider to provider appointment the code \"FOLLOWUP\" may be appropriate, as this is expected to be discussing some patient that was seen in the past.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.serviceType",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUS"
+      },
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.code"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a, might be inferred from the ServiceDeliveryLocation"
+      }]
+    },
+    {
+      "id" : "Appointment.specialty",
+      "path" : "Appointment.specialty",
+      "short" : "Especialidade clínica",
+      "definition" : "Especialidade clínica requerida para o atendimento",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.specialty",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://terminologia.saude.gov.br/fhir/ValueSet/BROcupacao"
+      },
+      "mapping" : [{
+        "identity" : "w5",
+        "map" : "FiveWs.class"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".performer.AssignedPerson.code"
+      }]
+    },
+    {
+      "id" : "Appointment.appointmentType",
+      "path" : "Appointment.appointmentType",
+      "short" : "Tipo do agendamento",
+      "definition" : "Classificação do agendamento (p.ex. rotina, retorno, encaixe)",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.appointmentType",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v2-0276"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "ARQ-7"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".code"
+      },
+      {
+        "identity" : "ical",
+        "map" : "CLASSIFICATION"
+      }]
+    },
+    {
+      "id" : "Appointment.reasonCode",
+      "path" : "Appointment.reasonCode",
+      "short" : "Motivo (código) do agendamento",
+      "definition" : "Códigos que expressam a justificativa para o agendamento",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.reasonCode",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://terminologia.saude.gov.br/fhir/ValueSet/BRCID10"
+      },
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.reasonCode"
+      },
+      {
+        "identity" : "v2",
+        "map" : "AIS-3, SCH-7"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".reasonCode"
+      }]
+    },
+    {
+      "id" : "Appointment.reasonReference",
+      "path" : "Appointment.reasonReference",
+      "short" : "Motivo (referência) do agendamento",
+      "definition" : "Referências clínicas (p.ex., Condition, Procedure, Observation) que justificam o agendamento",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.reasonReference",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Condition",
+        "http://hl7.org/fhir/StructureDefinition/Procedure",
+        "http://hl7.org/fhir/StructureDefinition/Observation",
+        "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.reasonReference"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".inboundRelationship[@typeCode = 'RSON'].observation"
+      }]
+    },
+    {
+      "id" : "Appointment.priority",
+      "path" : "Appointment.priority",
+      "short" : "Prioridade (0 = rotina)",
+      "definition" : "Nível de prioridade do agendamento (inteiro; 0 para rotina, valores maiores indicam maior prioridade)",
+      "comment" : "Seeking implementer feedback on this property and how interoperable it is.\r\rUsing an extension to record a CodeableConcept for named values may be tested at a future connectathon.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.priority",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "unsignedInt"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.priority"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.class"
+      },
+      {
+        "identity" : "v2",
+        "map" : "ARQ-12, SCH-11.6 / TQ1-9"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".priorityCode"
+      },
+      {
+        "identity" : "ical",
+        "map" : "PRIORITY"
+      }]
+    },
+    {
+      "id" : "Appointment.description",
+      "path" : "Appointment.description",
+      "short" : "Descrição livre do agendamento",
+      "definition" : "Resumo textual do propósito do agendamento",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.description",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "NTE-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".text"
+      },
+      {
+        "identity" : "ical",
+        "map" : "SUMMARY"
+      }]
+    },
+    {
+      "id" : "Appointment.supportingInformation",
+      "path" : "Appointment.supportingInformation",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "resolve()"
+        }],
+        "description" : "Fatiado pelo tipo do recurso referenciado",
+        "rules" : "open"
+      },
+      "short" : "Informações de apoio",
+      "definition" : "Referências a recursos que dão contexto ao agendamento (p.ex., DocumentReference, ImagingStudy)",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.supportingInformation",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.supportingInfo"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.context"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".inboundRelationship[@typeCode = 'SPRT'].observation"
+      },
+      {
+        "identity" : "ical",
+        "map" : "ATTACH"
+      }]
+    },
+    {
+      "id" : "Appointment.supportingInformation:regulador",
+      "path" : "Appointment.supportingInformation",
+      "sliceName" : "regulador",
+      "short" : "Estabelecimento regulador",
+      "definition" : "Referências a recursos que dão contexto ao agendamento (p.ex., DocumentReference, ImagingStudy)",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.supportingInformation",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.supportingInfo"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.context"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".inboundRelationship[@typeCode = 'SPRT'].observation"
+      },
+      {
+        "identity" : "ical",
+        "map" : "ATTACH"
+      }]
+    },
+    {
+      "id" : "Appointment.supportingInformation:autorizacao",
+      "path" : "Appointment.supportingInformation",
+      "sliceName" : "autorizacao",
+      "short" : "Autorização APAC/AIH, quando exigida",
+      "definition" : "Referências a recursos que dão contexto ao agendamento (p.ex., DocumentReference, ImagingStudy)",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.supportingInformation",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.supportingInfo"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.context"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".inboundRelationship[@typeCode = 'SPRT'].observation"
+      },
+      {
+        "identity" : "ical",
+        "map" : "ATTACH"
+      }]
+    },
+    {
+      "id" : "Appointment.start",
+      "path" : "Appointment.start",
+      "short" : "Início planejado",
+      "definition" : "Data/hora planejada de início do atendimento",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.start",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "instant"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.occurrence[x]"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.init"
+      },
+      {
+        "identity" : "v2",
+        "map" : "ARQ-11.1, SCH-11.4 / TQ1-7"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".effectiveTime.low"
+      },
+      {
+        "identity" : "ical",
+        "map" : "DTSTART"
+      }]
+    },
+    {
+      "id" : "Appointment.end",
+      "path" : "Appointment.end",
+      "short" : "Término planejado",
+      "definition" : "Data/hora planejada de término do atendimento",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.end",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "instant"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.occurrence[x]"
+      },
+      {
+        "identity" : "w5",
+        "map" : "FiveWs.done[x]"
+      },
+      {
+        "identity" : "v2",
+        "map" : "SCH-11.5 / TQ1-8/ calculated based on the start and the duration which is in ARQ-9"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".effectiveTime.high"
+      },
+      {
+        "identity" : "ical",
+        "map" : "DTEND"
+      }]
+    },
+    {
+      "id" : "Appointment.minutesDuration",
+      "path" : "Appointment.minutesDuration",
+      "short" : "Duração prevista (minutos)",
+      "definition" : "Duração estimada do atendimento em minutos",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.minutesDuration",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "positiveInt"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.occurrence[x]"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".activityTime[@xsi:type = ('SXPR_TS', 'PIVL_TS')].width"
+      },
+      {
+        "identity" : "ical",
+        "map" : "DURATION (e.g. PT15M)"
+      }]
+    },
+    {
+      "id" : "Appointment.slot",
+      "path" : "Appointment.slot",
+      "short" : "Slots reservados",
+      "definition" : "Slots do agendador reservados para este Appointment",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.slot",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Slot"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : ".outboundRelationship[@typeCode = 'REFR'].act[@classCode = 'ACT'][@moodCode = 'SLOT']"
+      }]
+    },
+    {
+      "id" : "Appointment.created",
+      "path" : "Appointment.created",
+      "short" : "Data de criação",
+      "definition" : "Data em que o agendamento foi criado",
+      "comment" : "Data de criação do registro, na semântica padrão do FHIR. NÃO representa a data da autorização: ela fica em RespostaAutorizacaoSUS.created e preAuthPeriod.start. O RIRA reinterpretava este elemento como 'Data da Autorização'.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.created",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.authoredOn"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".author.time"
+      },
+      {
+        "identity" : "ical",
+        "map" : "CREATED"
+      }]
+    },
+    {
+      "id" : "Appointment.comment",
+      "path" : "Appointment.comment",
+      "short" : "Comentários adicionais",
+      "definition" : "Informações adicionais relevantes sobre o agendamento",
+      "comment" : "Additional text to aid in facilitating the appointment. For instance, a comment might be, \"patient should proceed immediately to infusion room upon arrival\"\r\rWhere this is a planned appointment and the start/end dates are not set then this field can be used to provide additional guidance on the details of the appointment request, including any restrictions on when to book it.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.comment",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.note"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NTE-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".subjectOf.observation[@moodCode = 'EVN'][code = 'annotation'].value"
+      },
+      {
+        "identity" : "ical",
+        "map" : "DESCRIPTION (for internal use)"
+      }]
+    },
+    {
+      "id" : "Appointment.patientInstruction",
+      "path" : "Appointment.patientInstruction",
+      "short" : "Instruções ao paciente",
+      "definition" : "Instruções para o paciente sobre o agendamento",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.patientInstruction",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "NTE-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".subjectOf.observation[@moodCode = 'EVN'][code = 'annotation'].value"
+      },
+      {
+        "identity" : "ical",
+        "map" : "DESCRIPTION (for patient use)"
+      }]
+    },
+    {
+      "id" : "Appointment.basedOn",
+      "path" : "Appointment.basedOn",
+      "short" : "Solicitação que originou o agendamento",
+      "definition" : "Referência à solicitação (ServiceRequest, CarePlan, etc.) que originou o agendamento",
+      "comment" : "Elo estrutural com o pedido. Já existia no RIRA e passa a ser o vínculo principal.",
+      "alias" : ["incomingReferral"],
+      "min" : 1,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.basedOn",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.basedOn"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".outboundRelationship[@typeCode = 'FLFS'].act[@classCode < 'ActCareProvisionRequestType'][@moodCode = 'RQO']"
+      }]
+    },
+    {
+      "id" : "Appointment.participant",
+      "path" : "Appointment.participant",
+      "short" : "Participantes do agendamento",
+      "definition" : "Participantes envolvidos no agendamento (profissional, paciente, organização, dispositivo, etc.)",
+      "min" : 1,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.participant",
+        "min" : 1,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "key" : "app-1",
+        "severity" : "error",
+        "human" : "Either the type or actor on the participant SHALL be specified",
+        "expression" : "type.exists() or actor.exists()",
+        "xpath" : "(exists(f:type) or exists(f:actor))",
+        "source" : "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-appointment"
+      },
+      {
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.performer, Request.subject"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID, AIP, AIG, AIL"
+      },
+      {
+        "identity" : "rim",
+        "map" : "performer | reusableDevice | subject | location"
+      },
+      {
+        "identity" : "ical",
+        "map" : "ATTENDEE component to be created"
+      }]
+    },
+    {
+      "id" : "Appointment.participant.id",
+      "path" : "Appointment.participant.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Identificador do elemento",
+      "definition" : "Identificador único do elemento dentro do recurso, para referências internas.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Appointment.participant.extension",
+      "path" : "Appointment.participant.extension",
+      "short" : "Extensões adicionais",
+      "definition" : "Extensões que acrescentam informação não prevista no modelo base.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "id" : "Appointment.participant.modifierExtension",
+      "path" : "Appointment.participant.modifierExtension",
+      "short" : "Extensões que não podem ser ignoradas",
+      "definition" : "Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "BackboneElement.modifierExtension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : true,
+      "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "isSummary" : true
+    },
+    {
+      "id" : "Appointment.participant.type",
+      "path" : "Appointment.participant.type",
+      "short" : "Tipo de participante",
+      "definition" : "Função ou papel do participante no agendamento (p.ex. médico, paciente, intérprete)",
+      "comment" : "The role of the participant can be used to declare what the actor will be doing in the scope of this appointment.\r\rIf the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.\r\rThis value SHALL be the same when creating an AppointmentResponse so that they can be matched, and subsequently update the Appointment.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.participant.type",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://terminologia.saude.gov.br/fhir/ValueSet/BRTipoParticipante"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "AIP-4, AIG-4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "(performer | reusableDevice | subject | location).@typeCode"
+      },
+      {
+        "identity" : "ical",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Appointment.participant.actor",
+      "path" : "Appointment.participant.actor",
+      "short" : "Entidade participante",
+      "definition" : "Referência ao recurso que representa o participante",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.participant.actor",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-patient",
+        "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-practitioner",
+        "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-healthcareservice"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "w5",
+        "map" : "FiveWs.who"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-3-Patient ID List | AIL-3 | AIG-3 | AIP-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "performer.person | reusableDevice.manufacturedDevice | subject.patient | location.serviceDeliveryLocation"
+      },
+      {
+        "identity" : "ical",
+        "map" : "ATTENDEE: (Need to provide the common name CN and also the MAILTO properties from the practitioner resource) where the participant type is not \"information-only\""
+      }]
+    },
+    {
+      "id" : "Appointment.participant.required",
+      "path" : "Appointment.participant.required",
+      "short" : "Participação obrigatória?",
+      "definition" : "Indica se a presença do participante é obrigatória",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.participant.required",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/participantrequired"
+      },
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "(performer | reusableDevice | subject | location).@performInd"
+      },
+      {
+        "identity" : "ical",
+        "map" : "ROLE=REQ-PARTICIPANT (roleparam)"
+      }]
+    },
+    {
+      "id" : "Appointment.participant.status",
+      "path" : "Appointment.participant.status",
+      "short" : "Status de participação",
+      "definition" : "Confirmação do participante (accepted, declined, tentative, needs-action)",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.participant.status",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/participationstatus"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "AIP-12, AIG-14"
+      },
+      {
+        "identity" : "rim",
+        "map" : "(performer | reusableDevice | subject | location).statusCode"
+      },
+      {
+        "identity" : "ical",
+        "map" : "ATTENDEE;CN=\"John Doe\";RSVP=TRUE:mailto:john@doe.com (rsvpparam | partstatparam)"
+      }]
+    },
+    {
+      "id" : "Appointment.participant.period",
+      "path" : "Appointment.participant.period",
+      "short" : "Período de disponibilidade",
+      "definition" : "Intervalo de tempo durante o qual o participante está disponível",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Appointment.participant.period",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Period"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Appointment.requestedPeriod",
+      "path" : "Appointment.requestedPeriod",
+      "short" : "Período solicitado",
+      "definition" : "Período ou faixa de tempo solicitada para o agendamento (antes da confirmação)",
+      "comment" : "This does not introduce a capacity for recurring appointments.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Appointment.requestedPeriod",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Period"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "workflow",
+        "map" : "Request.occurrence[x]"
+      },
+      {
+        "identity" : "v2",
+        "map" : "ARQ-11"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".activityTime[@xsi:type = ('SXPR_TS', 'PIVL_TS')]"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "Appointment",
+      "path" : "Appointment",
+      "short" : "Agendamento de Regulação Assistencial",
+      "definition" : "Agendamento resultante da regulação. Só DEVE ser criado quando houver proposta de data, local e serviço. Os estados booked, fulfilled, cancelled e noshow substituem os slices event:booked, event:attended, event:cancelled e event:absence do RIRA.",
+      "constraint" : [{
+        "key" : "ag-1",
+        "severity" : "error",
+        "human" : "O agendamento DEVE ter o paciente como participante.",
+        "expression" : "participant.actor.where(reference.startsWith('Patient/')).exists()",
+        "source" : "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/agendamento-regulacao"
+      }]
+    },
+    {
+      "id" : "Appointment.identifier",
+      "path" : "Appointment.identifier",
+      "comment" : "No RIRA era 0..0.",
+      "min" : 1
+    },
+    {
+      "id" : "Appointment.status",
+      "path" : "Appointment.status",
+      "comment" : "appointmentstatus padrão, herdado do BR-Core. O ValueSet próprio de status de agendamento do RIRA deixa de ser usado."
+    },
+    {
+      "id" : "Appointment.cancelationReason",
+      "path" : "Appointment.cancelationReason",
+      "comment" : "No RIRA era 0..0.",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.serviceCategory",
+      "path" : "Appointment.serviceCategory",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.serviceType",
+      "path" : "Appointment.serviceType",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUS"
+      }
+    },
+    {
+      "id" : "Appointment.specialty",
+      "path" : "Appointment.specialty",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.reasonReference",
+      "path" : "Appointment.reasonReference",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.supportingInformation",
+      "path" : "Appointment.supportingInformation",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "resolve()"
+        }],
+        "description" : "Fatiado pelo tipo do recurso referenciado",
+        "rules" : "open"
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.supportingInformation:regulador",
+      "path" : "Appointment.supportingInformation",
+      "sliceName" : "regulador",
+      "short" : "Estabelecimento regulador",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-organization"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.supportingInformation:autorizacao",
+      "path" : "Appointment.supportingInformation",
+      "sliceName" : "autorizacao",
+      "short" : "Autorização APAC/AIH, quando exigida",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/resposta-autorizacao-sus"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.start",
+      "path" : "Appointment.start",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.end",
+      "path" : "Appointment.end",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.slot",
+      "path" : "Appointment.slot",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.created",
+      "path" : "Appointment.created",
+      "comment" : "Data de criação do registro, na semântica padrão do FHIR. NÃO representa a data da autorização: ela fica em RespostaAutorizacaoSUS.created e preAuthPeriod.start. O RIRA reinterpretava este elemento como 'Data da Autorização'."
+    },
+    {
+      "id" : "Appointment.basedOn",
+      "path" : "Appointment.basedOn",
+      "comment" : "Elo estrutural com o pedido. Já existia no RIRA e passa a ser o vínculo principal.",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.participant",
+      "path" : "Appointment.participant",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.participant.id",
+      "path" : "Appointment.participant.id",
+      "short" : "Identificador do elemento",
+      "definition" : "Identificador único do elemento dentro do recurso, para referências internas."
+    },
+    {
+      "id" : "Appointment.participant.extension",
+      "path" : "Appointment.participant.extension",
+      "short" : "Extensões adicionais",
+      "definition" : "Extensões que acrescentam informação não prevista no modelo base."
+    },
+    {
+      "id" : "Appointment.participant.modifierExtension",
+      "path" : "Appointment.participant.modifierExtension",
+      "short" : "Extensões que não podem ser ignoradas",
+      "definition" : "Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece."
+    },
+    {
+      "id" : "Appointment.participant.actor",
+      "path" : "Appointment.participant.actor",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Appointment.participant.status",
+      "path" : "Appointment.participant.status",
+      "mustSupport" : true
+    }]
+  }
+}

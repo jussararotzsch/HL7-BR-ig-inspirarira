@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "sr-vaga-zero",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/requisicao-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: ServiceRequest sr-vaga-zero</b></p><a name=\"sr-vaga-zero\"> </a><a name=\"hcsr-vaga-zero\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-requisicao-regulacao.html\">Requisição de Regulação Assistencial</a></p></div><p><b>identifier</b>: <code>http://upa-exemplo.saude.sp.gov.br/fhir/sid/solicitacao</code>/SOL-UPA-2026-1180</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS 0303}\">Tratamentos clínicos (outras especialidades)</span></p><p><b>priority</b>: STAT</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS 0303060212}\">TRATAMENTO DE INSUFICIENCIA CARDIACA</span></p><p><b>subject</b>: <a href=\"Patient-paciente-joao.html\">João Souza  Male, DoB: 1950-07-02 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-09-20 02:10:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-upa.html\">Organization UPA 24h Exemplo</a></p><p><b>locationCode</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito 75}\">UTI ADULTO - TIPO II</span></p><p><b>reasonReference</b>: <a href=\"Condition-condicao-icc.html\">Condition Insuficiência cardíaca congestiva</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://upa-exemplo.saude.sp.gov.br/fhir/sid/solicitacao",
+    "value" : "SOL-UPA-2026-1180"
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSubgrupoTabelaSUS",
+      "code" : "0303",
+      "display" : "Tratamentos clínicos (outras especialidades)"
+    }]
+  }],
+  "priority" : "stat",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTabelaSUS",
+      "code" : "0303060212",
+      "display" : "TRATAMENTO DE INSUFICIENCIA CARDIACA"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/paciente-joao"
+  },
+  "authoredOn" : "2026-09-20T02:10:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-upa"
+  },
+  "locationCode" : [{
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BREspecialidadeLeito",
+      "code" : "75",
+      "display" : "UTI ADULTO - TIPO II"
+    }]
+  }],
+  "reasonReference" : [{
+    "reference" : "Condition/condicao-icc"
+  }]
+}

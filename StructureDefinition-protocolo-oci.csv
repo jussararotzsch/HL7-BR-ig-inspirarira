@@ -1,0 +1,479 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: Workflow Pattern","Mapping: FiveWs Pattern Mapping","Mapping: Object Implementation Information","Mapping: RIM Mapping"
+"PlanDefinition","PlanDefinition","","","",0,*,"","","","null {[]} {[]}
+","Protocolo de Oferta de Cuidados Integrados (OCI)","Composição, obrigatoriedade dos procedimentos e prazo de conclusão de uma OCI do SUS. É artefato definicional: não representa fila, pedido nem decisão. A requisição da OCI aponta para ele em ServiceRequest.instantiatesCanonical.","","","","","","","","","",,,,,"",,,,"PlanDefinition",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
+dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}pdf-0:Name should be usable as an identifier for the module by machine processing applications such as code generation {name.matches('[A-Z]([A-Za-z0-9_]){0,254}')}oci-1:O protocolo da OCI DEVE declarar o código SIGTAP da oferta em useContext (code = focus). {useContext.where(code.code = 'focus' and value.ofType(CodeableConcept).exists()).exists()}","Definition","Entity. Role, or Act"
+"PlanDefinition.id","PlanDefinition.id","","","",0,1,"","","Y","id {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","The only time that a resource does not have an id is when it is being submitted to the server using a create operation.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
+"PlanDefinition.meta","PlanDefinition.meta","","","",0,1,"","","Y","Meta {[]} {[]}
+","Metadados do recurso","Metadados mantidos pela infraestrutura: versão, data de atualização, perfis e etiquetas.","","","","","","","","","",,,,,"",,,,"Resource.meta",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.implicitRules","PlanDefinition.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
+","Regras sob as quais o conteúdo foi criado","Referência ao conjunto de regras usadas na criação do recurso.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.language","PlanDefinition.language","","","",0,1,"","","","code {[]} {[]}
+","Idioma do conteúdo","Idioma em que o recurso foi escrito.","Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).","","","","","","","","",,"preferred","A human language.","http://hl7.org/fhir/ValueSet/languages|4.0.1","",,,,"Resource.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.text","PlanDefinition.text","","narrative
+htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
+","Narrativa legível do recurso","Resumo textual do recurso, para leitura humana.","Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a ""text blob"" or where text is additionally entered raw or narrated and encoded information is added later.","","","","","","","","",,,,,"",,,,"DomainResource.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.text?"
+"PlanDefinition.contained","PlanDefinition.contained","","inline resources
+anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
+","Recursos contidos","Recursos inline sem existência independente fora deste recurso.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+"PlanDefinition.extension","PlanDefinition.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.modifierExtension","PlanDefinition.modifierExtension","","","",0,*,"","Y","","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.url","PlanDefinition.url","","","",1,1,"Y","","Y","uri {[]} {[]}
+","URL canônica","Identificador canônico, globalmente único, do artefato.","Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+
+The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](http://hl7.org/fhir/R4/resource.html#versions). 
+
+In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](http://hl7.org/fhir/R4/resource.html#meta) element to indicate where the current master source of the resource can be found.","Allows the plan definition to be referenced by a single globally unique identifier.","","","","","","","",,,,,"",,,,"PlanDefinition.url",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.url","FiveWs.identifier"
+"PlanDefinition.identifier","PlanDefinition.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
+","Identificador de negócio","Identificador externo atribuído ao recurso pelo sistema de origem.","Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this plan definition outside of FHIR, where it is not possible to use the logical URI.","Allows externally provided and/or usable business identifiers to be easily associated with the module.","","","","","","","",,,,,"",,,,"PlanDefinition.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.identifier","FiveWs.identifier","no-gen-base"
+"PlanDefinition.version","PlanDefinition.version","","","",1,1,"Y","","Y","string {[]} {[]}
+","Versão","Versão de negócio do artefato.","There may be different plan definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version].","","","","","","","","",,,,,"",,,,"PlanDefinition.version",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.version","FiveWs.version"
+"PlanDefinition.name","PlanDefinition.name","","","",1,1,"Y","","Y","string {[]} {[]}
+","Nome computável","Nome legível por máquina.","The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.","Support human navigation and code generation.","","","","","","","",,,,,"",,,,"PlanDefinition.name",0,1,"inv-0
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.title","PlanDefinition.title","","","",1,1,"Y","","Y","string {[]} {[]}
+","Título","Nome legível por pessoas.","This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.","","","","","","","","",,,,,"",,,,"PlanDefinition.title",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.title"
+"PlanDefinition.subtitle","PlanDefinition.subtitle","","","",0,1,"","","","string {[]} {[]}
+","Subtítulo","Subtítulo do protocolo.","","","","","","","","","",,,,,"",,,,"PlanDefinition.subtitle",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.type","PlanDefinition.type","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
+","Tipo de definição","order-set, clinical-protocol, eca-rule ou workflow-definition.","","","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
+  <coding>
+    <system value=""http://terminology.hl7.org/CodeSystem/plan-definition-type""/>
+    <code value=""order-set""/>
+  </coding>
+</valueCodeableConcept>","","","",,"extensible","The type of PlanDefinition.","http://hl7.org/fhir/ValueSet/plan-definition-type|4.0.1","",,,,"PlanDefinition.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.status","PlanDefinition.status","","","",1,1,"Y","Y","Y","code {[]} {[]}
+","Situação","Situação do recurso no seu ciclo de vida.","Allows filtering of plan definitions that are appropriate for use versus not.","","","","","","","","",,"required","The lifecycle status of an artifact.","http://hl7.org/fhir/ValueSet/publication-status|4.0.1","",,,,"PlanDefinition.status",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.status {different ValueSet}","FiveWs.status"
+"PlanDefinition.experimental","PlanDefinition.experimental","","","",0,1,"","","Y","boolean {[]} {[]}
+","Uso experimental","Indica que o artefato é para teste e não para uso real.","Allows filtering of plan definitions that are appropriate for use versus not.","Enables experimental content to be developed following the same lifecycle that would be used for a production-level plan definition.","","","","","","","",,,,,"",,,,"PlanDefinition.experimental",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.experimental","FiveWs.class"
+"PlanDefinition.subject[x]","PlanDefinition.subject[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Group|4.0.1]]}","Tipo de sujeito","Tipo de indivíduo a que o protocolo se aplica.","","","","Patient","","","","","",,"extensible","The possible types of subjects for a plan definition (E.g. Patient, Practitioner, Organization, Location, etc.).","http://hl7.org/fhir/ValueSet/subject-type|4.0.1","",,,,"PlanDefinition.subject[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.subject"
+"PlanDefinition.date","PlanDefinition.date","","Revision Date
+","",0,1,"","","Y","dateTime {[]} {[]}
+","Data","Data da última alteração relevante.","Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the plan definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.","","","","","","","","",,,,,"",,,,"PlanDefinition.date",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.date","FiveWs.recorded"
+"PlanDefinition.publisher","PlanDefinition.publisher","","","",0,1,"","","Y","string {[]} {[]}
+","Publicador","Organização ou pessoa responsável pela publicação.","Usually an organization but may be an individual. The publisher (or steward) of the plan definition is the organization or individual primarily responsible for the maintenance and upkeep of the plan definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the plan definition. This item SHOULD be populated unless the information is available from context.","Helps establish the ""authority/credibility"" of the plan definition.  May also allow for contact.","","","","","","","",,,,,"",,,,"PlanDefinition.publisher",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.publisher","FiveWs.witness"
+"PlanDefinition.contact","PlanDefinition.contact","","","",0,*,"","","Y","ContactDetail {[]} {[]}
+","Contato do publicador","Dados de contato do publicador.","May be a web site, an email address, a telephone number, etc.","","","","","","","","",,,,,"",,,,"PlanDefinition.contact",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.contact"
+"PlanDefinition.description","PlanDefinition.description","","","",0,1,"","","Y","markdown {[]} {[]}
+","Descrição","Descrição em linguagem natural.","This description can be used to capture details such as why the plan definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the plan definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the plan definition is presumed to be the predominant language in the place the plan definition was created).","","","","","","","","",,,,,"",,,,"PlanDefinition.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.description"
+"PlanDefinition.useContext","PlanDefinition.useContext","","","",1,*,"Y","","Y","UsageContext {[]} {[]}
+","Contexto de uso","Contexto em que o conteúdo se aplica.","useContext com code = focus carrega o código SIGTAP da OCI (grupo 09).","Assist in searching for appropriate content.","","","","","","","",,,,,"",,,,"PlanDefinition.useContext",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.useContext"
+"PlanDefinition.jurisdiction","PlanDefinition.jurisdiction","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
+","Jurisdição","Jurisdição em que o artefato se aplica.","It may be possible for the plan definition to be used in jurisdictions other than those for which it was originally designed or intended.","","","","","","","","",,"extensible","Countries and regions within which this artifact is targeted for use.","http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1","",,,,"PlanDefinition.jurisdiction",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.jurisdiction"
+"PlanDefinition.purpose","PlanDefinition.purpose","","","",0,1,"","","","markdown {[]} {[]}
+","Finalidade","Por que o artefato existe.","This element does not describe the usage of the plan definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this plan definition.","","","","","","","","",,,,,"",,,,"PlanDefinition.purpose",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.purpose","FiveWs.why[x]","no-gen-base"
+"PlanDefinition.usage","PlanDefinition.usage","","","",0,1,"","","","string {[]} {[]}
+","Orientação de uso","Como o protocolo deve ser usado.","","","","","","","","","",,,,,"",,,,"PlanDefinition.usage",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.copyright","PlanDefinition.copyright","","License
+Restrictions","",0,1,"","","","markdown {[]} {[]}
+","Direitos de uso","Restrições de uso e publicação.","","Consumers must be able to determine any legal restrictions on the use of the plan definition and/or its content.","","","","","","","",,,,,"",,,,"PlanDefinition.copyright",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.copyright","no-gen-base"
+"PlanDefinition.approvalDate","PlanDefinition.approvalDate","","","",0,1,"","","","date {[]} {[]}
+","Data de aprovação","Data em que o publicador aprovou o conteúdo.","The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.","","","","","","","","",,,,,"",,,,"PlanDefinition.approvalDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.approvalDate","no-gen-base"
+"PlanDefinition.lastReviewDate","PlanDefinition.lastReviewDate","","","",0,1,"","","","date {[]} {[]}
+","Data da última revisão","Data da última revisão do conteúdo.","If specified, this date follows the original approval date.","Gives a sense of how ""current"" the content is.  Resources that have not been reviewed in a long time may have a risk of being less appropriate/relevant.","","","","","","","",,,,,"",,,,"PlanDefinition.lastReviewDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.lastReviewDate","no-gen-base"
+"PlanDefinition.effectivePeriod","PlanDefinition.effectivePeriod","","","",0,1,"Y","","Y","Period {[]} {[]}
+","Vigência da composição","Período em que o artefato está vigente.","The effective period for a plan definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.","Allows establishing a transition before a resource comes into effect and also allows for a sunsetting  process when new versions of the plan definition are or are expected to be used instead.","","","","","","","",,,,,"",,,,"PlanDefinition.effectivePeriod",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.effectivePeriod","no-gen-base"
+"PlanDefinition.topic","PlanDefinition.topic","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Temas","Categorias temáticas.","","Repositories must be able to determine how to categorize the plan definition so that it can be found by topical searches.","","","","","","","",,"example","High-level categorization of the definition, used for searching, sorting, and filtering.","http://hl7.org/fhir/ValueSet/definition-topic|4.0.1","",,,,"PlanDefinition.topic",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.subject[x]"
+"PlanDefinition.author","PlanDefinition.author","","","",0,*,"","","","ContactDetail {[]} {[]}
+","Autores","Quem elaborou o conteúdo.","","","","","","","","","",,,,,"",,,,"PlanDefinition.author",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".participation[typeCode=AUT]"
+"PlanDefinition.editor","PlanDefinition.editor","","","",0,*,"","","","ContactDetail {[]} {[]}
+","Editores","Quem editou o conteúdo.","","","","","","","","","",,,,,"",,,,"PlanDefinition.editor",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.reviewer","PlanDefinition.reviewer","","","",0,*,"","","","ContactDetail {[]} {[]}
+","Revisores","Quem revisou o conteúdo.","","","","","","","","","",,,,,"",,,,"PlanDefinition.reviewer",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".participation[typeCode=VRF] {not clear whether VRF best corresponds to reviewer or endorser}"
+"PlanDefinition.endorser","PlanDefinition.endorser","","","",0,*,"","","","ContactDetail {[]} {[]}
+","Endossantes","Quem endossa o conteúdo.","","","","","","","","","",,,,,"",,,,"PlanDefinition.endorser",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".participation[typeCode=VRF] {not clear whether VRF best corresponds to reviewer or endorser}"
+"PlanDefinition.relatedArtifact","PlanDefinition.relatedArtifact","","","",0,*,"Y","","","RelatedArtifact {[]} {[]}
+","Artefatos relacionados","Normas, documentação e artefatos dos quais depende.","DEVE referenciar a norma de origem (documentation) e a RegraReembolsoOCI correspondente (depends-on).","Plan definitions must be able to provide enough information for consumers of the content (and/or interventions or results produced by the content) to be able to determine and understand the justification for and evidence in support of the content.","","","","","","","",,,,,"",,,,"PlanDefinition.relatedArtifact",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.library","PlanDefinition.library","","","",0,*,"","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Library|4.0.1]]}
+","Lógica (Library)","Bibliotecas com a lógica usada.","","","","","","","","","",,,,,"",,,,"PlanDefinition.library",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal","PlanDefinition.goal","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Metas","Metas que o protocolo busca.","","Goal information needs to be captured for order sets, protocols, and care plan definitions to better describe the objectives of the protocol activities and to guide the creation of specific goals within the derived care plans and orders.","","","","","","","",,,,,"",,,,"PlanDefinition.goal",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.id","PlanDefinition.goal.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.goal.extension","PlanDefinition.goal.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.goal.modifierExtension","PlanDefinition.goal.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.goal.category","PlanDefinition.goal.category","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Categoria da meta","Tipo de meta.","","","","","","","","","",,"example","Example codes for grouping goals for filtering or presentation.","http://hl7.org/fhir/ValueSet/goal-category|4.0.1","",,,,"PlanDefinition.goal.category",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.description","PlanDefinition.goal.description","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Descrição da meta","O que a meta pretende.","If no code is available, use CodeableConcept.text.","","","","","","","","",,"example","Describes goals that can be achieved.","http://hl7.org/fhir/ValueSet/clinical-findings|4.0.1","",,,,"PlanDefinition.goal.description",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.priority","PlanDefinition.goal.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Prioridade da meta","high, medium ou low.","","","","","","","","","",,"preferred","Indicates the level of importance associated with reaching or sustaining a goal.","http://hl7.org/fhir/ValueSet/goal-priority|4.0.1","",,,,"PlanDefinition.goal.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.start","PlanDefinition.goal.start","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Início da meta","Quando a meta começa.","","","","","","","","","",,"example","Identifies the types of events that might trigger the start of a goal.","http://hl7.org/fhir/ValueSet/goal-start-event|4.0.1","",,,,"PlanDefinition.goal.start",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.addresses","PlanDefinition.goal.addresses","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Problemas abordados","Condições que a meta aborda.","","","","","","","","","",,"example","Identifies problems, conditions, issues, or concerns that goals may address.","http://hl7.org/fhir/ValueSet/condition-code|4.0.1","",,,,"PlanDefinition.goal.addresses",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.documentation","PlanDefinition.goal.documentation","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","Evidências da meta","Documentação de apoio.","","","","","","","","","",,,,,"",,,,"PlanDefinition.goal.documentation",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.target","PlanDefinition.goal.target","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Alvos","Valores alvo da meta.","","","","","","","","","",,,,,"",,,,"PlanDefinition.goal.target",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.target.id","PlanDefinition.goal.target.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.goal.target.extension","PlanDefinition.goal.target.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.goal.target.modifierExtension","PlanDefinition.goal.target.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.goal.target.measure","PlanDefinition.goal.target.measure","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Parâmetro","O que é medido.","","","","","","","","","",,"example","Identifies types of parameters that can be tracked to determine goal achievement.","http://hl7.org/fhir/ValueSet/observation-codes|4.0.1","",,,,"PlanDefinition.goal.target.measure",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.target.detail[x]","PlanDefinition.goal.target.detail[x]","","","",0,1,"","","","Quantity {[]} {[]}
+Range {[]} {[]}CodeableConcept {[]} {[]}","Valor alvo","Valor a ser atingido.","","","","","","","","","",,,,,"",,,,"PlanDefinition.goal.target.detail[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.goal.target.due","PlanDefinition.goal.target.due","","","",0,1,"","","","Duration {[]} {[]}
+","Prazo do alvo","Tempo para atingir o alvo.","","","","","","","","","",,,,,"",,,,"PlanDefinition.goal.target.due",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action","PlanDefinition.action","","","",1,1,"Y","","","BackboneElement {[]} {[]}
+","A oferta como um todo","Ações que compõem o protocolo.","Note that there is overlap between many of the elements defined here and the ActivityDefinition resource. When an ActivityDefinition is referenced (using the definition element), the overlapping elements in the plan override the content of the referenced ActivityDefinition unless otherwise documented in the specific elements. See the PlanDefinition resource for more detailed information.","","","","","","","","",,,,,"",,,,"PlanDefinition.action",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","{Is a contained Definition}"
+"PlanDefinition.action.id","PlanDefinition.action.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.extension","PlanDefinition.action.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.modifierExtension","PlanDefinition.action.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.prefix","PlanDefinition.action.prefix","","","",0,1,"","","","string {[]} {[]}
+","Prefixo","Rótulo para exibição.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.prefix",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.title","PlanDefinition.action.title","","","",1,1,"Y","","","string {[]} {[]}
+","Título da ação","Título da ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.title",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.title"
+"PlanDefinition.action.description","PlanDefinition.action.description","","","",0,1,"","","","string {[]} {[]}
+","Descrição da ação","Descrição da ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.description"
+"PlanDefinition.action.textEquivalent","PlanDefinition.action.textEquivalent","","","",0,1,"","","","string {[]} {[]}
+","Equivalente textual","Versão em texto para sistemas sem suporte estruturado.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.textEquivalent",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.description"
+"PlanDefinition.action.priority","PlanDefinition.action.priority","","","",0,1,"","","","code {[]} {[]}
+","Prioridade","Urgência da ação.","","","","","","","","","",,"required","Identifies the level of importance to be assigned to actioning the request.","http://hl7.org/fhir/ValueSet/request-priority|4.0.1","",,,,"PlanDefinition.action.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.code","PlanDefinition.action.code","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Código da ação","Código que identifica a ação, como o procedimento SIGTAP.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.code",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.reason","PlanDefinition.action.reason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Motivo","Por que a ação é executada.","This is different than the clinical evidence documentation, it's an actual business description of the reason for performing the action.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.reason",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.documentation","PlanDefinition.action.documentation","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","Documentação","Material de apoio.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.documentation",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.goalId","PlanDefinition.action.goalId","","","",0,*,"","","","id {[]} {[]}
+","Metas atendidas","Metas a que a ação se refere.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.goalId",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.subject[x]","PlanDefinition.action.subject[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Group|4.0.1]]}","Tipo de sujeito","Tipo de indivíduo da ação.","The subject of an action overrides the subject at a parent action or on the root of the PlanDefinition if specified.
+
+In addition, because the subject needs to be resolved during realization, use of subjects in actions (or in the ActivityDefinition referenced by the action) resolves based on the set of subjects supplied in context and by type (i.e. the patient subject would resolve to a resource of type Patient).","Multiple steps in a protocol often have different groups of steps that are focused on testing different things. The subject of an action specifies the focus of the action and any child actions.","","Patient","","","","","",,"extensible","The possible types of subjects for a plan definition (E.g. Patient, Practitioner, Organization, Location, etc.).","http://hl7.org/fhir/ValueSet/subject-type|4.0.1","",,,,"PlanDefinition.action.subject[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.subject"
+"PlanDefinition.action.trigger","PlanDefinition.action.trigger","","","",0,*,"","","","TriggerDefinition {[]} {[]}
+","Gatilho","Quando a ação é disparada.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.trigger",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.condition","PlanDefinition.action.condition","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Condição","Condição para aplicar a ação.","When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all the conditions are true.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.condition",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.condition.id","PlanDefinition.action.condition.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.condition.extension","PlanDefinition.action.condition.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.condition.modifierExtension","PlanDefinition.action.condition.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.condition.kind","PlanDefinition.action.condition.kind","","","",1,1,"","","","code {[]} {[]}
+","Tipo de condição","applicability, start ou stop.","Applicability criteria are used to determine immediate applicability when a plan definition is applied to a given context. Start and stop criteria are carried through application and used to describe enter/exit criteria for an action.","","","","","","","","",,"required","Defines the kinds of conditions that can appear on actions.","http://hl7.org/fhir/ValueSet/action-condition-kind|4.0.1","",,,,"PlanDefinition.action.condition.kind",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.condition.expression","PlanDefinition.action.condition.expression","","","",0,1,"","","","Expression {[]} {[]}
+","Expressão","Expressão booleana da condição.","The expression may be inlined or may be a reference to a named expression within a logic library referenced by the library element.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.condition.expression",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.input","PlanDefinition.action.input","","","",0,*,"","","","DataRequirement {[]} {[]}
+","Dados de entrada","Dados necessários à ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.input",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.output","PlanDefinition.action.output","","","",0,*,"","","","DataRequirement {[]} {[]}
+","Dados de saída","Dados produzidos pela ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.output",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.relatedAction","PlanDefinition.action.relatedAction","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Ação relacionada","Relação com outra ação.","When an action depends on multiple actions, the meaning is that all actions are dependencies, rather than that any of the actions are a dependency.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.relatedAction",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.relatedAction.id","PlanDefinition.action.relatedAction.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.relatedAction.extension","PlanDefinition.action.relatedAction.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.relatedAction.modifierExtension","PlanDefinition.action.relatedAction.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.relatedAction.actionId","PlanDefinition.action.relatedAction.actionId","","","",1,1,"","","","id {[]} {[]}
+","Ação de referência","Identificador da ação relacionada.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.relatedAction.actionId",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.relatedAction.relationship","PlanDefinition.action.relatedAction.relationship","","","",1,1,"","","","code {[]} {[]}
+","Tipo de relação","before, after, concurrent etc.","","","","","","","","","",,"required","Defines the types of relationships between actions.","http://hl7.org/fhir/ValueSet/action-relationship-type|4.0.1","",,,,"PlanDefinition.action.relatedAction.relationship",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.relatedAction.offset[x]","PlanDefinition.action.relatedAction.offset[x]","","","",0,1,"","","","Duration {[]} {[]}
+Range {[]} {[]}","Intervalo","Tempo entre as ações.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.relatedAction.offset[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.timing[x]","PlanDefinition.action.timing[x]","","","",1,1,"Y","","","Duration {[]} {[]}
+","Prazo máximo de conclusão da OCI","Quando a ação deve ocorrer; na OCI, o prazo de conclusão.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.participant","PlanDefinition.action.participant","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Participantes","Quem participa da ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.participant",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.participant.id","PlanDefinition.action.participant.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.participant.extension","PlanDefinition.action.participant.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.participant.modifierExtension","PlanDefinition.action.participant.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.participant.type","PlanDefinition.action.participant.type","","","",1,1,"","","","code {[]} {[]}
+","Tipo de participante","patient, practitioner, related-person ou device.","","","","","","","","","",,"required","The type of participant for the action.","http://hl7.org/fhir/ValueSet/action-participant-type|4.0.1","",,,,"PlanDefinition.action.participant.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.participant.role","PlanDefinition.action.participant.role","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Função","Função do participante.","","","","","","","","","",,"example","Defines roles played by participants for the action.","http://hl7.org/fhir/ValueSet/action-participant-role|4.0.1","",,,,"PlanDefinition.action.participant.role",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.type","PlanDefinition.action.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Tipo de ação","create, update, remove ou fire-event.","","","","","","","","","",,"extensible","The type of action to be performed.","http://hl7.org/fhir/ValueSet/action-type|4.0.1","",,,,"PlanDefinition.action.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.groupingBehavior","PlanDefinition.action.groupingBehavior","","","",0,1,"","","","code {[]} {[]}
+","Agrupamento","visual-group, logical-group ou sentence-group.","","","","","","","","","",,"required","Defines organization behavior of a group.","http://hl7.org/fhir/ValueSet/action-grouping-behavior|4.0.1","",,,,"PlanDefinition.action.groupingBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.selectionBehavior","PlanDefinition.action.selectionBehavior","","","",0,1,"","","","code {[]} {[]}
+","Seleção","Como as subações são selecionadas.","","","","","","","","","",,"required","Defines selection behavior of a group.","http://hl7.org/fhir/ValueSet/action-selection-behavior|4.0.1","",,,,"PlanDefinition.action.selectionBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.requiredBehavior","PlanDefinition.action.requiredBehavior","","","",0,1,"","","","code {[]} {[]}
+","Obrigatoriedade","must, could ou must-unless-documented.","","","","","","","","","",,"required","Defines expectations around whether an action or action group is required.","http://hl7.org/fhir/ValueSet/action-required-behavior|4.0.1","",,,,"PlanDefinition.action.requiredBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.precheckBehavior","PlanDefinition.action.precheckBehavior","","","",0,1,"","","","code {[]} {[]}
+","Pré-seleção","yes ou no.","","","","","","","","","",,"required","Defines selection frequency behavior for an action or group.","http://hl7.org/fhir/ValueSet/action-precheck-behavior|4.0.1","",,,,"PlanDefinition.action.precheckBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.cardinalityBehavior","PlanDefinition.action.cardinalityBehavior","","","",0,1,"","","","code {[]} {[]}
+","Repetição","single ou multiple.","","","","","","","","","",,"required","Defines behavior for an action or a group for how many times that item may be repeated.","http://hl7.org/fhir/ValueSet/action-cardinality-behavior|4.0.1","",,,,"PlanDefinition.action.cardinalityBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.definition[x]","PlanDefinition.action.definition[x]","","","",0,1,"","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ActivityDefinition|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PlanDefinition|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Questionnaire|4.0.1]]}
+uri {[]} {[]}","Definição da ação","ActivityDefinition ou PlanDefinition que descreve a ação.","Note that the definition is optional, and if no definition is specified, a dynamicValue with a root ($this) path can be used to define the entire resource dynamically.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.definition[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.derivedFrom"
+"PlanDefinition.action.transform","PlanDefinition.action.transform","","","",0,1,"","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/StructureMap|4.0.1]]}
+","Transformação","StructureMap aplicado.","Note that when a referenced ActivityDefinition also defines a transform, the transform specified here generally takes precedence. In addition, if both a transform and dynamic values are specific, the dynamic values are applied to the result of the transform.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.transform",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.dynamicValue","PlanDefinition.action.dynamicValue","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Valor dinâmico","Valor calculado na aplicação.","Dynamic values are applied in the order in which they are defined in the PlanDefinition resource. Note that when dynamic values are also specified by a referenced ActivityDefinition, the dynamicValues from the ActivityDefinition are applied first, followed by the dynamicValues specified here. In addition, if both a transform and dynamic values are specific, the dynamic values are applied to the result of the transform.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.dynamicValue",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.dynamicValue.id","PlanDefinition.action.dynamicValue.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.dynamicValue.extension","PlanDefinition.action.dynamicValue.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.dynamicValue.modifierExtension","PlanDefinition.action.dynamicValue.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.dynamicValue.path","PlanDefinition.action.dynamicValue.path","","","",0,1,"","","","string {[]} {[]}
+","Caminho","Elemento que recebe o valor.","To specify the path to the current action being realized, the %action environment variable is available in this path. For example, to specify the description element of the target action, the path would be %action.description. The path attribute contains a [Simple FHIRPath Subset](http://hl7.org/fhir/R4/fhirpath.html#simple) that allows path traversal, but not calculation.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.dynamicValue.path",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.dynamicValue.expression","PlanDefinition.action.dynamicValue.expression","","","",0,1,"","","","Expression {[]} {[]}
+","Expressão","Expressão que calcula o valor.","The expression may be inlined or may be a reference to a named expression within a logic library referenced by the library element.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.dynamicValue.expression",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action","PlanDefinition.action.action","","","",1,*,"Y","","","BackboneElement {[]} {[]}
+","Procedimentos componentes","Ações componentes; na OCI, os procedimentos.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.action",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","{InverseRelationship of Definition.partOf}"
+"PlanDefinition.action.action.id","PlanDefinition.action.action.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.action.extension","PlanDefinition.action.action.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.modifierExtension","PlanDefinition.action.action.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.prefix","PlanDefinition.action.action.prefix","","","",0,1,"","","","string {[]} {[]}
+","Prefixo","Rótulo para exibição.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.prefix",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.title","PlanDefinition.action.action.title","","","",0,1,"","","","string {[]} {[]}
+","User-visible title","Nome legível por pessoas.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.title",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.title"
+"PlanDefinition.action.action.description","PlanDefinition.action.action.description","","","",0,1,"","","","string {[]} {[]}
+","Descrição","Descrição em linguagem natural.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.description"
+"PlanDefinition.action.action.textEquivalent","PlanDefinition.action.action.textEquivalent","","","",0,1,"","","","string {[]} {[]}
+","Equivalente textual","Versão em texto para sistemas sem suporte estruturado.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.textEquivalent",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.description"
+"PlanDefinition.action.action.priority","PlanDefinition.action.action.priority","","","",0,1,"","","","code {[]} {[]}
+","routine | urgent | asap | stat","Urgência da ação.","","","","","","","","","",,"required","Identifies the level of importance to be assigned to actioning the request.","http://hl7.org/fhir/ValueSet/request-priority|4.0.1","",,,,"PlanDefinition.action.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.code","PlanDefinition.action.action.code","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
+","Código","Código que identifica o conceito.","","","","","","","","","",,"required","","https://terminologia.saude.gov.br/fhir/ValueSet/BRTabelaSUS","",,,,"PlanDefinition.action.code",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.reason","PlanDefinition.action.action.reason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Motivo","Motivo da ocorrência.","This is different than the clinical evidence documentation, it's an actual business description of the reason for performing the action.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.reason",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.documentation","PlanDefinition.action.action.documentation","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","Documentação","Material de apoio.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.documentation",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.goalId","PlanDefinition.action.action.goalId","","","",0,*,"","","","id {[]} {[]}
+","Metas atendidas","Metas a que a ação se refere.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.goalId",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.subject[x]","PlanDefinition.action.action.subject[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Group|4.0.1]]}","Tipo de sujeito","Tipo de indivíduo da ação.","The subject of an action overrides the subject at a parent action or on the root of the PlanDefinition if specified.
+
+In addition, because the subject needs to be resolved during realization, use of subjects in actions (or in the ActivityDefinition referenced by the action) resolves based on the set of subjects supplied in context and by type (i.e. the patient subject would resolve to a resource of type Patient).","Multiple steps in a protocol often have different groups of steps that are focused on testing different things. The subject of an action specifies the focus of the action and any child actions.","","Patient","","","","","",,"extensible","The possible types of subjects for a plan definition (E.g. Patient, Practitioner, Organization, Location, etc.).","http://hl7.org/fhir/ValueSet/subject-type|4.0.1","",,,,"PlanDefinition.action.subject[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.subject"
+"PlanDefinition.action.action.trigger","PlanDefinition.action.action.trigger","","","",0,*,"","","","TriggerDefinition {[]} {[]}
+","Gatilho","Quando a ação é disparada.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.trigger",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.condition","PlanDefinition.action.action.condition","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Condição","Condição para aplicar a ação.","When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all the conditions are true.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.condition",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.condition.id","PlanDefinition.action.action.condition.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.action.condition.extension","PlanDefinition.action.action.condition.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.condition.modifierExtension","PlanDefinition.action.action.condition.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.condition.kind","PlanDefinition.action.action.condition.kind","","","",1,1,"","","","code {[]} {[]}
+","applicability | start | stop","applicability, start ou stop.","Applicability criteria are used to determine immediate applicability when a plan definition is applied to a given context. Start and stop criteria are carried through application and used to describe enter/exit criteria for an action.","","","","","","","","",,"required","Defines the kinds of conditions that can appear on actions.","http://hl7.org/fhir/ValueSet/action-condition-kind|4.0.1","",,,,"PlanDefinition.action.condition.kind",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.condition.expression","PlanDefinition.action.action.condition.expression","","","",0,1,"","","","Expression {[]} {[]}
+","Boolean-valued expression","Expressão booleana da condição.","The expression may be inlined or may be a reference to a named expression within a logic library referenced by the library element.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.condition.expression",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.input","PlanDefinition.action.action.input","","","",0,*,"","","","DataRequirement {[]} {[]}
+","Input data requirements","Dados necessários à ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.input",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.output","PlanDefinition.action.action.output","","","",0,*,"","","","DataRequirement {[]} {[]}
+","Output data definition","Dados produzidos pela ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.output",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.relatedAction","PlanDefinition.action.action.relatedAction","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Ação relacionada","Relação com outra ação.","When an action depends on multiple actions, the meaning is that all actions are dependencies, rather than that any of the actions are a dependency.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.relatedAction",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.relatedAction.id","PlanDefinition.action.action.relatedAction.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.action.relatedAction.extension","PlanDefinition.action.action.relatedAction.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.relatedAction.modifierExtension","PlanDefinition.action.action.relatedAction.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.relatedAction.actionId","PlanDefinition.action.action.relatedAction.actionId","","","",1,1,"","","","id {[]} {[]}
+","Ação de referência","Identificador da ação relacionada.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.relatedAction.actionId",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.relatedAction.relationship","PlanDefinition.action.action.relatedAction.relationship","","","",1,1,"","","","code {[]} {[]}
+","Tipo de relação","before, after, concurrent etc.","","","","","","","","","",,"required","Defines the types of relationships between actions.","http://hl7.org/fhir/ValueSet/action-relationship-type|4.0.1","",,,,"PlanDefinition.action.relatedAction.relationship",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.relatedAction.offset[x]","PlanDefinition.action.action.relatedAction.offset[x]","","","",0,1,"","","","Duration {[]} {[]}
+Range {[]} {[]}","Intervalo","Tempo entre as ações.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.relatedAction.offset[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.timing[x]","PlanDefinition.action.action.timing[x]","","","",0,1,"","","","dateTime {[]} {[]}
+Age {[]} {[]}Period {[]} {[]}Duration {[]} {[]}Range {[]} {[]}Timing {[]} {[]}","Prazo ou momento","Quando a ação deve ocorrer; na OCI, o prazo de conclusão.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.participant","PlanDefinition.action.action.participant","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Participantes","Quem participa da ação.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.participant",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.participant.id","PlanDefinition.action.action.participant.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.action.participant.extension","PlanDefinition.action.action.participant.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.participant.modifierExtension","PlanDefinition.action.action.participant.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.participant.type","PlanDefinition.action.action.participant.type","","","",1,1,"","","","code {[]} {[]}
+","patient | practitioner | related-person | device","Tipo da ocorrência.","","","","","","","","","",,"required","The type of participant for the action.","http://hl7.org/fhir/ValueSet/action-participant-type|4.0.1","",,,,"PlanDefinition.action.participant.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.participant.role","PlanDefinition.action.action.participant.role","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","E.g. Nurse, Surgeon, Parent","Função do participante.","","","","","","","","","",,"example","Defines roles played by participants for the action.","http://hl7.org/fhir/ValueSet/action-participant-role|4.0.1","",,,,"PlanDefinition.action.participant.role",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.type","PlanDefinition.action.action.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","create | update | remove | fire-event","Tipo da ocorrência.","","","","","","","","","",,"extensible","The type of action to be performed.","http://hl7.org/fhir/ValueSet/action-type|4.0.1","",,,,"PlanDefinition.action.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.groupingBehavior","PlanDefinition.action.action.groupingBehavior","","","",0,1,"","","","code {[]} {[]}
+","visual-group | logical-group | sentence-group","visual-group, logical-group ou sentence-group.","","","","","","","","","",,"required","Defines organization behavior of a group.","http://hl7.org/fhir/ValueSet/action-grouping-behavior|4.0.1","",,,,"PlanDefinition.action.groupingBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.selectionBehavior","PlanDefinition.action.action.selectionBehavior","","","",0,1,"","","","code {[]} {[]}
+","Seleção","Como as subações são selecionadas.","","","","","","","","","",,"required","Defines selection behavior of a group.","http://hl7.org/fhir/ValueSet/action-selection-behavior|4.0.1","",,,,"PlanDefinition.action.selectionBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.requiredBehavior","PlanDefinition.action.action.requiredBehavior","","","",1,1,"Y","","","code {[]} {[]}
+","must | could | must-unless-documented","must, could ou must-unless-documented.","must = obrigatório para o pagamento da OCI; could = opcional, conforme indicação.","","","","","","","","",,"required","Defines expectations around whether an action or action group is required.","http://hl7.org/fhir/ValueSet/action-required-behavior|4.0.1","",,,,"PlanDefinition.action.requiredBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.precheckBehavior","PlanDefinition.action.action.precheckBehavior","","","",0,1,"","","","code {[]} {[]}
+","yes | no","yes ou no.","","","","","","","","","",,"required","Defines selection frequency behavior for an action or group.","http://hl7.org/fhir/ValueSet/action-precheck-behavior|4.0.1","",,,,"PlanDefinition.action.precheckBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.cardinalityBehavior","PlanDefinition.action.action.cardinalityBehavior","","","",0,1,"","","","code {[]} {[]}
+","single | multiple","single ou multiple.","","","","","","","","","",,"required","Defines behavior for an action or a group for how many times that item may be repeated.","http://hl7.org/fhir/ValueSet/action-cardinality-behavior|4.0.1","",,,,"PlanDefinition.action.cardinalityBehavior",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.definition[x]","PlanDefinition.action.action.definition[x]","","","",0,1,"","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ActivityDefinition|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/PlanDefinition|4.0.1], CanonicalType[http://hl7.org/fhir/StructureDefinition/Questionnaire|4.0.1]]}
+uri {[]} {[]}","Definição da ação","ActivityDefinition ou PlanDefinition que descreve a ação.","Note that the definition is optional, and if no definition is specified, a dynamicValue with a root ($this) path can be used to define the entire resource dynamically.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.definition[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.derivedFrom"
+"PlanDefinition.action.action.transform","PlanDefinition.action.action.transform","","","",0,1,"","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/StructureMap|4.0.1]]}
+","Transformação","StructureMap aplicado.","Note that when a referenced ActivityDefinition also defines a transform, the transform specified here generally takes precedence. In addition, if both a transform and dynamic values are specific, the dynamic values are applied to the result of the transform.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.transform",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.dynamicValue","PlanDefinition.action.action.dynamicValue","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Valor dinâmico","Valor calculado na aplicação.","Dynamic values are applied in the order in which they are defined in the PlanDefinition resource. Note that when dynamic values are also specified by a referenced ActivityDefinition, the dynamicValues from the ActivityDefinition are applied first, followed by the dynamicValues specified here. In addition, if both a transform and dynamic values are specific, the dynamic values are applied to the result of the transform.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.dynamicValue",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.dynamicValue.id","PlanDefinition.action.action.dynamicValue.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador do elemento","Identificador único do elemento dentro do recurso, para referências internas.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PlanDefinition.action.action.dynamicValue.extension","PlanDefinition.action.action.dynamicValue.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensões adicionais","Extensões que acrescentam informação não prevista no modelo base.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.dynamicValue.modifierExtension","PlanDefinition.action.action.dynamicValue.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensões que não podem ser ignoradas","Extensões que alteram o significado do elemento e não podem ser ignoradas por quem não as reconhece.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PlanDefinition.action.action.dynamicValue.path","PlanDefinition.action.action.dynamicValue.path","","","",0,1,"","","","string {[]} {[]}
+","Caminho","Elemento que recebe o valor.","To specify the path to the current action being realized, the %action environment variable is available in this path. For example, to specify the description element of the target action, the path would be %action.description. The path attribute contains a [Simple FHIRPath Subset](http://hl7.org/fhir/R4/fhirpath.html#simple) that allows path traversal, but not calculation.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.dynamicValue.path",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.dynamicValue.expression","PlanDefinition.action.action.dynamicValue.expression","","","",0,1,"","","","Expression {[]} {[]}
+","Expressão","Expressão que calcula o valor.","The expression may be inlined or may be a reference to a named expression within a logic library referenced by the library element.","","","","","","","","",,,,,"",,,,"PlanDefinition.action.dynamicValue.expression",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PlanDefinition.action.action.action","PlanDefinition.action.action.action","","","",0,*,"","","","null {[]} {[]}
+","A sub-action","Ações que compõem o protocolo.","","","","","","","","","",,,,,"",,,,"PlanDefinition.action.action",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","{InverseRelationship of Definition.partOf}"

@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+http://terminology.hl7.org/ValueSet/v2-0116,3.0.0,active,"2.16.840.1.113883.21.51",Hl7VSBedStatus,hl7VS-bedStatus,"Value Set of codes that specify the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.","StructureDefinition/leito-regulado","THO (V2)"

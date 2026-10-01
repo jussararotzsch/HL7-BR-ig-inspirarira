@@ -1,0 +1,75 @@
+{
+  "resourceType" : "Task",
+  "id" : "task-regulacao-urologia-negada",
+  "meta" : {
+    "profile" : ["http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-regulacao-urologia-negada</b></p><a name=\"task-regulacao-urologia-negada\"> </a><a name=\"hctask-regulacao-urologia-negada\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-consulta-urologia-excluida.html\">ServiceRequest Consulta médica em atenção especializada</a></p><p><b>status</b>: Rejected</p><p><b>statusReason</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria sem-indicacao-clinica}\">sem-indicacao-clinica</span></p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria cancelado-clinicamente}\">cancelado-clinicamente</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-acesso}\">regulacao-acesso</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-consulta-urologia-excluida.html\">ServiceRequest Consulta médica em atenção especializada</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2026-08-20 08:35:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria pertinencia}\">pertinencia</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria nao-pertinente}\">nao-pertinente</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria decisao}\">decisao</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria negado}\">negado</span></p></blockquote></div>"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/sr-consulta-urologia-excluida"
+  }],
+  "status" : "rejected",
+  "statusReason" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria",
+      "code" : "sem-indicacao-clinica"
+    }]
+  },
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria",
+      "code" : "cancelado-clinicamente"
+    }]
+  },
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao",
+      "code" : "regulacao-acesso"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/sr-consulta-urologia-excluida"
+  },
+  "for" : {
+    "reference" : "Patient/paciente-maria"
+  },
+  "authoredOn" : "2026-08-20T08:35:00-03:00",
+  "requester" : {
+    "reference" : "Organization/org-ubs-solicitante"
+  },
+  "owner" : {
+    "reference" : "Organization/org-central-regulacao"
+  },
+  "output" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria",
+        "code" : "pertinencia"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria",
+        "code" : "nao-pertinente"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria",
+        "code" : "decisao"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria",
+        "code" : "negado"
+      }]
+    }
+  }]
+}

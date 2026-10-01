@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - Guia de Implementação InspiraRIRA v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação InspiraRIRA</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Brazil
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Início</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fluxo
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="fluxo.html">Fluxo regulatório</a>
+      </li>
+      <li>
+        <a href="autorizacao.html">Autorização na Task</a>
+      </li>
+      <li>
+        <a href="leitos.html">Regulação de leitos</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="mapeamento-rira.html">Mapeamento RIRA</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Débitos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="debitos-tecnicos.html">Débitos técnicos</a>
+      </li>
+      <li>
+        <a href="recomendacoes-rnds.html">Recomendações à RNDS</a>
+      </li>
+      <li>
+        <a href="transicao.html">Transição</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefatos</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação InspiraRIRA - Compilação de desenvolvimento local (v0.1.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='http://fhir.hsl.org.br/ig/inspirarira/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Knowledge Artifacts: Measure</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#4">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Knowledge Artifacts: Measure </h3>
+    <p>These define measures as part of content in this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Measure-censo-leitos.html" title="Measure/censo-leitos">Medida do censo de leitos</a>
+            </td>
+            <td>
+<p>Contagem de leitos por situação, estratificada por especialidade de leito do CNES.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-agendamento-regulacao.html"
+                  title="StructureDefinition/agendamento-regulacao">Agendamento de Regulação Assistencial</a>
+            </td>
+            <td>
+<p>Agendamento resultante da regulação. Só DEVE ser criado quando houver proposta de data, local e serviço. Os estados booked, fulfilled, cancelled e noshow substituem os slices event:booked, event:attended, event:cancelled e event:absence do RIRA.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-censo-leitos.html"
+                  title="StructureDefinition/censo-leitos">Censo de Leitos</a>
+            </td>
+            <td>
+<p>Situação dos leitos de um estabelecimento num instante, estratificada por especialidade de leito do CNES. Calculado a partir dos LeitoRegulado e das InternacaoRegulada.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-internacao-regulada.html"
+                  title="StructureDefinition/internacao-regulada">Internação Regulada</a>
+            </td>
+            <td>
+<p>Reserva e ocupação de leito resultante da regulação. Reserva = status planned com o leito em location.status reserved. Internação = in-progress com o leito active. Transferência interna (entre leitos do mesmo estabelecimento) é a troca de location dentro do mesmo Encounter. Transferência externa encerra este Encounter (desfecho Transferência) e abre outro no destino, regulado por nova Requisição.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-leito-regulado.html"
+                  title="StructureDefinition/leito-regulado">Leito Regulado</a>
+            </td>
+            <td>
+<p>Leito hospitalar disponível à regulação. Tipo e especialidade seguem os domínios do CNES. A situação operacional (livre, ocupado, higienização, bloqueado) usa a tabela HL7 v2-0116, nativa de Location.operationalStatus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-protocolo-oci.html"
+                  title="StructureDefinition/protocolo-oci">Protocolo de Oferta de Cuidados Integrados (OCI)</a>
+            </td>
+            <td>
+<p>Composição, obrigatoriedade dos procedimentos e prazo de conclusão de uma OCI do SUS. É artefato definicional: não representa fila, pedido nem decisão. A requisição da OCI aponta para ele em ServiceRequest.instantiatesCanonical.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-producao-sus.html"
+                  title="StructureDefinition/producao-sus">Registro de Produção SUS (BPA-I, RAAS, APAC, AIH)</a>
+            </td>
+            <td>
+<p>Apresentação da produção ao SIA/SUS ou SIH/SUS depois da execução do cuidado. Cobre BPA-I e RAAS (sem autorização prévia) e a produção de APAC e AIH (ligada à autorização emitida). Cada item aponta para o Encounter executado.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-regra-reembolso-oci.html"
+                  title="StructureDefinition/regra-reembolso-oci">Regra de Reembolso de OCI</a>
+            </td>
+            <td>
+<p>Condições de pagamento e valor de referência de uma OCI do SUS. As condições (applicability) são avaliadas sobre o Registro de Produção SUS: procedimentos obrigatórios realizados, conclusão no prazo e habilitação do executante. Pagamento por pacote, não por procedimento isolado.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-requisicao-regulacao.html"
+                  title="StructureDefinition/requisicao-regulacao">Requisição de Regulação Assistencial</a>
+            </td>
+            <td>
+<p>Pedido clínico persistente submetido à regulação do acesso. Registra o que é solicitado, por quê, com que prioridade e com que apoio clínico, independentemente do canal de financiamento. Substitui BRRequisicaoRegulacaoAssistencial do RIRA.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-resposta-autorizacao-sus.html"
+                  title="StructureDefinition/resposta-autorizacao-sus">Resposta de Autorização SUS (APAC/AIH)</a>
+            </td>
+            <td>
+<p>Emissão, negativa ou crítica da APAC/AIH pelo gestor autorizador. Carrega o número e a validade da autorização. Estrutura alinhada ao perfil RespostaGuia (ClaimResponse) da ANS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-autorizacao-previa-sus.html"
+                  title="StructureDefinition/autorizacao-previa-sus">Solicitação de Autorização SUS (APAC/AIH)</a>
+            </td>
+            <td>
+<p>Solicitação de APAC ou AIH ao gestor autorizador. Pertence à camada administrativo-financeira e NÃO substitui a Requisição nem a Tarefa de Regulação. Estrutura alinhada aos perfis Guia (Claim) da ANS, sem dependência do pacote ANS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-tarefa-regulacao.html"
+                  title="StructureDefinition/tarefa-regulacao">Tarefa de Regulação Assistencial</a>
+            </td>
+            <td>
+<p>Etapa de trabalho regulatório sobre uma Requisição de Regulação: regulação do acesso (qualificação, priorização, alocação e agendamento), autorização regulatória, reavaliação, recurso e contrarreferência. É onde a decisão regulatória acontece, com dimensão, resultado, motivo, responsável e protocolo. Substitui os slices de Composition.event do RIRA.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-transporte-sanitario.html"
+                  title="StructureDefinition/transporte-sanitario">Transporte Sanitário</a>
+            </td>
+            <td>
+<p>Pedido de transporte do paciente entre estabelecimentos, vinculado à requisição de internação ou transferência.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-data-entrada-fila.html"
+                  title="StructureDefinition/data-entrada-fila">Data de Entrada na Fila</a>
+            </td>
+            <td>
+<p>Momento em que o pedido se tornou elegível e entrou na fila regulada. Preservada quando uma reserva expira e a tarefa volta à fila, ou quando uma nova etapa substitui a anterior (seção 7.3 do guia do GT). Difere de ServiceRequest.authoredOn (autoria do pedido) e de Task.authoredOn (criação da etapa).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-local-origem.html"
+                  title="StructureDefinition/local-origem">Local de Origem</a>
+            </td>
+            <td>
+<p>Local de onde o paciente parte no transporte sanitário. ServiceRequest R4 só tem o local de realização (locationReference), usado aqui como destino. No R5 o recurso Transport resolve isso nativamente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-prioridade-regulatoria.html"
+                  title="StructureDefinition/prioridade-regulatoria">Prioridade Regulatória</a>
+            </td>
+            <td>
+<p>Classe, escore e fatores componentes da prioridade clínica atribuída pela regulação. Task.priority (request-priority) só expressa urgência operacional e não comporta classe de protocolo, escore nem fatores de equidade.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-consulta-nefrologia.html"
+                  title="ServiceRequest/sr-consulta-nefrologia">A1. Pedido de consulta em nefrologia</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Appointment-appt-consulta-nefrologia-falta.html"
+                  title="Appointment/appt-consulta-nefrologia-falta">A2. Primeiro agendamento, com falta</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Appointment-appt-consulta-nefrologia.html"
+                  title="Appointment/appt-consulta-nefrologia">A3. Reagendamento, realizado</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-regulacao-consulta.html"
+                  title="Task/task-regulacao-consulta">A4. Regulação do acesso concluída e executada</a>
+            </td>
+            <td>
+<p>A falta em A2 não reinicia o pedido: a tarefa voltou à fila preservando a data de entrada e gerou o reagendamento A3.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-consulta-nefrologia.html"
+                  title="Encounter/enc-consulta-nefrologia">A5. Consulta realizada</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-bpai-consulta-nefrologia.html"
+                  title="Claim/bpai-consulta-nefrologia">A6. Produção em BPA-I</a>
+            </td>
+            <td>
+<p>Registro da produção da consulta regulada. BPA-I dispensa autorização prévia.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-hemodialise.html"
+                  title="ServiceRequest/sr-hemodialise">B1. Pedido de hemodiálise</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-coverage-sus-arranjo-publico.html"
+                  title="Coverage/coverage-sus-arranjo-publico">B2. Arranjo público SUS (PPI)</a>
+            </td>
+            <td>
+<p>Coverage que representa o arranjo público de custeio e o gestor responsável. Não é plano individual e não condiciona o direito universal. Perfil BR Public Funding Arrangement fica para versão futura.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-claim-apac-hemodialise.html"
+                  title="Claim/claim-apac-hemodialise">B3. Solicitação de APAC</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ClaimResponse-claimresponse-apac-hemodialise.html"
+                  title="ClaimResponse/claimresponse-apac-hemodialise">B4. APAC emitida</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Appointment-appt-hemodialise.html"
+                  title="Appointment/appt-hemodialise">B5. Primeira sessão, realizada</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-autorizacao-hemodialise.html"
+                  title="Task/task-autorizacao-hemodialise">B6. Autorização regulatória concluída</a>
+            </td>
+            <td>
+<p>A autorização acontece na Task: dimensões avaliadas, decisão e protocolo. A ClaimResponse da APAC é um produto da decisão, referenciado em output.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-hemodialise.html" title="Encounter/enc-hemodialise">B7. Atendimento realizado</a>
+            </td>
+            <td>
+<p>A existência do Encounter é a evidência do atendimento. Substitui event:attended sem duplicar o RAC.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-producao-apac-hemodialise.html"
+                  title="Claim/producao-apac-hemodialise">B8. Produção da APAC</a>
+            </td>
+            <td>
+<p>Produção ligada à autorização (insurance.preAuthRef e related.claim) e ao cuidado executado (item.encounter).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-usg-abdome.html"
+                  title="ServiceRequest/sr-usg-abdome">C1. Pedido de ultrassonografia com informação insuficiente</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-regulacao-usg-pendencia.html"
+                  title="Task/task-regulacao-usg-pendencia">C2. Devolução por pendência documental</a>
+            </td>
+            <td>
+<p>Devolução é pendência regulatória (Task on-hold), não negativa financeira.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-consulta-urologia-excluida.html"
+                  title="ServiceRequest/sr-consulta-urologia-excluida">C3. Pedido retirado após revisão</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-regulacao-urologia-negada.html"
+                  title="Task/task-regulacao-urologia-negada">C4. Negativa por ausência de indicação</a>
+            </td>
+            <td>
+<p>Negativa com dimensão, motivo, responsável e protocolo, passível de recurso (nova Task com partOf).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-central-regulacao.html"
+                  title="Organization/org-central-regulacao">Complexo regulador</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PlanDefinition-protocolo-oci-mama.html"
+                  title="PlanDefinition/protocolo-oci-mama">D1. Protocolo da OCI de avaliação diagnóstica inicial de câncer de mama</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ChargeItemDefinition-regra-reembolso-oci-mama.html"
+                  title="ChargeItemDefinition/regra-reembolso-oci-mama">D2. Regra de reembolso da OCI de câncer de mama</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-oci-mama.html"
+                  title="ServiceRequest/sr-oci-mama">D3. Pedido da OCI</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Appointment-appt-oci-mama.html" title="Appointment/appt-oci-mama">D4. Agendamento da OCI, realizado</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-regulacao-oci-mama.html"
+                  title="Task/task-regulacao-oci-mama">D5. Regulação da OCI, com prazo alvo do protocolo</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-oci-mama.html" title="Encounter/enc-oci-mama">D6. Consulta da OCI realizada</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-producao-oci-mama.html" title="Claim/producao-oci-mama">D7. Produção da OCI</a>
+            </td>
+            <td>
+<p>Um item com o código da OCI e os componentes realizados em item.detail. A RegraReembolsoOCI avalia este Claim.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-condicao-drc.html" title="Condition/condicao-drc">Doença renal crônica</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PlanDefinition-protocolo-oci-ic.html"
+                  title="PlanDefinition/protocolo-oci-ic">E1. Protocolo da OCI de insuficiência cardíaca</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ChargeItemDefinition-regra-reembolso-oci-ic.html"
+                  title="ChargeItemDefinition/regra-reembolso-oci-ic">E2. Regra de reembolso da OCI de insuficiência cardíaca</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-executante.html"
+                  title="Organization/org-executante">Estabelecimento executante</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-origem-enfermaria.html"
+                  title="Encounter/enc-origem-enfermaria">F1a. Internação na origem, encerrada por transferência</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-leito-uti.html"
+                  title="ServiceRequest/sr-leito-uti">F1b. Pedido de leito de UTI (transferência externa)</a>
+            </td>
+            <td>
+<p>O pedido nasce na internação de origem (encounter) e pede leito complementar de UTI.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-transporte-uti.html"
+                  title="ServiceRequest/transporte-uti">F1c. Transporte sanitário avançado</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-destino-uti.html" title="Encounter/enc-destino-uti">F1d. Internação na UTI de destino</a>
+            </td>
+            <td>
+<p>dischargeDisposition 07 Permanência: o BR-Core exige o elemento antes da alta.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-leito-uti.html" title="Task/task-leito-uti">F1e. Regulação de leito concluída: paciente internado no destino</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-claim-aih-icc.html" title="Claim/claim-aih-icc">F1f. Solicitação de AIH</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ClaimResponse-claimresponse-aih-icc.html"
+                  title="ClaimResponse/claimresponse-aih-icc">F1g. AIH emitida</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-leito-clinico.html"
+                  title="ServiceRequest/sr-leito-clinico">F2a. Pedido de leito clínico</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-reserva-clinico.html"
+                  title="Encounter/enc-reserva-clinico">F2b. Reserva de leito clínico</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-leito-clinico.html" title="Task/task-leito-clinico">F2c. Leito reservado</a>
+            </td>
+            <td>
+<p>restriction.period.end marca o fim da reserva; se expirar, a tarefa volta a aguardando-leito sem perder a data de entrada.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-sr-vaga-zero.html"
+                  title="ServiceRequest/sr-vaga-zero">F3a. Pedido de leito de UTI a partir da UPA</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-vaga-zero.html" title="Task/task-vaga-zero">F3b. Vaga zero</a>
+            </td>
+            <td>
+<p>Sem leito compatível disponível e com risco iminente, o regulador encaminha ao hospital de referência. A decisão tem responsável, motivo e justificativa.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-enc-alta-uti.html" title="Encounter/enc-alta-uti">F4. Internação encerrada com alta clínica</a>
+            </td>
+            <td>
+<p>Após a alta, o leito-uti-02 passa a H (higienização) e depois a U (livre).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MeasureReport-censo-hre-20261001.html"
+                  title="MeasureReport/censo-hre-20261001">F5. Censo do Hospital Regional Exemplo</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-gestor-ses.html"
+                  title="Organization/org-gestor-ses">Gestor autorizador (SES)</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-hospital-destino.html"
+                  title="Organization/org-hospital-destino">Hospital de destino</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-condicao-icc.html" title="Condition/condicao-icc">Insuficiência cardíaca descompensada</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-leito-uti-01.html" title="Location/leito-uti-01">Leito UTI adulto tipo II 01 (ocupado)</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-leito-uti-02.html" title="Location/leito-uti-02">Leito UTI adulto tipo II 02 (higienização)</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-leito-clin-01.html" title="Location/leito-clin-01">Leito clínica geral 01 (livre, com reserva)</a>
+            </td>
+            <td>
+<p>A reserva não muda operationalStatus: o leito segue U e a reserva fica no Encounter planned.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-leito-origem-01.html" title="Location/leito-origem-01">Leito clínico na origem</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-paciente-joao.html" title="Patient/paciente-joao">Paciente João Souza</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-paciente-maria.html" title="Patient/paciente-maria">Paciente Maria da Silva</a>
+            </td>
+            <td>
+<p>Paciente usada em todos os cenários.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PlanDefinition-protocolo-acesso-nefrologia.html"
+                  title="PlanDefinition/protocolo-acesso-nefrologia">Protocolo de acesso à nefrologia (exemplo)</a>
+            </td>
+            <td>
+<p>Semente do perfil BR Access Protocol (seção 6.1 do guia do GT). Define critérios, sem representar fila nem decisão.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-ubs-solicitante.html"
+                  title="Organization/org-ubs-solicitante">UBS solicitante</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-org-upa.html" title="Organization/org-upa">UPA de origem</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.hospitalsiriolibanes.org.br">Hospital Sírio-Libanês</a>.  Package br.org.hsl.inspirarira#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 1, 2026 16:52-0300">2026-10-01</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

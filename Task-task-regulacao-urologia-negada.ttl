@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-urologia-negada> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "task-regulacao-urologia-negada"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao" ;
+       fhir:index 0 ;
+       fhir:link <http://fhir.hsl.org.br/ig/inspirarira/StructureDefinition/tarefa-regulacao>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Task task-regulacao-urologia-negada</b></p><a name=\"task-regulacao-urologia-negada\"> </a><a name=\"hctask-regulacao-urologia-negada\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-tarefa-regulacao.html\">Tarefa de Regulação Assistencial</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-sr-consulta-urologia-excluida.html\">ServiceRequest Consulta médica em atenção especializada</a></p><p><b>status</b>: Rejected</p><p><b>statusReason</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria sem-indicacao-clinica}\">sem-indicacao-clinica</span></p><p><b>businessStatus</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria cancelado-clinicamente}\">cancelado-clinicamente</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao regulacao-acesso}\">regulacao-acesso</span></p><p><b>focus</b>: <a href=\"ServiceRequest-sr-consulta-urologia-excluida.html\">ServiceRequest Consulta médica em atenção especializada</a></p><p><b>for</b>: <a href=\"Patient-paciente-maria.html\">Maria da Silva  Female, DoB: 1961-03-14 ( Health Card Number (use: official, ))</a></p><p><b>authoredOn</b>: 2026-08-20 08:35:00-0300</p><p><b>requester</b>: <a href=\"Organization-org-ubs-solicitante.html\">Organization UBS Jardim Exemplo</a></p><p><b>owner</b>: <a href=\"Organization-org-central-regulacao.html\">Organization Central de Regulação Ambulatorial Exemplo</a></p><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria pertinencia}\">pertinencia</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria nao-pertinente}\">nao-pertinente</span></p></blockquote><blockquote><p><b>output</b></p><p><b>type</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria decisao}\">decisao</span></p><p><b>value</b>: <span title=\"Códigos:{https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria negado}\">negado</span></p></blockquote></div>"
+  ] ;
+  fhir:Task.basedOn [
+     fhir:index 0 ;
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-consulta-urologia-excluida> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-consulta-urologia-excluida" ]
+  ] ;
+  fhir:Task.status [ fhir:value "rejected"] ;
+  fhir:Task.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRMotivoDecisaoRegulatoria" ] ;
+       fhir:Coding.code [ fhir:value "sem-indicacao-clinica" ]
+     ]
+  ] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRSituacaoRegulatoria" ] ;
+       fhir:Coding.code [ fhir:value "cancelado-clinicamente" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRTipoTarefaRegulacao" ] ;
+       fhir:Coding.code [ fhir:value "regulacao-acesso" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/ServiceRequest/sr-consulta-urologia-excluida> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/sr-consulta-urologia-excluida" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Patient/paciente-maria> ;
+     fhir:Reference.reference [ fhir:value "Patient/paciente-maria" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-08-20T08:35:00-03:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-ubs-solicitante> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-ubs-solicitante" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <http://fhir.hsl.org.br/ig/inspirarira/Organization/org-central-regulacao> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-central-regulacao" ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "pertinencia" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "nao-pertinente" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRDimensaoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "decisao" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://terminologia.saude.gov.br/fhir/CodeSystem/BRResultadoDecisaoRegulatoria" ] ;
+         fhir:Coding.code [ fhir:value "negado" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.hsl.org.br/ig/inspirarira/Task/task-regulacao-urologia-negada.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
